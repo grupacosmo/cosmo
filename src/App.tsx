@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//I'm in develop branch
+//I'm in feature branch
 const App: React.FC = () => {
   return (
     <div className="App">
