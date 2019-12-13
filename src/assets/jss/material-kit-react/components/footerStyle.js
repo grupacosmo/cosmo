@@ -12,6 +12,11 @@ const footerStyle = {
     position: "relative",
     display: "block"
   },
+  center: {
+    display:"flex",
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
   left: {
     float: "left!important",
     display: "block"

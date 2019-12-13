@@ -36,7 +36,7 @@ export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <div>
+    <>
       <Header
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
@@ -64,7 +64,7 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
+        {/* <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
         <SectionPills />
@@ -81,10 +81,10 @@ export default function Components(props) {
             </Button>
           </Link>
         </GridItem>
-        <SectionExamples />
-        <SectionDownload />
+        <SectionExamples /> */}
+        <SectionDownload /> 
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
