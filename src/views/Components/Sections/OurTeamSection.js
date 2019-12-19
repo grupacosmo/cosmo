@@ -10,7 +10,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
-import Card from "./components/Card/Card";
+import Card from "components/Card/Card";
 import profilePhoto from "assets/img/faces/pawel_kisielewicz_profile.jpg";
 
 const useStyles = makeStyles(styles);
