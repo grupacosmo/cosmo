@@ -1,6 +1,7 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+// react components for routing our app without refresh
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
@@ -12,7 +13,9 @@ import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
+
 import styles from "assets/jss/material-kit-react/views/components.js";
+import OurTeamSection from "../Components/Sections/OurTeamSection.js";
 
 const useStyles = makeStyles(styles);
 
@@ -20,7 +23,7 @@ export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <>
+    <div>
       <Header
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
@@ -48,9 +51,11 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-       
+
+        <OurTeamSection />
+
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
