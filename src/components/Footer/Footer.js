@@ -32,13 +32,13 @@ export default function Footer(props) {
       <div className={classes.container}>
         <div className={classes.center}>
         <div className={classes.left}>
-        <Button color="twitter">
+          <Button color="twitter" href="#">
             <i className={classes.socials + " fab fa-twitter"} /> Tweet
           </Button>
-          <Button color="facebook">
+          <Button color="facebook" href="#">
             <i className={classes.socials + " fab fa-facebook-square"} /> Share
           </Button>
-          <Button color="instagram">
+          <Button color="instagram" href="#">
             <i className={classes.socials + " fab fa-instagram"} />
             Follow
           </Button>
