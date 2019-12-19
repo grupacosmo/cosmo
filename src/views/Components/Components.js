@@ -15,7 +15,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
-import OurTeamSection from "../../OurTeamSection";
+import OurTeamSection from "../Components/Sections/OurTeamSection.js";
 
 const useStyles = makeStyles(styles);
 
