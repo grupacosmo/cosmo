@@ -1,17 +1,21 @@
 {
-  "name": "material-kit-react",
-  "homepage": "https://github.com/creativetimofficial/material-kit-react",
+  "name": "cosmo",
+  "homepage": "https://github.com/grupacosmo",
   "authors": [
-    "creative-tim"
+    "creative-tim",
+    "cosmo-pk-group"
   ],
-  "description": "A Badass Material-UI Kit based on Material Design",
+  "description": "A home page of cosmo scientific cirle",
   "main": "dist/index.js",
   "keywords": [
     "material",
     "design",
     "material-ui",
     "google",
-    "twitter"
+    "twitter",
+    "cosmo",
+    "satellite",
+    "cosmo-pk"
   ],
   "license": "Creative TIM License",
   "ignore": [
