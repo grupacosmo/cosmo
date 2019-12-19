@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
+import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
@@ -29,58 +30,35 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
+        <div className={classes.center}>
         <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Creative Tim
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
-            </ListItem>
-          </List>
+          <Button color="twitter" href="#">
+            <i className={classes.socials + " fab fa-twitter"} /> Tweet
+          </Button>
+          <Button color="facebook" href="#">
+            <i className={classes.socials + " fab fa-facebook-square"} /> Share
+          </Button>
+          <Button color="instagram" href="#">
+            <i className={classes.socials + " fab fa-instagram"} />
+            Follow
+          </Button>
+          <Button color="github" href="https://github.com/grupacosmo/cosmo">
+            <i className={classes.socials + " fab fa-github"} /> Star
+          </Button>
         </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made with{" "}
           <Favorite className={classes.icon} /> by{" "}
           <a
-            href="https://www.creative-tim.com?ref=mkr-footer"
+            href="#"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
+            Cosmo PK Group
           </a>{" "}
-          for a better web.
+          
         </div>
+        </div> 
       </div>
     </footer>
   );

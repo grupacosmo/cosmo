@@ -15,7 +15,7 @@ export default function SectionDownload() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-      <div className={classes.container}>
+      {/* <div className={classes.container}>
         <GridContainer className={classes.textCenter} justify="center">
           <GridItem xs={12} sm={12} md={8}>
             <h2>Do you love this UI Kit?</h2>
@@ -100,7 +100,9 @@ export default function SectionDownload() {
             <i className={classes.socials + " fab fa-github"} /> Star
           </Button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
+
+
