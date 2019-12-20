@@ -10,36 +10,50 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 import Button from "components/CustomButtons/Button.js";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles(styles);
 
 export default function HomeSection() {
-    const classes = useStyles();
-    return (
-        <Parallax image={require("assets/img/home_background.jpg")}>
-            <div className={classes.container}>
-                <GridContainer>
-                    <GridItem>
-                        <div className={classes.brand}>
-                            <h1 className={classes.title}>Projekt COSMO</h1>
-                            <h3 className={classes.subtitle}>
-                                Studenckie koło naukowe Politechniki Krakowskiej
-                            </h3>
-                            <Link
-                                activeClass="active"
-                                to="who-we-are"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                            >
-                                <Button type="button" color="info" round>Kim jesteśmy?</Button>
-                            </Link>
-                        </div>
-                    </GridItem>
-                </GridContainer>
+  const classes = useStyles();
+  return (
+    <Parallax image={require("assets/img/home_background.jpg")}>
+      <div className={classes.container}>
+        <GridContainer>
+          <GridItem>
+            <div className={classes.brand}>
+              <h1 className={classes.title}>Projekt COSMO</h1>
+              <h3 className={classes.subtitle}>
+                Studenckie koło naukowe Politechniki Krakowskiej
+              </h3>
+              <Link
+                activeClass="active"
+                to="who-we-are"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button type="button" color="info" round>
+                  Kim jesteśmy?
+                </Button>
+              </Link>
+              <Link
+                activeClass="active"
+                to="contact-form"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button type="button" color="info" round>
+                  Kontakt
+                </Button>
+              </Link>
             </div>
-        </Parallax>
-    );
+          </GridItem>
+        </GridContainer>
+      </div>
+    </Parallax>
+  );
 }

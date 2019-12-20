@@ -143,7 +143,7 @@ const ConstactSection = props => {
   };
 
   return (
-    <div className={classes.section}>
+    <div className={classes.section} id="contact-form">
       <div className={classes.container}>
         <h2 className={classes.title}>Kontakt</h2>
         <GridContainer justify="center">
@@ -187,7 +187,7 @@ const ConstactSection = props => {
               <h3>Wyślij nam wiadomość</h3>
             </div>
             <Card plain>
-              <form className={classes.root} noValidate>
+              <form className={classes.root} noValidate style={{ margin: 10 }}>
                 <CssTextField
                   className={classes.margin}
                   id="custom-css-outlined-input"
@@ -195,6 +195,7 @@ const ConstactSection = props => {
                   value={name}
                   onChange={handleNameChange}
                   fullWidth
+                  margin="dense"
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
