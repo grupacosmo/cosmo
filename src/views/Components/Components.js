@@ -23,7 +23,7 @@ export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <div>
+    <div id="menu-navbar">
       <Header
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
