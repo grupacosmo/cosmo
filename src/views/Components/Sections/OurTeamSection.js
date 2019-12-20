@@ -41,7 +41,7 @@ export default function OurTeamSection(props) {
     };
 
     return (
-        <div className={classes.section}>
+        <div className={classes.section} id="who-we-are">
             <div className={classes.container}>
 
                 <h2 className={classes.title}>Kim jesteśmy?</h2>
