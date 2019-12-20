@@ -186,8 +186,8 @@ const ConstactSection = props => {
             <div className={classes.title}>
               <h3>Wyślij nam wiadomość</h3>
             </div>
-            <Card plain>
-              <form className={classes.root} noValidate style={{ margin: 10 }}>
+            <Card plain style={{ padding: 10 }}>
+              <form className={classes.root} noValidate>
                 <CssTextField
                   className={classes.margin}
                   id="custom-css-outlined-input"
