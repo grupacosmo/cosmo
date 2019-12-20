@@ -15,6 +15,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import OurTeamSection from "../Components/Sections/OurTeamSection.js";
 import HomeSection from "./Sections/HomeSection";
+import ContactSection from "./Sections/ContactSection";
 
 const useStyles = makeStyles(styles);
 
@@ -38,9 +39,8 @@ export default function Components(props) {
       <HomeSection />
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-
         <OurTeamSection />
-
+        <ContactSection />
       </div>
       <Footer />
     </div>

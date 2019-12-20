@@ -4,8 +4,8 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
 //!! Important!! //
-//Not supported on some linux dist for example  Arch// 
-//import "assets/scss/material-kit-react.scss?v=1.8.0";
+//Not supported on some linux dist for example  Arch//
+import "assets/scss/material-kit-react.scss?v=1.8.0";
 
 // pages for this product
 import Components from "views/Components/Components.js";
