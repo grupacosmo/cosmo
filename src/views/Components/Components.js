@@ -6,38 +6,22 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
-import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
-
-// sections for this page
-import HeaderLinks from "components/Header/HeaderLinks.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 import OurTeamSection from "../Components/Sections/OurTeamSection.js";
 import HomeSection from "./Sections/HomeSection";
 import ContactSection from "./Sections/ContactSection";
+import NavBarSection from "./Sections/NavBarSection";
 
 const useStyles = makeStyles(styles);
 
-export default function Components(props) {
+export default function Components() {
   const classes = useStyles();
-  const { ...rest } = props;
   return (
     <div id="menu-navbar">
-      <Header
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
-
+      <NavBarSection />
       <HomeSection />
-
       <div className={classNames(classes.main, classes.mainRaised)}>
         <OurTeamSection />
         <ContactSection />
