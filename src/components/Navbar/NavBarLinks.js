@@ -31,6 +31,7 @@ export default function NavBarLinks() {
           offset={-70}
           duration={500}
           className={classes.navLink}
+          style={{cursor: "pointer"}}
         >
             <People className={classes.icons} /> Kim jesteśmy?
         </Link>
@@ -44,6 +45,7 @@ export default function NavBarLinks() {
                 offset={-70}
                 duration={500}
                 className={classes.navLink}
+                style={{cursor: "pointer"}}
             >
                 <Email className={classes.icons} /> Kontakt
             </Link>

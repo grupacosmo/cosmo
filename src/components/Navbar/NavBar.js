@@ -18,6 +18,7 @@ import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 import logoWhite from "assets/img/svg/logo_white.svg";
 import logoGray from "assets/img/svg/logo_gray.svg";
+import {Link} from "react-scroll";
 
 const useStyles = makeStyles(styles);
 
@@ -79,7 +80,17 @@ export default function NavBar(props) {
                 {leftLinks}
               </Hidden>
           ) : (
-              <img src={belowHeight ? logoGray : logoWhite} style={{width: 35}}  alt=""/>
+              <Link
+                  activeClass="active"
+                  to="root"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className={classes.navLink}
+                  style={{cursor: "pointer"}}
+              >
+                <img src={belowHeight ? logoGray : logoWhite} style={{width: 35}}  alt=""/>
+              </Link>
           )}
 
           {leftLinks !== undefined ? (
