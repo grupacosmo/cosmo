@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // nodejs library that concatenates classes
+// eslint-disable-next-line
 import classNames from "classnames";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -151,14 +152,12 @@ const ConstactSection = props => {
             <Card>
               <GridContainer
                 justify="center"
-                style={descriptionGridContainerStyle}
-              >
+                style={descriptionGridContainerStyle}>
                 <GridItem
                   xs={12}
                   sm={12}
                   md={9}
-                  style={descriptionGridItemStyle}
-                >
+                  style={descriptionGridItemStyle}>
                   <div className={classes.title}>
                     <h4>Lokalizacja</h4>
                   </div>
@@ -258,14 +257,12 @@ const ConstactSection = props => {
                   spy={true}
                   smooth={true}
                   offset={10}
-                  duration={700}
-                >
+                  duration={700}>
                   <Button
                     color="primary"
                     round
                     onClick={handleSubmit}
-                    disabled={!formValid}
-                  >
+                    disabled={!formValid}>
                     Wyślij
                   </Button>
                 </Link>
