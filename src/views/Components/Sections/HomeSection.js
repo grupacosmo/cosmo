@@ -32,8 +32,7 @@ export default function HomeSection() {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 <Button type="button" color="info" round>
                   Kim jesteśmy?
                 </Button>
@@ -44,10 +43,20 @@ export default function HomeSection() {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 <Button type="button" color="info" round>
                   Kontakt
+                </Button>
+              </Link>
+              <Link
+                activeClass="active"
+                to="our-goals"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                <Button type="button" color="info" round>
+                  Nasz cel
                 </Button>
               </Link>
             </div>
