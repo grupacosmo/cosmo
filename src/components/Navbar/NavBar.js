@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -18,7 +18,7 @@ import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 import logoWhite from "assets/img/svg/logo_white.svg";
 import logoGray from "assets/img/svg/logo_gray.svg";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles(styles);
 
@@ -69,28 +69,36 @@ export default function NavBar(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  const brandComponent = (
+    <Button className={classes.title} href="/">
+      {brand}
+    </Button>
+  );
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (
-              <Hidden smDown implementation="css">
-                {leftLinks}
-              </Hidden>
+            <Hidden smDown implementation="css">
+              {leftLinks}
+            </Hidden>
           ) : (
-              <Link
-                  activeClass="active"
-                  to="root"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className={classes.navLink}
-                  style={{cursor: "pointer"}}
-              >
-                <img src={belowHeight ? logoGray : logoWhite} style={{width: 35}}  alt=""/>
-              </Link>
+            <Link
+              activeClass="active"
+              to="root"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={classes.navLink}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={belowHeight ? logoGray : logoWhite}
+                style={{ width: 35 }}
+                alt=""
+              />
+            </Link>
           )}
 
           {leftLinks !== undefined ? (
