@@ -8,13 +8,11 @@ import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
 import Favorite from "@material-ui/icons/Favorite";
 // core components
-import Footer from "components/Footer/Footer.js";
+
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
-import Parallax from "components/Parallax/Parallax.js";
-import NavBarSection from "./Sections/NavBarSection";
 import profile from "assets/img/faces/christian.jpg";
 import studio1 from "assets/img/examples/studio-1.jpg";
 import studio2 from "assets/img/examples/studio-2.jpg";
@@ -27,10 +25,42 @@ import work3 from "assets/img/examples/cynthia-del-rio.jpg";
 import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const useStyles = makeStyles(styles);
+const SampleArrowStyle = {
+  fontSize: 0,
+  lineHeight: 0,
+  position: "absolute",
+  top: "50%",
+  display: "block",
+  height: "100%",
+  padding: 0,
+  transform: "translateY(-50%)",
+  cursor: "pointer",
+  border: "none",
+  color: "transparent",
+  outline: "none",
+  background: "grey",
+  width: "15%",
+  zIndex: 2,
+  opacity: 0.5,
+  marginTop: 100
+};
 
-export default function Profile(props) {
+function SampleArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <Button
+      id="sampleArrow"
+      className={className}
+      style={SampleArrowStyle}
+      onClick={onClick}
+    />
+  );
+}
+function Profile1(props) {
   const classes = useStyles();
 
   const imageClasses = classNames(
@@ -40,7 +70,10 @@ export default function Profile(props) {
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
-    <div className={classNames(classes.main, classes.mainRaised)}>
+    <div
+      className={classNames(classes.main, classes.mainRaised)}
+      style={{ margin: 100 }}
+    >
       <div className={classes.container}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
@@ -52,7 +85,7 @@ export default function Profile(props) {
                 <h3 className={classes.title}>Christian Louboutin</h3>
                 <h6>DESIGNER</h6>
                 <Button justIcon link className={classes.margin5}>
-                  <i className={"fab fa-twitter"} />
+                  <i className={"fab fa-github"} />
                 </Button>
                 <Button justIcon link className={classes.margin5}>
                   <i className={"fab fa-instagram"} />
@@ -190,5 +223,24 @@ export default function Profile(props) {
         </GridContainer>
       </div>
     </div>
+  );
+}
+
+export default function Profile(props) {
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: <SampleArrow />,
+    nextArrow: <SampleArrow />
+  };
+  return (
+    <Slider {...settings}>
+      <Profile1 />
+      <Profile1 />
+      <Profile1 />
+    </Slider>
   );
 }
