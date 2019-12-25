@@ -23,17 +23,22 @@ export default function Components() {
 
   const [loaded, setLoaded] = useState(false);
 
+  // if page is loading more than 7 seconds, set loaded on true
   useEffect(() => {
-    //setTimeout(() => {  setLoaded(true); }, 3000);  //fake loading
-    setLoaded(true);
-  }, []);
+    setTimeout(() => {
+      if (!loaded) {
+        setLoaded(true);
+      }
+    }, 7000);
+  });
+
 
   const classes = useStyles();
   return (
     <div id="menu-navbar">
       <LoadingScreen isLoaded={loaded}/>
       <NavBarSection />
-      <HomeSection />
+      <HomeSection setLoaded={setLoaded} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <OurTeamSection />
         <Divider variant="middle" />
