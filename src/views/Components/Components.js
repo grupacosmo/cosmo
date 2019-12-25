@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
@@ -23,17 +23,12 @@ export default function Components() {
 
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    //setTimeout(() => {  setLoaded(true); }, 3000);  //fake loading
-    setLoaded(true);
-  }, []);
-
   const classes = useStyles();
   return (
     <div id="menu-navbar">
       <LoadingScreen isLoaded={loaded}/>
       <NavBarSection />
-      <HomeSection />
+      <HomeSection setLoaded={setLoaded} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <OurTeamSection />
         <Divider variant="middle" />
