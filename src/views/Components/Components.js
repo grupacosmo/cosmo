@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
@@ -22,6 +22,16 @@ const useStyles = makeStyles(styles);
 export default function Components() {
 
   const [loaded, setLoaded] = useState(false);
+
+  // if page is loading more than 7 seconds, set loaded on true
+  useEffect(() => {
+    setTimeout(() => {
+      if (!loaded) {
+        setLoaded(true);
+      }
+    }, 7000);
+  });
+
 
   const classes = useStyles();
   return (
