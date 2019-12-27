@@ -14,10 +14,19 @@ import { Link } from "react-scroll";
 
 const useStyles = makeStyles(styles);
 
-export default function HomeSection() {
+export default function HomeSection(props) {
   const classes = useStyles();
+
+  const image = require("assets/img/home_background.jpg");
+  const img = new Image();
+  img.src = image;
+
+  // this piece of code, detects if the background image is loaded
+  img.onload = () => props.setLoaded(true);
+  img.onerror = () => props.setLoaded(true);
+
   return (
-    <Parallax image={require("assets/img/home_background.jpg")}>
+    <Parallax image={image}>
       <div className={classes.container}>
         <GridContainer>
           <GridItem>
