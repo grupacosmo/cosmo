@@ -28,11 +28,11 @@ export default function OurTeamSection(props) {
     height: "100%"
   };
 
-  const descriptionGridItemStyle = {
-    height: "100%",
-    display: "flex",
-    alignItems: "center"
-  };
+  // const descriptionGridItemStyle = {
+  //   height: "100%",
+  //   display: "flex",
+  //   alignItems: "center"
+  // };
   const descriptionGridItemStyle2 = {
     height: "100%",
     display: "flex",
