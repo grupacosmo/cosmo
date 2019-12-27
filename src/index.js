@@ -19,7 +19,7 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/landing-page" component={LandingPage} />
-      <Route path="/profile-page" component={ProfilePage} />
+      <Route path="/nasz-team" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/" component={Components} />
     </Switch>
