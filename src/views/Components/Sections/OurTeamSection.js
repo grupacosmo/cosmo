@@ -28,10 +28,17 @@ export default function OurTeamSection(props) {
     height: "100%"
   };
 
-  const descriptionGridItemStyle = {
+  // const descriptionGridItemStyle = {
+  //   height: "100%",
+  //   display: "flex",
+  //   alignItems: "center"
+  // };
+  const descriptionGridItemStyle2 = {
     height: "100%",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "center"
   };
 
   const descriptionStyle = {
@@ -50,7 +57,12 @@ export default function OurTeamSection(props) {
               justify="center"
               style={descriptionGridContainerStyle}
             >
-              <GridItem xs={12} sm={12} md={9} style={descriptionGridItemStyle}>
+              <GridItem
+                xs={12}
+                sm={12}
+                md={9}
+                style={descriptionGridItemStyle2}
+              >
                 <p className={classes.description} style={descriptionStyle}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                   finibus nulla, at tincidunt orci. Pellentesque porttitor
