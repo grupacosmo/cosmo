@@ -55,14 +55,12 @@ export default function OurTeamSection(props) {
           <GridItem xs={12} sm={12} md={6}>
             <GridContainer
               justify="center"
-              style={descriptionGridContainerStyle}
-            >
+              style={descriptionGridContainerStyle}>
               <GridItem
                 xs={12}
                 sm={12}
                 md={9}
-                style={descriptionGridItemStyle2}
-              >
+                style={descriptionGridItemStyle2}>
                 <p className={classes.description} style={descriptionStyle}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                   finibus nulla, at tincidunt orci. Pellentesque porttitor
@@ -73,7 +71,7 @@ export default function OurTeamSection(props) {
                   massa in nibh mollis, sed scelerisque elit sagittis. Integer
                   pulvinar tortor vel convallis faucibus.
                 </p>
-                <Button color="primary" round href="nasz-team">
+                <Button color="primary" round target="_blank" href="nasz-team">
                   Więcej
                 </Button>
               </GridItem>

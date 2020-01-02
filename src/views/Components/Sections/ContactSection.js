@@ -191,6 +191,7 @@ const ConstactSection = props => {
                   className={classes.margin}
                   id="custom-css-outlined-input"
                   label="Your Name"
+                  required
                   value={name}
                   onChange={handleNameChange}
                   fullWidth
@@ -224,6 +225,7 @@ const ConstactSection = props => {
                   id="font-awesome"
                   label="Topic"
                   value={topic}
+                  required
                   onChange={handleTopicChange}
                   fullWidth
                   InputProps={{
@@ -239,6 +241,7 @@ const ConstactSection = props => {
                   label="Your message"
                   multiline
                   value={message}
+                  required
                   rows="2"
                   rowsMax="5"
                   fullWidth
