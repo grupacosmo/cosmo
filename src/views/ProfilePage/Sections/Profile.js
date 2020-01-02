@@ -23,11 +23,10 @@ import img1 from "assets/img/faces/pawel_kisielewicz_profile.jpg";
 //Pictures
 //Add more people
 
-
-
 const useStyles = makeStyles(styles);
 const SampleArrowStyle = {
   fontSize: 0,
+  visibility: "hidden",
   lineHeight: 0,
   position: "absolute",
   top: "50%",
@@ -73,8 +72,7 @@ function DefaultProfile(props) {
   return (
     <div
       className={classNames(classes.main, classes.mainRaised)}
-      style={{ margin: 100 }}
-    >
+      style={{ margin: 100 }}>
       <div className={classes.container} style={{ height: 600 }}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
@@ -89,16 +87,14 @@ function DefaultProfile(props) {
                   justIcon
                   link
                   className={classes.margin5}
-                  href="https://github.com/JacobChwastek"
-                >
+                  href="https://github.com/JacobChwastek">
                   <i className={"fab fa-github"} />
                 </Button>
                 <Button
                   justIcon
                   link
                   className={classes.margin5}
-                  href="https://www.linkedin.com/in/jakub-chwastek-892b9816b/"
-                >
+                  href="https://www.linkedin.com/in/jakub-chwastek-892b9816b/">
                   <i className={"fab fa-linkedin"} />
                 </Button>
                 <Button justIcon link className={classes.margin5}>
@@ -131,14 +127,23 @@ export default function Profile(props) {
   };
   return (
     <Slider {...settings}>
-      <DefaultProfile Img={img1} Name="Mgr inż. Paweł Kisielewicz" Title="Prowadzący koła naukowego COSMO" Description="Under development"/>
-      <DefaultProfile Img={profile} Name="Patryk Borchowiec" Title="Java/React Geek " Description="Under development"/>
+      <DefaultProfile
+        Img={img1}
+        Name="Mgr inż. Paweł Kisielewicz"
+        Title="Prowadzący koła naukowego COSMO"
+        Description="Under development"
+      />
+      <DefaultProfile
+        Img={profile}
+        Name="Patryk Borchowiec"
+        Title="Java/React Geek "
+        Description="Under development"
+      />
       <DefaultProfile
         Img={profile}
         Name="Jakub Chwastek"
         Title="C#/React Geek"
         Description="Under development"
-       
       />
     </Slider>
   );

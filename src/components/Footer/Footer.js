@@ -16,6 +16,10 @@ import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
 const useStyles = makeStyles(styles);
 
+const buttonStyle = {
+  width: 120,
+  justifyContent: "center"
+};
 export default function Footer(props) {
   const classes = useStyles();
   const { whiteFont } = props;
@@ -31,34 +35,33 @@ export default function Footer(props) {
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.center}>
-        <div className={classes.left}>
-          <Button color="twitter" href="#">
-            <i className={classes.socials + " fab fa-twitter"} /> Tweet
-          </Button>
-          <Button color="facebook" href="#">
-            <i className={classes.socials + " fab fa-facebook-square"} /> Share
-          </Button>
-          <Button color="instagram" href="#">
-            <i className={classes.socials + " fab fa-instagram"} />
-            Follow
-          </Button>
-          <Button color="github" href="https://github.com/grupacosmo/cosmo">
-            <i className={classes.socials + " fab fa-github"} /> Star
-          </Button>
+          <div className={classes.left}>
+            <Button style={buttonStyle} color="twitter" href="#">
+              <i className={classes.socials + " fab fa-twitter"} /> Tweet
+            </Button>
+            <Button style={buttonStyle} color="facebook" href="#">
+              <i className={classes.socials + " fab fa-facebook-square"} />{" "}
+              Share
+            </Button>
+            <Button style={buttonStyle} color="instagram" href="#">
+              <i className={classes.socials + " fab fa-instagram"} />
+              Follow
+            </Button>
+            <Button
+              style={buttonStyle}
+              color="github"
+              href="https://github.com/grupacosmo/cosmo">
+              <i className={classes.socials + " fab fa-github"} /> Star
+            </Button>
+          </div>
+          <div className={classes.right}>
+            &copy; {1900 + new Date().getYear()} , made with{" "}
+            <Favorite className={classes.icon} /> by{" "}
+            <a href="#" className={aClasses} target="_blank">
+              Cosmo PK Group
+            </a>{" "}
+          </div>
         </div>
-        <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="#"
-            className={aClasses}
-            target="_blank"
-          >
-            Cosmo PK Group
-          </a>{" "}
-          
-        </div>
-        </div> 
       </div>
     </footer>
   );

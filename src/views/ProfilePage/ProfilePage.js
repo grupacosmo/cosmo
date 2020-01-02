@@ -6,17 +6,22 @@ import Parallax from "components/Parallax/Parallax.js";
 import NavBarSection from "./Sections/NavBarSection";
 import Profile from "./Sections/Profile";
 
-const ParallaxStyle= {
+const ParallaxStyle = {
   backgroundPosition: "bottom"
-}
+};
 
 export default function ProfilePage(props) {
   return (
-    <div>
+    <>
       <NavBarSection />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} style={ParallaxStyle}/>
+      <Parallax
+        small
+        filter
+        image={require("assets/img/profile-bg.jpg")}
+        style={ParallaxStyle}
+      />
       <Profile />
       <Footer />
-    </div>
+    </>
   );
 }
