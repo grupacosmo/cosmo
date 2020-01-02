@@ -73,7 +73,7 @@ export default function OurTeamSection(props) {
                   massa in nibh mollis, sed scelerisque elit sagittis. Integer
                   pulvinar tortor vel convallis faucibus.
                 </p>
-                <Button color="primary" round>
+                <Button color="primary" href="/nasz-team" target="_blank" round>
                   Więcej
                 </Button>
               </GridItem>
