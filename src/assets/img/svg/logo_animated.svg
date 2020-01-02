@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Warstwa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 595.28 659" style="enable-background:new 0 0 595.28 659;" xml:space="preserve">
+<style type="text/css">
+	.st0{
+        opacity:0.94;
+        fill:none;
+        stroke:url(#SVGID_1_);
+        stroke-width:16;
+        stroke-miterlimit:10;
+        animation: breathing 1s linear infinite;
+    }
+	.st1{
+        opacity:0.94;
+        fill:none;
+        stroke:url(#SVGID_2_);
+        stroke-width:56;
+        stroke-miterlimit:10;
+        animation: breathing 1s linear infinite;
+    }
+	.st2{
+        fill:#92278F;
+        stroke:#92278F;
+        stroke-width:16;
+        stroke-miterlimit:10;
+    }
+    #satellite{
+        animation: disapear 2s infinite
+    }
+
+    @keyframes disapear {
+        0%   {opacity:0}
+        15%  {opacity:0}
+        20%  {opacity:1}
+        70%  {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+    }
+
+    @keyframes breathing {
+        0%   {opacity:0.94}
+        50%  {opacity:0.8}
+        100% {opacity:0.94}
+    }
+</style>
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="43.6335" y1="329.5555" x2="524.1443" y2="329.5555">
+	<stop  offset="0" style="stop-color:#27AAE1"/>
+        <stop  offset="0.0815" style="stop-color:#5098D2"/>
+        <stop  offset="0.2008" style="stop-color:#6B80BF"/>
+        <stop  offset="0.3241" style="stop-color:#7A6BB0"/>
+        <stop  offset="0.4494" style="stop-color:#8457A4"/>
+        <stop  offset="0.5772" style="stop-color:#8A459A"/>
+        <stop  offset="0.7089" style="stop-color:#8F3594"/>
+        <stop  offset="0.8465" style="stop-color:#912A90"/>
+        <stop  offset="1" style="stop-color:#92278F"/>
+</linearGradient>
+    <path class="st0" d="M174.74,249.53C287.94,95.15,428.57,5.82,488.85,50.02s17.38,205.18-95.81,359.56s-253.83,243.7-314.11,199.5
+	C18.65,564.89,61.55,403.91,174.74,249.53z"/>
+    <g id="satellite-bellow">
+	<circle class="st2" cx="0" cy="0" r="40">
+            <animateMotion dur="2s" repeatCount="indefinite"
+                           path="M174.74,249.53C287.94,95.15,428.57,5.82,488.85,50.02s17.38,205.18-95.81,359.56s-253.83,243.7-314.11,199.5
+	C18.65,564.89,61.55,403.91,174.74,249.53z" />
+    </circle>
+</g>
+    <g id="Warstwa_1">
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="111.8533" y1="325.5082" x2="504.1365" y2="325.5082">
+		<stop  offset="0.0754" style="stop-color:#007FC6"/>
+        <stop  offset="0.2927" style="stop-color:#3A6EB6"/>
+        <stop  offset="0.6251" style="stop-color:#7451A1"/>
+        <stop  offset="0.8704" style="stop-color:#8A3594"/>
+        <stop  offset="1" style="stop-color:#92278F"/>
+	</linearGradient>
+        <circle class="st1" cx="307.99" cy="325.51" r="168.14"/>
+</g>
+    <g id="satellite">
+	<circle class="st2" cx="0" cy="0" r="40">
+            <animateMotion dur="2s" repeatCount="indefinite"
+                           path="M174.74,249.53C287.94,95.15,428.57,5.82,488.85,50.02s17.38,205.18-95.81,359.56s-253.83,243.7-314.11,199.5
+	C18.65,564.89,61.55,403.91,174.74,249.53z" />
+    </circle>
+</g>
+</svg>

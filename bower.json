@@ -1,0 +1,29 @@
+{
+  "name": "cosmo",
+  "homepage": "https://github.com/grupacosmo",
+  "authors": [
+    "creative-tim",
+    "cosmo-pk-group"
+  ],
+  "description": "A home page of cosmo scientific cirle",
+  "main": "dist/index.js",
+  "keywords": [
+    "material",
+    "design",
+    "material-ui",
+    "google",
+    "twitter",
+    "cosmo",
+    "satellite",
+    "cosmo-pk"
+  ],
+  "license": "Creative TIM License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
