@@ -16,7 +16,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from "assets/img/faces/pawel_kisielewicz_profile.jpg";
-
+import JakubChwastekImg from "assets/img/faces/jakub_chwastek_profile.png";
 //TODO:
 //Links
 //Descriptions
@@ -72,7 +72,8 @@ function DefaultProfile(props) {
   return (
     <div
       className={classNames(classes.main, classes.mainRaised)}
-      style={{ margin: 100 }}>
+      style={{ margin: 110 }}
+    >
       <div className={classes.container} style={{ height: 600 }}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
@@ -87,20 +88,21 @@ function DefaultProfile(props) {
                   justIcon
                   link
                   className={classes.margin5}
-                  href="https://github.com/JacobChwastek">
+                  href={props.Github}
+                  target="_blank"
+                >
                   <i className={"fab fa-github"} />
                 </Button>
                 <Button
                   justIcon
                   link
                   className={classes.margin5}
-                  href="https://www.linkedin.com/in/jakub-chwastek-892b9816b/">
+                  href={props.Linkedin}
+                  target="_blank"
+                >
                   <i className={"fab fa-linkedin"} />
                 </Button>
-                <Button justIcon link className={classes.margin5}>
-                  <i className={"fab fa-facebook"} />
-                </Button>
-                <Button justIcon link className={classes.margin5}>
+                <Button justIcon link color="youtube" className={classes.margin5} href={props.Youtube} target="_blank">
                   <i className={"fab fa-youtube"} />
                 </Button>
               </div>
@@ -123,7 +125,10 @@ export default function Profile(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: <SampleArrow />,
-    nextArrow: <SampleArrow />
+    nextArrow: <SampleArrow />,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
   };
   return (
     <Slider {...settings}>
@@ -132,18 +137,27 @@ export default function Profile(props) {
         Name="Mgr inż. Paweł Kisielewicz"
         Title="Prowadzący koła naukowego COSMO"
         Description="Under development"
+        Github=""
+        Linkedin=""
+        Youtube=""
       />
       <DefaultProfile
         Img={profile}
         Name="Patryk Borchowiec"
         Title="Java/React Geek "
-        Description="Under development"
+        Description="Student drugiego roku infromatyki na wydziale Infromatyki i Telekomunikacji Politechniki Krakowskiej. Pasjonat technologi Java/ Spring oraz frameworku React. "
+        Github="https://github.com/borchowiec"
+        Linkedin=""
+        Youtube=""
       />
       <DefaultProfile
-        Img={profile}
+        Img={JakubChwastekImg}
         Name="Jakub Chwastek"
         Title="C#/React Geek"
-        Description="Under development"
+        Description="Student drugiego roku infromatyki na wydziale Infromatyki i Telekomunikacji Politechniki Krakowskiej. Pasjonat technologi C#/ ASP.NET Core oraz frameworku React. "
+        Github="https://github.com/JacobChwastek"
+        Linkedin="https://www.linkedin.com/in/jakub-chwastek-892b9816b/"
+        Youtube=""
       />
     </Slider>
   );

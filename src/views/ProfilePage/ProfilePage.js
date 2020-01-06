@@ -19,7 +19,9 @@ export default function ProfilePage(props) {
         filter
         image={require("assets/img/profile-bg.jpg")}
         style={ParallaxStyle}
-      />
+     />
+
+
       <Profile />
       <Footer />
     </>
