@@ -2,7 +2,7 @@ import React from "react";
 // nodejs library that concatenates classes
 // eslint-disable-next-line
 import classNames from "classnames";
-import {makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -14,12 +14,9 @@ import OldForm from "components/Form/OldForm.js";
 
 const useStyles = makeStyles(styles);
 
-
 // Contact Section Hook
 const ConstactSection = props => {
   const classes = useStyles();
-
-
 
   //this style and style below is using for centering description paragraph vertically
   const descriptionGridContainerStyle = {
@@ -48,12 +45,14 @@ const ConstactSection = props => {
             <Card>
               <GridContainer
                 justify="center"
-                style={descriptionGridContainerStyle}>
+                style={descriptionGridContainerStyle}
+              >
                 <GridItem
                   xs={12}
                   sm={12}
                   md={9}
-                  style={descriptionGridItemStyle}>
+                  style={descriptionGridItemStyle}
+                >
                   <div className={classes.title}>
                     <h4>Lokalizacja</h4>
                   </div>
@@ -82,8 +81,8 @@ const ConstactSection = props => {
               <h3>Wyślij nam wiadomość</h3>
             </div>
             <Card plain style={{ padding: 10 }}>
-                {/*<OldForm/>*/}
-                <OldForm/>
+              {/*<OldForm/>*/}
+              <OldForm />
             </Card>
           </GridItem>
         </GridContainer>
