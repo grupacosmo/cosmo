@@ -39,7 +39,12 @@ export default function Footer(props) {
             <Button style={buttonStyle} color="twitter" href="#">
               <i className={classes.socials + " fab fa-twitter"} /> Tweet
             </Button>
-            <Button style={buttonStyle} color="facebook" href="#">
+            <Button
+              style={buttonStyle}
+              color="facebook"
+              target="_blank"
+              href="https://www.facebook.com/pkcosmopk/"
+            >
               <i className={classes.socials + " fab fa-facebook-square"} />{" "}
               Share
             </Button>
@@ -50,7 +55,8 @@ export default function Footer(props) {
             <Button
               style={buttonStyle}
               color="github"
-              href="https://github.com/grupacosmo/cosmo">
+              href="https://github.com/grupacosmo/cosmo"
+            >
               <i className={classes.socials + " fab fa-github"} /> Star
             </Button>
           </div>

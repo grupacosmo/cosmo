@@ -11,7 +11,7 @@
     "history": "4.9.0",
     "material-auto-rotating-carousel": "^3.0.2",
     "moment": "2.24.0",
-    "node-sass": "4.12.0",
+    "node-sass": "4.13.0",
     "nodemailer-react": "^0.1.0",
     "nouislider": "14.0.2",
     "prop-types": "15.7.2",
