@@ -5,56 +5,80 @@ import classNames from "classnames";
 // react components for routing our app without refresh
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+
+import rocket from "assets/img/rocket.png";
+
 // @material-ui/icons
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
 
 const useStyles = makeStyles(styles);
+
+
 const GoalSection = props => {
   const classes = useStyles();
 
   const cardStyle = {
-    flexDirection: "row",
+
     justifyContent: "center",
-    textAlign: "justify"
+    textAlign: "justify",
+    
   };
+  const descriptionGridItemStyle = {
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row"
+  };
+
+  const textStyle = {
+    textAlign: "justify",
+    fontFamily: "Roboto Slab",
+    padding: 20,
+    fontSize: 17,
+    margin: "auto"
+  };
+  const rocketDivStyle={
+
+    margin:"auto"
+  };
+  const rocketStyle = {
+    maxWidth:"60%",
+    height: "auto",
+    padding:10,
+    margin:"auto",
+    minWidth:"150px"
+  };
+
 
   return (
     <div className={classes.section} id="our-goals">
       <div className={classes.container}>
         <h2 className={classes.title}>Cel projektu ?</h2>
-        <GridContainer justify="center">
-          <Card plain style={cardStyle}>
-            <GridItem xs={12} sm={12} md={4}>
-              <h4 className={classes.description}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                finibus nulla, at tincidunt orci. Pellentesque porttitor
-                imperdiet arcu, ut posuere mauris mattis dapibus. Curabitur
-                vitae elit eu elit scelerisque malesuada sed vitae dui.
-                Curabitur nec arcu non sem aliquet semper ac id orci.
-                Pellentesque ultrices venenatis pulvinar. Vestibulum commodo
-                massa in nibh mollis, sed scelerisque elit sagittis. Integer
-                pulvinar tortor vel convallis faucibus.
+        <GridContainer justify="center" style={descriptionGridItemStyle}>
+          <>
+            <GridItem xs={12} sm={12} md={6}>
+              <Card plain style={cardStyle}>
+              <h4 className={classes.description} style={textStyle}>
+                Głównym celem jest zbudowanie satelity, którego chcemy umieścić na orbicie.
+                Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy.
               </h4>
+              </Card>
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
-              <h4 className={classes.description}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                finibus nulla, at tincidunt orci. Pellentesque porttitor
-                imperdiet arcu, ut posuere mauris mattis dapibus. Curabitur
-                vitae elit eu elit scelerisque malesuada sed vitae dui.
-                Curabitur nec arcu non sem aliquet semper ac id orci.
-                Pellentesque ultrices venenatis pulvinar. Vestibulum commodo
-                massa in nibh mollis, sed scelerisque elit sagittis. Integer
-                pulvinar tortor vel convallis faucibus.
-              </h4>
+
+                <div className="rocket" style={rocketDivStyle}>
+                  <img src={rocket} style={rocketStyle} alt=""/>
+
+                </div>
             </GridItem>
-          </Card>
+          </>
         </GridContainer>
+
+
       </div>
     </div>
   );

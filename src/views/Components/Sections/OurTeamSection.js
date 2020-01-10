@@ -40,11 +40,17 @@ export default function OurTeamSection(props) {
     flexDirection: "column",
     justifyContent: "center"
   };
+  const mgrPictureStyle = {
+    maxWidth:"200px",
+    height:'auto',
+  };
 
   const descriptionStyle = {
     textAlign: "justify",
     fontFamily: "Roboto Slab",
-    padding: 20
+    padding: 20,
+    fontSize: 17,
+    // fontVariant: "petite-caps
   };
 
   return (
@@ -64,14 +70,9 @@ export default function OurTeamSection(props) {
                 style={descriptionGridItemStyle2}
               >
                 <p className={classes.description} style={descriptionStyle}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  finibus nulla, at tincidunt orci. Pellentesque porttitor
-                  imperdiet arcu, ut posuere mauris mattis dapibus. Curabitur
-                  vitae elit eu elit scelerisque malesuada sed vitae dui.
-                  Curabitur nec arcu non sem aliquet semper ac id orci.
-                  Pellentesque ultrices venenatis pulvinar. Vestibulum commodo
-                  massa in nibh mollis, sed scelerisque elit sagittis. Integer
-                  pulvinar tortor vel convallis faucibus.
+                  Grupa młodych ludzi, studentów Politechniki Krakowskiej.
+                  W przerwach od nauki spotykamy się by realizować wspólny cel - wysłać własnego satelitę na orbitę.
+                  Nasze zmagania można obserwować na naszych kanałach w mediach społecznościowych. Trzymajcie kciuki!
                 </p>
                 <Button color="primary" href="/nasz-team" target="_blank" round>
                   Więcej
@@ -84,6 +85,7 @@ export default function OurTeamSection(props) {
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img
+                    style ={mgrPictureStyle}
                   src={profilePhoto}
                   alt="Paweł Kisielewicz"
                   className={imageClasses}

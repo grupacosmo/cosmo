@@ -15,7 +15,7 @@ import OldForm from "components/Form/OldForm.js";
 const useStyles = makeStyles(styles);
 
 // Contact Section Hook
-const ConstactSection = props => {
+const ContactSection = props => {
   const classes = useStyles();
 
   //this style and style below is using for centering description paragraph vertically
@@ -90,4 +90,4 @@ const ConstactSection = props => {
     </div>
   );
 };
-export default ConstactSection;
+export default ContactSection;
