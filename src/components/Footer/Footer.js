@@ -36,7 +36,7 @@ export default function Footer(props) {
       <div className={classes.container}>
         <div className={classes.center}>
           <div className={classes.left}>
-            <Button style={buttonStyle} color="twitter" href="#">
+            <Button style={buttonStyle} color="twitter" href="https://twitter.com/pkcosmopk" target="_blank">
               <i className={classes.socials + " fab fa-twitter"} /> Tweet
             </Button>
             <Button
@@ -55,6 +55,7 @@ export default function Footer(props) {
             <Button
               style={buttonStyle}
               color="github"
+              target="blank"
               href="https://github.com/grupacosmo/cosmo"
             >
               <i className={classes.socials + " fab fa-github"} /> Star

@@ -72,7 +72,7 @@ export default function NavBarLinks() {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="#"
+            href="https://twitter.com/pkcosmopk"
             target="_blank"
             color="transparent"
             className={classes.navLink}

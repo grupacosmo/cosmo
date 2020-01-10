@@ -10,12 +10,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+//eslint-disable-next-line
 import profile from "assets/img/faces/christian.jpg";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from "assets/img/faces/pawel_kisielewicz_profile.jpg";
+//eslint-disable-next-line
 import JakubChwastekImg from "assets/img/faces/jakub_chwastek_profile.png";
 //TODO:
 //Links
@@ -80,6 +82,7 @@ function DefaultProfile(props) {
             <div className={classes.profile}>
               <div>
                 <img src={props.Img} alt="..." className={imageClasses} />
+
               </div>
               <div className={classes.name}>
                 <h3 className={classes.title}>{props.Name}</h3>
@@ -126,7 +129,7 @@ export default function Profile(props) {
     slidesToScroll: 1,
     prevArrow: <SampleArrow />,
     nextArrow: <SampleArrow />,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     pauseOnHover: true,
   };
@@ -141,24 +144,24 @@ export default function Profile(props) {
         Linkedin=""
         Youtube=""
       />
-      <DefaultProfile
-        Img={profile}
-        Name="Patryk Borchowiec"
-        Title="Java/React Geek "
-        Description="Student drugiego roku infromatyki na wydziale Infromatyki i Telekomunikacji Politechniki Krakowskiej. Pasjonat technologi Java/ Spring oraz frameworku React. "
-        Github="https://github.com/borchowiec"
-        Linkedin=""
-        Youtube=""
-      />
-      <DefaultProfile
-        Img={JakubChwastekImg}
-        Name="Jakub Chwastek"
-        Title="C#/React Geek"
-        Description="Student drugiego roku infromatyki na wydziale Infromatyki i Telekomunikacji Politechniki Krakowskiej. Pasjonat technologi C#/ ASP.NET Core oraz frameworku React. "
-        Github="https://github.com/JacobChwastek"
-        Linkedin="https://www.linkedin.com/in/jakub-chwastek-892b9816b/"
-        Youtube=""
-      />
+      {/*<DefaultProfile*/}
+      {/*  Img={profile}*/}
+      {/*  Name="Patryk Borchowiec"*/}
+      {/*  Title="Java/React Geek "*/}
+      {/*  Description="Student drugiego roku infromatyki na wydziale Infromatyki i Telekomunikacji Politechniki Krakowskiej. Pasjonat technologi Java/ Spring oraz frameworku React. "*/}
+      {/*  Github="https://github.com/borchowiec"*/}
+      {/*  Linkedin=""*/}
+      {/*  Youtube=""*/}
+      {/*/>*/}
+      {/*<DefaultProfile*/}
+      {/*  Img={JakubChwastekImg}*/}
+      {/*  Name="Jakub Chwastek"*/}
+      {/*  Title="C#/React Geek"*/}
+      {/*  Description="Student drugiego roku infromatyki na wydziale Infromatyki i Telekomunikacji Politechniki Krakowskiej. Pasjonat technologi C#/ ASP.NET Core oraz frameworku React. "*/}
+      {/*  Github="https://github.com/JacobChwastek"*/}
+      {/*  Linkedin="https://www.linkedin.com/in/jakub-chwastek-892b9816b/"*/}
+      {/*  Youtube=""*/}
+      {/*/>*/}
     </Slider>
   );
 }
