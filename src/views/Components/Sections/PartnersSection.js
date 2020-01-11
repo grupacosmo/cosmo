@@ -8,7 +8,7 @@ import department from "assets/img/logoIT.png";
 import "assets/css/PartnerCarousel.css"
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import {makeStyles} from "@material-ui/core/styles";
-
+import RegularButton from "../../../components/CustomButtons/Button";
 
 const useStyles = makeStyles(styles);
 
@@ -30,6 +30,8 @@ const partnersUlStyle = {
     textAlign: "left",
     listStyle: "circle"
 };
+const aa  ={
+
     padding:"auto",
     maxHeight: "150px",
     maxWidth: "90%"
@@ -116,38 +118,9 @@ const PartnersSection = () => {
             <RegularButton onClick={() => setCarouselVisibility(!carouselVisibility)}>
                 Szczegóły
             </RegularButton>
-
-
-
-const PartnersSection = () => {
-    const classes = useStyles();
-
-    return (
-
-        <div className={classes.section} id="our-goals">
-            <div className={classes.container}>
-                <h2 className={classes.title}>Nasi partnerzy </h2>
-                <Carousel style={carouselStyle} emulateTouch showArrows={false}  interval={5000} infiniteLoop showThumbs={false}
-                          autoPlay showStatus={false} showIndicators={false}>
-                    <div className="Partner" style={partnerStyle}>
-                        <img style={imgStyle} src={pk} alt="politechnika krakowska"/>
-
-                    </div>
-                    <div className="Partner" style={partnerStyle}>
-                        <img style={imgStyle} src={baltic} alt="balticsatapps"/>
-                    </div>
-                    <div className="Partner" style={partnerStyle}>
-                        <img style={imgStyle} src={department} alt="department"/>
-                        <p style={{fontSize:"1.5rem",lineHeight:1.1}}>Wydział Informatyki i Telekomunikacji</p>
-                    </div>
-
-                </Carousel>
-            </div>
-
         </div>
 
-    );
 
-
+);
 };
-export default PartnersSection;
+            export default PartnersSection;
