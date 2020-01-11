@@ -30,15 +30,7 @@ const partnersUlStyle = {
     textAlign: "left",
     listStyle: "circle"
 };
-const aa  ={
 
-    padding:"auto",
-    maxHeight: "150px",
-    maxWidth: "90%"
-};
-const partnerStyle = {
-    //maxWidth: "90%",
-};
 const carouselStyle = {
     maxHeight: "150px",
     width: "auto",
