@@ -1,0 +1,15 @@
+.slide.selected{
+
+    background-color: white;
+    margin: auto;
+}
+.carousel .slide{
+
+    background-color: white;
+    margin: auto;
+}
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow
+{
+    background-color: grey;
+}
+
