@@ -25,7 +25,7 @@ const GoalSection = props => {
 
     justifyContent: "center",
     textAlign: "justify",
-    
+
   };
   const descriptionGridItemStyle = {
     height: "100%",
@@ -55,32 +55,32 @@ const GoalSection = props => {
 
 
   return (
-    <div className={classes.section} id="our-goals">
-      <div className={classes.container}>
-        <h2 className={classes.title}>Cel projektu ?</h2>
-        <GridContainer justify="center" style={descriptionGridItemStyle}>
-          <>
-            <GridItem xs={12} sm={12} md={6}>
-              <Card plain style={cardStyle}>
-              <h4 className={classes.description} style={textStyle}>
-                Głównym celem jest zbudowanie satelity, którego chcemy umieścić na orbicie.
-                Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy.
-              </h4>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={4}>
+      <div className={classes.section} id="our-goals">
+        <div className={classes.container}>
+          <h2 className={classes.title}>Cel projektu ?</h2>
+          <GridContainer justify="center" style={descriptionGridItemStyle}>
+            <>
+              <GridItem xs={12} sm={12} md={6}>
+                <Card plain style={cardStyle}>
+                  <h4 className={classes.description} style={textStyle}>
+                    Głównym celem jest zbudowanie satelity i umieszczenie go na orbicie.
+                    Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy.
+                  </h4>
+                </Card>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={4}>
 
                 <div className="rocket" style={rocketDivStyle}>
                   <img src={rocket} style={rocketStyle} alt=""/>
 
                 </div>
-            </GridItem>
-          </>
-        </GridContainer>
+              </GridItem>
+            </>
+          </GridContainer>
 
 
+        </div>
       </div>
-    </div>
   );
 };
 export default GoalSection;
