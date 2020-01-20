@@ -27,6 +27,7 @@ const GoalSection = props => {
     textAlign: "justify",
 
   };
+
   const descriptionGridItemStyle = {
     height: "100%",
     display: "flex",
