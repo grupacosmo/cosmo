@@ -1,14 +1,14 @@
-
-import React, {useState} from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import pk from "assets/img/politechnika.jpg";
 import baltic from "assets/img/balticsatapps.png";
 import department from "assets/img/logoIT.png";
+import department2 from "assets/img/partners/katedra.png";
 import "assets/css/PartnerCarousel.css"
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import {makeStyles} from "@material-ui/core/styles";
-import RegularButton from "../../../components/CustomButtons/Button";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(styles);
 
@@ -20,17 +20,23 @@ const imgStyle = {
     maxHeight: "150px",
     maxWidth: "90%"
 };
+const imgStyle2 = {
+    height: "auto",
+    width: "auto",
+    background: "black",
+    padding: "10px",
+    maxHeight: "130px",
+    maxWidth: "90%"
+};
 
-const partnersListStyle = {
-    display: "flex",
+const gridStyle = {
     justifyContent: "center",
 
 };
-const partnersUlStyle = {
-    textAlign: "left",
-    listStyle: "circle"
-};
+const itDepartmentStyle = {
+    color: "rgb(122,164,64)",
 
+};
 const carouselStyle = {
     maxHeight: "150px",
     width: "auto",
@@ -38,81 +44,60 @@ const carouselStyle = {
 };
 
 
-const moreDivStyle = {
-    height: "200px",
-};
 
 const PartnersSection = () => {
     const classes = useStyles();
-    const [carouselVisibility, setCarouselVisibility] = useState(true);
-
-    const partners =
-        [{
-            id: 1,
-            name: "Politechnika Krakowska",
-            link: "https://pk.edu.pl"
-        },
-            {
-                id: 2,
-                name: "BalticSatApps",
-                link: "https://balticsatapps.pl/",
-
-            }
-            ,
-            {
-                id: 3,
-                name: "Wydział Informatyki i Telekomunikacji",
-                link: "https://it.pk.edu.pl/"
-
-            }];
 
 
-    const listPartners = partners.map((p) =>
-        <li key={p.id.toString()}>
-            <a href={p.link} target="_blank">
-                {p.name}
-            </a>
-
-        </li>
-    );
     return (
 
         <div className={classes.section} id="our-partners">
 
-            <h2 className={classes.title}>Nasi partnerzy </h2>
-            {carouselVisibility ? <div className={classes.container}>
-
-                    <Carousel style={carouselStyle} showArrows={false} interval={3000} infiniteLoop
-                              showThumbs={false}
-                              autoPlay showStatus={false} showIndicators={false}>
-                        <div className="Partner">
-                            <img style={imgStyle} src={pk} alt="politechnika krakowska"/>
+            <h2 className={classes.title}>Nasi partnerzy</h2>
 
 
-                        </div>
-                        <div className="Partner">
-                            <img style={imgStyle} src={baltic} alt="balticsatapps"/>
-                        </div>
-                        <div className="Partner">
-                            <img style={imgStyle} src={department} alt="department"/>
-                            <p style={{fontSize: "1.5rem", lineHeight: 1.1}}>Wydział Informatyki i Telekomunikacji</p>
-                        </div>
+            <Carousel style={carouselStyle}
+                      showArrows={false}
+                      interval={3000}
+                      infiniteLoop
+                      showThumbs={false}
+                      autoPlay
+                      showIndicators={false}>
 
-                    </Carousel>
-                </div> :
-                <div className="partnerDetails" style={moreDivStyle}>
-
-                    <div style={partnersListStyle} className="partnersList">
-                        <ul style={partnersUlStyle}>{listPartners}</ul>
+                <a href="https:\\www.pk.edu.pl" target="_blank" rel="noopener noreferrer">
+                    <div className="Partner">
+                        <img style={imgStyle} src={pk} alt="politechnika krakowska"/>
                     </div>
-                </div>
-            }
-            <RegularButton onClick={() => setCarouselVisibility(!carouselVisibility)}>
-                Szczegóły
-            </RegularButton>
+                </a>
+                <a href="https://balticsatapps.pl/" target="_blank" rel="noopener noreferrer">
+                    <div className="Partner">
+                        <img style={imgStyle} src={baltic} alt="balticsatapps"/>
+                    </div>
+                </a>
+                <a href="https://ii.pk.edu.pl" target="_blank" rel="noopener noreferrer">
+                    <div className="Partner">
+                        <img style={imgStyle2} src={department2} alt="itdepartment"/>
+                    </div>
+                </a>
+                <a href="https://it.pk.edu.pl" target="_blank" rel="noopener noreferrer">
+                    <div className="Partner">
+                        <Grid container  style={gridStyle}>
+                            <Grid xs={4} md={6}>
+                                <img style={imgStyle} src={department} alt="department"/>
+                            </Grid>
+                            <Grid xs={6} md={4}>
+                                <h2 style={itDepartmentStyle}>Wydział Informatyki i Telekomunikacji</h2>
+                            </Grid>
+                        </Grid>
+
+
+                    </div>
+                </a>
+
+            </Carousel>
         </div>
 
 
-);
+    );
 };
-            export default PartnersSection;
+export default PartnersSection;

@@ -47,7 +47,7 @@ const GoalSection = props => {
     margin:"auto"
   };
   const rocketStyle = {
-    maxWidth:"60%",
+    maxWidth:"50%",
     height: "auto",
     padding:10,
     margin:"auto",
