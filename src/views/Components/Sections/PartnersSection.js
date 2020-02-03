@@ -1,10 +1,11 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
-import pk from "assets/img/politechnika.jpg";
-import baltic from "assets/img/balticsatapps.png";
-import department from "assets/img/logoIT.png";
+import pk from "assets/img/partners/politechnika.jpg";
+import baltic from "assets/img/partners/balticsatapps.png";
+import department from "assets/img/partners/logoIT.png";
 import department2 from "assets/img/partners/katedra.png";
+import futureLab from "assets/img/partners/futurelab.png"
 import "assets/css/PartnerCarousel.css"
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import {makeStyles} from "@material-ui/core/styles";
@@ -31,6 +32,8 @@ const imgStyle2 = {
 
 const gridStyle = {
     justifyContent: "center",
+    alignItems: "center",
+    flexDirection:"column",
 
 };
 const itDepartmentStyle = {
@@ -59,10 +62,11 @@ const PartnersSection = () => {
             <Carousel style={carouselStyle}
                       showArrows={false}
                       interval={3000}
-                      infiniteLoop
+                      infiniteLoop={true}
                       showThumbs={false}
                       autoPlay
-                      showIndicators={false}>
+                      showIndicators={false}
+            >
 
                 <a href="https:\\www.pk.edu.pl" target="_blank" rel="noopener noreferrer">
                     <div className="Partner">
@@ -89,8 +93,11 @@ const PartnersSection = () => {
                                 <h2 style={itDepartmentStyle}>Wydział Informatyki i Telekomunikacji</h2>
                             </Grid>
                         </Grid>
-
-
+                    </div>
+                </a>
+                <a href="http://futurelab.pk.edu.pl/" target="_blank" rel="noopener noreferrer">
+                    <div className="Partner">
+                        <img style={imgStyle} src={futureLab} alt="futurelab"/>
                     </div>
                 </a>
 
