@@ -5,6 +5,7 @@
     animation-timing-function: linear;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    color: #3c4858;
 }
 
 @keyframes breathing {
