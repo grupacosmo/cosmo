@@ -17,6 +17,7 @@ import NavBarSection from "./Sections/NavBarSection";
 import GoalSection from "./Sections/GoalSection";
 import LoadingScreen from "./Sections/LoadingScreen";
 import PartnersSection from "./Sections/PartnersSection";
+import BlogSection from "./Sections/BlogSection";
 const useStyles = makeStyles(styles);
 
 export default function Components() {
@@ -43,6 +44,8 @@ export default function Components() {
         <OurTeamSection />
         <Divider variant="middle" />
         <GoalSection />
+        <Divider variant="middle" />
+        <BlogSection/>
         <Divider variant="middle" />
         <ContactSection />
         <Divider variant="middle" />
