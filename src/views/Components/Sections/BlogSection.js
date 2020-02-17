@@ -99,7 +99,7 @@ export default function BlogSection() {
             <Button
               justIcon
               color="primary"
-              href={"/blog/1"}
+              href={"/blog"}
               style={{fontSize: "20px", width: "200px"}}
             >
               Więcej postów
