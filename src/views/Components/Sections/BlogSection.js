@@ -82,6 +82,7 @@ export default function BlogSection() {
                         justIcon
                         color="transparent"
                         href={`/post/${post.id}`}
+                        style={{width: "150px"}}
                       >
                         Czytaj dalej
                       </Button>
@@ -94,14 +95,16 @@ export default function BlogSection() {
                 <Loading />
               </GridItem>
           }
-          <Button
-            justIcon
-            color="primary"
-            href={"/blog/1"}
-            style={{fontSize: "20px", width: "200px"}}
-          >
-            Więcej postów
-          </Button>
+          <GridItem>
+            <Button
+              justIcon
+              color="primary"
+              href={"/blog/1"}
+              style={{fontSize: "20px", width: "200px"}}
+            >
+              Więcej postów
+            </Button>
+          </GridItem>
         </GridContainer>
       </div>
     </div>

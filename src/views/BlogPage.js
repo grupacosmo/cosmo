@@ -91,6 +91,7 @@ export default function BlogPage() {
                         justIcon
                         color="transparent"
                         href={`/post/${post.id}`}
+                        style={{width: "150px"}}
                       >
                         Czytaj dalej
                       </Button>

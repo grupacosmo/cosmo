@@ -12,6 +12,7 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import {Public} from "@material-ui/icons";
+import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 
 const useStyles = makeStyles(styles);
 
@@ -37,7 +38,23 @@ export default function NavBarBlogLinks() {
           </Button>
         </Tooltip>
       </ListItem>
-
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-twitter"
+          title="Follow us on twitter"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            href={twitterUrl}
+            target="_blank"
+            color="transparent"
+            className={classes.navLink}
+          >
+            <i className={classes.socialIcons + " fab fa-twitter"} />
+          </Button>
+        </Tooltip>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
@@ -47,7 +64,7 @@ export default function NavBarBlogLinks() {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/pkcosmopk/"
+            href={facebookUrl}
             target="_blank"
             className={classes.navLink}
           >
@@ -64,7 +81,7 @@ export default function NavBarBlogLinks() {
         >
           <Button
             color="transparent"
-            href="#"
+            href={instagramUrl}
             target="_blank"
             className={classes.navLink}
           >
@@ -81,7 +98,7 @@ export default function NavBarBlogLinks() {
         >
           <Button
             color="transparent"
-            href="https://github.com/grupacosmo/cosmo"
+            href={githubUrl}
             target="_blank"
             className={classes.navLink}
           >
