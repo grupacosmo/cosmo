@@ -1,0 +1,16 @@
+body {
+    background-color: #aaaaaa;
+}
+
+.content {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.content * {
+    padding: 10px 0;
+}
+
+.content img {
+    max-width: 500px;
+}

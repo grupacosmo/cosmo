@@ -13,6 +13,7 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import BlogPage from "./views/BlogPage";
+import PostPage from "./views/PostPage";
 
 var hist = createBrowserHistory();
 
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="/nasz-team" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/blog/:id" component={BlogPage} />
+      <Route path="/post/:id" component={PostPage} />
       <Route path="/" component={Components} />
     </Switch>
   </Router>,
