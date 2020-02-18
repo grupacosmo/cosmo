@@ -12,7 +12,9 @@ import rocket from "assets/img/rocket.png";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+
+//stylistyka komponentów
+import styles from "assets/jss/material-kit-react/views/componentsSections/goalStyle";
 import Card from "components/Card/Card";
 
 const useStyles = makeStyles(styles);
@@ -21,15 +23,7 @@ const useStyles = makeStyles(styles);
 const GoalSection = props => {
   const classes = useStyles();
 
-  const goalSectionStyle= {
-    background:"#0b1011",
-  };
-  const cardStyle = {
 
-    justifyContent: "center",
-    textAlign: "justify",
-
-  };
 
   const descriptionGridItemStyle = {
     height: "100%",
@@ -38,36 +32,23 @@ const GoalSection = props => {
     flexDirection: "row"
   };
 
-  const textStyle = {
-    textAlign: "justify",
-    fontFamily: "'Titillium Web', sans-serif",
-    color:"white",
-    padding: 20,
-    fontSize: 26,
-    margin: "auto"
-  };
+
   const rocketDivStyle={
 
     margin:"auto"
   };
-  const rocketStyle = {
-    maxWidth:"50%",
-    height: "auto",
-    padding:10,
-    margin:"auto",
-    minWidth:"150px"
-  };
+
 
 
   return (
-      <div className={classes.section} id="our-goals" style={goalSectionStyle}>
+      <div className={classes.section} id="our-goals">
         <div className={classes.container}>
           <h2 className={classes.title} style={{color:"white"}}>Cel projektu ?</h2>
           <GridContainer justify="center" style={descriptionGridItemStyle}>
             <>
               <GridItem xs={12} sm={12} md={6}>
-                <Card plain style={cardStyle}>
-                  <h4 className={classes.description} style={textStyle}>
+                <Card className={classes.card} plain>
+                  <h4 className={classes.description}>
                     <ul>
                       <li> Zaprojektowanie i przetestowanie małego silnika jonowego
                        </li>
@@ -82,7 +63,7 @@ const GoalSection = props => {
               <GridItem xs={12} sm={12} md={4}>
 
                 <div className="rocket" style={rocketDivStyle}>
-                  <img src={rocket} style={rocketStyle} alt=""/>
+                  <img className={classes.rocket} src={rocket} alt=""/>
 
                 </div>
               </GridItem>

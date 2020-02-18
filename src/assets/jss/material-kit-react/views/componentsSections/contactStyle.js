@@ -4,11 +4,14 @@ import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 const teamStyle = {
     section: {
         background:"#000000",
+        color:"white",
         padding: "70px 0",
         textAlign: "center"
     },
     title: {
         ...title,
+        color:"white",
+        fontFamily:"'Titillium Web', sans-serif",
         marginBottom: "1rem",
         marginTop: "30px",
         minHeight: "32px",
@@ -21,15 +24,12 @@ const teamStyle = {
     },
     cardTitle,
     smallTitle: {
-        color: "#6c757d"
+        color: "red"
     },
     description: {
-        textAlign: "justify",
-        fontFamily: "'Titillium Web', sans-serif",
-        color:"white",
-        padding: 20,
-        fontSize: 26,
-        margin: "auto"
+        color: "white",
+        fontFamily:"'Titillium Web', sans-serif",
+
     },
     justifyCenter: {
         justifyContent: "center !important"
@@ -46,19 +46,14 @@ const teamStyle = {
         color: "#999"
     },
     margin5: {
-        margin: "5px"
-    },
-    rocket:{
-        maxWidth:"50%",
-        height: "auto",
-        padding:10,
-        margin:"auto",
-        minWidth:"150px"
+        margin: "5px",
     },
     card:{
-        justifyContent: "center",
-        textAlign: "justify",
+        padding:10,
 
+    },
+    cardMain:{
+        backgroundColor:"#454545",
     }
 };
 
