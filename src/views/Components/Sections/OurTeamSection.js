@@ -58,11 +58,11 @@ export default function OurTeamSection(props) {
                 lg={6}
                 style={descriptionGridItemStyle2}
               >
-                <h4 className={classes.description} style={descriptionStyle}>
+                <h5 className={classes.description} style={descriptionStyle}>
                   Grupą młodych ludzi, studentów Politechniki Krakowskiej.
                   W przerwach od nauki spotykamy się by realizować wspólny cel - wysłać własnego satelitę na orbitę.
                   Nasze zmagania można obserwować na naszych kanałach w mediach społecznościowych. Trzymajcie kciuki!
-                </h4>
+                </h5>
                 <Button color="primary" href="/nasz-team" target="_blank" round>
                   Więcej
                 </Button>

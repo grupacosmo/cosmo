@@ -48,7 +48,7 @@ const GoalSection = props => {
             <>
               <GridItem xs={12} sm={12} md={6}>
                 <Card className={classes.card} plain>
-                  <h4 className={classes.description}>
+                  <h5 className={classes.description}>
                     <ul>
                       <li> Zaprojektowanie i przetestowanie małego silnika jonowego
                        </li>
@@ -57,7 +57,7 @@ const GoalSection = props => {
                         Edukacja, wdrożenie uczestników projektu w branżę kosmiczną</li>
                     </ul>
 
-                  </h4>
+                  </h5>
                 </Card>
               </GridItem>
               <GridItem xs={12} sm={12} md={4}>
