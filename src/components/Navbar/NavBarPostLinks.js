@@ -7,64 +7,19 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
-// @material-ui/icons
-import {Email, People, Flag, Public} from "@material-ui/icons";
-
 // core components
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-import { Link } from "react-scroll";
+import {Public} from "@material-ui/icons";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 
 const useStyles = makeStyles(styles);
 
-export default function NavBarLinks() {
+export default function NavBarBlogLinks() {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <Link
-          activeClass="active"
-          to="who-we-are"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={classes.navLink}
-          style={{ cursor: "pointer" }}
-        >
-          <People className={classes.icons} /> Kim jesteśmy?
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link
-          activeClass="active"
-          to="contact-form"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          className={classes.navLink}
-          style={{ cursor: "pointer" }}
-        >
-          <Email className={classes.icons} /> Kontakt
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link
-          activeClass="active"
-          to="our-goals"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={classes.navLink}
-          style={{ cursor: "pointer" }}
-        >
-          <Flag className={classes.icons} /> Nasz cel
-        </Link>
-      </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
@@ -77,6 +32,7 @@ export default function NavBarLinks() {
             href="/blog"
             target="_self"
             className={classes.navLink}
+            style={{marginTop: "1px"}}
           >
             <Public className={classes.icons} /> Aktualności
           </Button>
