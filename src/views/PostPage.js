@@ -12,29 +12,58 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import "assets/css/PostPage.css";
 import Loading from "../components/Loading/Loading";
 import PostNavBarSection from "./Components/Sections/PostNavBarSection";
+import {backendUrl} from "../components/properties";
+import JsxParser from "react-jsx-parser";
 
 const useStyles = makeStyles(styles);
 
-export default function PostPage() {
+let fetchedPost = {};
+let authorName = "";
 
+export default function PostPage() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const id = parseInt(urlParams.get("id"));
-  console.log(id);
 
   if (id === null || isNaN(id)) {
-    window.open("/", "_self")
+    window.open("/", "_self");
   }
 
   const [postLoaded, setPostLoaded] = useState(false);
-  setTimeout(() => setPostLoaded(true), 2000);
+  const [authorLoaded, setAuthorLoaded] = useState(false);
 
-  let fetchedPost = {
-      id: 1,
-      title: "Title 1",
-    thumbnail: require("assets/img/bg7.jpg"),
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec odio dapibus, venenatis nisl in, blandit lectus. Integer ac nulla lacinia, aliquet arcu blandit, tempus ligula. Morbi viverra erat laoreet, viverra libero at, dapibus tellus. Quisque euismod laoreet quam, eu sollicitudin tellus pharetra ac. Nulla eleifend ante at commodo sagittis. Mauris hendrerit rutrum scelerisque. Etiam at efficitur lectus, malesuada ullamcorper nulla. Mauris eu viverra nisl. Donec condimentum augue eu tristique imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec odio dapibus, venenatis nisl in, blandit lectus. Integer ac nulla lacinia, aliquet arcu blandit, tempus ligula. Morbi viverra erat laoreet, viverra libero at, dapibus tellus. Quisque euismod laoreet quam, eu sollicitudin tellus pharetra ac. Nulla eleifend ante at commodo sagittis. Mauris hendrerit rutrum scelerisque. Etiam at efficitur lectus, malesuada ullamcorper nulla. Mauris eu viverra nisl. Donec condimentum augue eu tristique imperdiet."
-  };
+  fetch(backendUrl + "/posts/" + id)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      fetchedPost = json;
+
+      const authorsLink = json._links.author[0].href;
+      fetch(authorsLink)
+        .then((r) => {
+          return r.json();
+        })
+        .then((data) => {
+          authorName = data.name;
+          setAuthorLoaded(true);
+        })
+        .catch((error) => {
+          setAuthorLoaded(false);
+          console.error('Error:', error);
+        });
+
+      setPostLoaded(true);
+
+      document.querySelectorAll(".content img").forEach((element) => {
+        element.removeAttribute("height");
+        element.removeAttribute("width");
+      });
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      window.open("/", "_self");
+    });
 
   const classes = useStyles();
   return (
@@ -50,37 +79,31 @@ export default function PostPage() {
                     xs={12} sm={12} md={6}
                     className={classes.itemGrid}
                     style={{margin: "auto"}}>
-                    <img src={fetchedPost.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
+                    <img src={fetchedPost.acf.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
                   </GridItem>
                 </div>
-                <h2 className={classes.cardTitle} style={{textAlign: "center"}}>
-                  {fetchedPost.title}
-                </h2>
+                <h1 className={classes.cardTitle} style={{textAlign: "center"}}>
+                  {fetchedPost.title.rendered}
+                </h1>
                 <p className={classes.description} style={{fontStyle: "italic", color: "#767676", paddingLeft: "60px"}}>
-                  12.01.2020
+                  {`${fetchedPost.date.slice(8,10)}.${fetchedPost.date.slice(5,7)}.${fetchedPost.date.slice(0,4)}`}
                 </p>
 
-                <div className="content">
-                  {/*CONTENT*/}
-                  <p>
-                    {fetchedPost.content}
-                  </p>
-                  <img src={require("assets/img/bg4.jpg")} alt="example" />
-                  <p>
-                    {fetchedPost.content}
-                    <a href={"/"}>Some link</a>
-                  </p>
-                  <h3>
-                    Some header
-                  </h3>
-                  <p>
-                    {fetchedPost.content}
-                  </p>
-                  {/*END OF CONTENT*/}
-                </div>
-                <p className={classes.description} style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
-                  Autor: Jan Kowalski
-                </p>
+                <GridItem xs={12} sm={12} md={8} style={{margin: "auto"}}>
+                  <div className="content">
+                    <JsxParser
+                      jsx={fetchedPost.content.rendered}
+                    />
+                  </div>
+                </GridItem>
+                {
+                  authorLoaded ?
+                    <p className={classes.description}
+                       style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
+                      Autor: {authorName}
+                    </p>
+                  : <></>
+                }
               </GridItem>
             :
             <GridItem style={{padding: "150px 0", textAlign: "center"}}>
