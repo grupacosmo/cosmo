@@ -7,81 +7,18 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
-// @material-ui/icons
-import {Email, People, Flag, Public} from "@material-ui/icons";
-
 // core components
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-import { Link } from "react-scroll";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 
 const useStyles = makeStyles(styles);
 
-export default function NavBarLinks() {
+export default function NavBarBlogLinks() {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <Link
-          activeClass="active"
-          to="who-we-are"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={classes.navLink}
-          style={{ cursor: "pointer" }}
-        >
-          <People className={classes.icons} /> Kim jesteśmy?
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link
-          activeClass="active"
-          to="contact-form"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          className={classes.navLink}
-          style={{ cursor: "pointer" }}
-        >
-          <Email className={classes.icons} /> Kontakt
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link
-          activeClass="active"
-          to="our-goals"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={classes.navLink}
-          style={{ cursor: "pointer" }}
-        >
-          <Flag className={classes.icons} /> Nasz cel
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Aktualności"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="/blog"
-            target="_self"
-            className={classes.navLink}
-          >
-            <Public className={classes.icons} /> Aktualności
-          </Button>
-        </Tooltip>
-      </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"

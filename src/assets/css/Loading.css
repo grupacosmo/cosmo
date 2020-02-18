@@ -1,0 +1,15 @@
+.loading {
+    font-style: italic;
+    font-size: 16px;
+    animation-name: breathing;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: #3c4858;
+}
+
+@keyframes breathing {
+    0%   {opacity: 1}
+    50%  {opacity: 0.3}
+    100% {opacity: 1}
+}

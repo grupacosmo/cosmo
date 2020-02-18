@@ -2,6 +2,7 @@
   "name": "material-kit-react",
   "version": "1.8.0",
   "description": "Material Kit React. Coded by Creative Tim",
+  "homepage": "./",
   "private": true,
   "main": "dist/index.js",
   "dependencies": {
@@ -19,6 +20,7 @@
     "react-datetime": "2.16.3",
     "react-dom": "16.9.0",
     "react-hook-form": "^4.4.3",
+    "react-jsx-parser": "^1.21.0",
     "react-material-ui-carousel": "^1.0.0",
     "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "5.0.1",
