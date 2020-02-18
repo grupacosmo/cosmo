@@ -12,7 +12,7 @@ import "assets/css/Form.css"
 const useStyles = makeStyles(styles);
 const CssTextField = withStyles({
     root: {
-        margin:"10px !important",
+        padding:"10px !important",
         '& label' : {
             color:"white",
         },

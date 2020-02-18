@@ -12,7 +12,7 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+import styles from "../../../assets/jss/material-kit-react/views/componentsSections/blogStyle";
 import Loading from "../../../components/Loading/Loading";
 import {backendUrl} from "../../../components/properties";
 
@@ -53,10 +53,11 @@ export default function BlogSection() {
                       <div
                         style={{
                           width: "100%",
-                          height: "250px",
+                          height: "400px",
                           backgroundImage: `url(${post.acf.thumbnail})`,
                           backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
+                          // backgroundSize: "cover",
+                          backgroundSize: "contain",
                           backgroundPosition: "center"
                         }}
                         className={classes.imgRaised}
