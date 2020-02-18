@@ -12,7 +12,9 @@ import rocket from "assets/img/rocket.png";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+
+//stylistyka komponentów
+import styles from "assets/jss/material-kit-react/views/componentsSections/goalStyle";
 import Card from "components/Card/Card";
 
 const useStyles = makeStyles(styles);
@@ -21,12 +23,7 @@ const useStyles = makeStyles(styles);
 const GoalSection = props => {
   const classes = useStyles();
 
-  const cardStyle = {
 
-    justifyContent: "center",
-    textAlign: "justify",
-
-  };
 
   const descriptionGridItemStyle = {
     height: "100%",
@@ -35,44 +32,38 @@ const GoalSection = props => {
     flexDirection: "row"
   };
 
-  const textStyle = {
-    textAlign: "justify",
-    fontFamily: "Roboto Slab",
-    padding: 20,
-    fontSize: 17,
-    margin: "auto"
-  };
+
   const rocketDivStyle={
 
     margin:"auto"
   };
-  const rocketStyle = {
-    maxWidth:"50%",
-    height: "auto",
-    padding:10,
-    margin:"auto",
-    minWidth:"150px"
-  };
+
 
 
   return (
       <div className={classes.section} id="our-goals">
         <div className={classes.container}>
-          <h2 className={classes.title}>Cel projektu ?</h2>
+          <h2 className={classes.title} style={{color:"white"}}>Cel projektu ?</h2>
           <GridContainer justify="center" style={descriptionGridItemStyle}>
             <>
               <GridItem xs={12} sm={12} md={6}>
-                <Card plain style={cardStyle}>
-                  <h4 className={classes.description} style={textStyle}>
-                    Głównym celem jest zbudowanie satelity i umieszczenie go na orbicie.
-                    Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy.
+                <Card className={classes.card} plain>
+                  <h4 className={classes.description}>
+                    <ul>
+                      <li> Zaprojektowanie i przetestowanie małego silnika jonowego
+                       </li>
+                      <li> Stworzenie inteligentnego systemu przetwarzania obrazu na pokładzie satelity opartego na AI</li>
+                      <li>
+                        Edukacja, wdrożenie uczestników projektu w branżę kosmiczną</li>
+                    </ul>
+
                   </h4>
                 </Card>
               </GridItem>
               <GridItem xs={12} sm={12} md={4}>
 
                 <div className="rocket" style={rocketDivStyle}>
-                  <img src={rocket} style={rocketStyle} alt=""/>
+                  <img className={classes.rocket} src={rocket} alt=""/>
 
                 </div>
               </GridItem>

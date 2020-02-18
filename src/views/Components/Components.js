@@ -47,9 +47,9 @@ export default function Components() {
         <Divider variant="middle" />
         <BlogSection/>
         <Divider variant="middle" />
-        <ContactSection />
-        <Divider variant="middle" />
         <PartnersSection/>
+        <Divider variant="middle" />
+        <ContactSection />
       </div>
       <Footer />
     </div>
