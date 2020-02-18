@@ -43,7 +43,7 @@ const GoalSection = props => {
   return (
       <div className={classes.section} id="our-goals">
         <div className={classes.container}>
-          <h2 className={classes.title} style={{color:"white"}}>Cel projektu ?</h2>
+          <h2 className={classes.title} >Cel projektu ?</h2>
           <GridContainer justify="center" style={descriptionGridItemStyle}>
             <>
               <GridItem xs={12} sm={12} md={6}>

@@ -60,7 +60,7 @@ export default function BlogSection() {
                           backgroundSize: "contain",
                           backgroundPosition: "center"
                         }}
-                        className={classes.imgRaised}
+                        // className={classes.imgRaised}
                       />
                     </GridItem>
                     <h4 className={classes.cardTitle}>

@@ -3,7 +3,7 @@ import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 
 const teamStyle = {
     section: {
-        background:"#000000",
+        // background:"#000000",
         padding: "70px 0",
         textAlign: "center"
     },
@@ -25,8 +25,10 @@ const teamStyle = {
     },
     description: {
         textAlign: "justify",
-        fontFamily: "'Titillium Web', sans-serif",
-        color:"white",
+        // fontFamily: "'Titillium Web', sans-serif",
+        fontFamily:"Roboto Slab",
+        // color:"white",
+        color: "#999",
         padding: 20,
         fontSize: 26,
         margin: "auto"

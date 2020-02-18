@@ -14,14 +14,14 @@ const CssTextField = withStyles({
     root: {
         padding:"10px !important",
         '& label' : {
-            color:"white",
+            // color:"white",
         },
 
         '& textarea':{
-            color:"white"
+            // color:"white"
         },
         '& input':{
-            color:"white",
+            // color:"white",
         },
         "& label.Mui-focused": {
             color: "purple"
@@ -34,7 +34,7 @@ const CssTextField = withStyles({
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: 'white',
+                borderColor: 'black',
                 padding:10,
             },
             '&:hover fieldset': {
@@ -44,7 +44,7 @@ const CssTextField = withStyles({
                 borderColor: 'purple',
             },
             '& textarea':{
-                color:"white"
+                // color:"white"
             }
         },
 
@@ -55,7 +55,7 @@ const CssTextField = withStyles({
 
 
 const inputStyle = {
-    color:"white",
+    // color:"white",
     margin: 5,
 };
 
@@ -171,7 +171,7 @@ const OldForm = props => {
                     id="custom-css-outlined-input"
                     label="Imię"
                     value={name}
-                    variant="outlined"
+                    // variant="outlined"
 
                     onChange={handleNameChange}
                     fullWidth
@@ -190,7 +190,7 @@ const OldForm = props => {
                     required
                     label="Email"
                     value={email}
-                    variant="outlined"
+                    // variant="outlined"
 
                     onChange={handleEmailChange}
                     fullWidth
@@ -209,7 +209,7 @@ const OldForm = props => {
                     value={topic}
                     onChange={handleTopicChange}
                     fullWidth
-                    variant="outlined"
+                    // variant="outlined"
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end" style={inputStyle}>
@@ -226,7 +226,7 @@ const OldForm = props => {
                     value={message}
                     rows="2"
                     rowsMax="5"
-                    variant="outlined"
+                    // variant="outlined"
                     fullWidth
                     onChange={handleMessageChange}
                     InputProps={{

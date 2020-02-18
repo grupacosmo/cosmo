@@ -36,7 +36,6 @@ export default function OurTeamSection(props) {
   };
   const descriptionStyle = {
     textAlign: "justify",
-    fontFamily: "'Titillium Web', sans-serif",
     padding: 20,
     fontSize: "26px",
     // fontVariant: "petite-caps
@@ -47,7 +46,7 @@ export default function OurTeamSection(props) {
       <div className={classes.container}>
         <h2 className={classes.title}>Kim jesteśmy?</h2>
         <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={6} lg={6}>
+          <GridItem xs={12} sm={12} md={6} lg={7}>
             <GridContainer
               justify="center"
               style={descriptionGridContainerStyle}
@@ -59,11 +58,11 @@ export default function OurTeamSection(props) {
                 lg={6}
                 style={descriptionGridItemStyle2}
               >
-                <p className={classes.description} style={descriptionStyle}>
+                <h4 className={classes.description} style={descriptionStyle}>
                   Grupą młodych ludzi, studentów Politechniki Krakowskiej.
                   W przerwach od nauki spotykamy się by realizować wspólny cel - wysłać własnego satelitę na orbitę.
                   Nasze zmagania można obserwować na naszych kanałach w mediach społecznościowych. Trzymajcie kciuki!
-                </p>
+                </h4>
                 <Button color="primary" href="/nasz-team" target="_blank" round>
                   Więcej
                 </Button>
@@ -71,7 +70,7 @@ export default function OurTeamSection(props) {
             </GridContainer>
           </GridItem>
 
-          <GridItem xs={12} sm={12} md={4} lg={5}>
+          <GridItem xs={12} sm={12} md={4} lg={4}>
                 <img
                   src={photo}
                   alt="COSMO"

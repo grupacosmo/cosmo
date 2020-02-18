@@ -3,15 +3,16 @@ import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 
 const teamStyle = {
     section: {
-        background:"#000000",
-        color:"white",
-        padding: "70px 0",
+        // background:"#000000",
+        // color:"white",
+        padding: "70px 0"   ,
         textAlign: "center"
     },
     title: {
         ...title,
-        color:"white",
-        fontFamily:"'Titillium Web', sans-serif",
+        // color:"white",
+        // fontFamily:"'Titillium Web', sans-serif",
+        fontFamily:"Roboto Slab",
         marginBottom: "1rem",
         marginTop: "30px",
         minHeight: "32px",
@@ -27,8 +28,11 @@ const teamStyle = {
         color: "red"
     },
     description: {
-        color: "white",
-        fontFamily:"'Titillium Web', sans-serif",
+        color: "#999",
+        // color: "white",
+        // fontFamily:"'Titillium Web', sans-serif",
+        fontFamily:"Roboto Slab",
+
 
     },
     justifyCenter: {

@@ -23,7 +23,8 @@ const teamStyle = {
     color: "#6c757d"
   },
   description: {
-    color: "#999"
+    color: "#999",
+    fontFamily:"Roboto Slab",
   },
   justifyCenter: {
     justifyContent: "center !important"

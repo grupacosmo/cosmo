@@ -25,19 +25,19 @@ const ContactSection = props => {
     height: "100%"
   };
   const h2Style = {
-    fontFamily:"'Titillium Web', sans-serif",
+    // fontFamily:"'Titillium Web', sans-serif",
   }
 
   const descriptionGridItemStyle = {
     height: "100%",
     display: "flex",
-    alignItems: "baseline",
+    alignItems: "center",
     flexDirection: "column"
   };
 
   const descriptionStyle = {
     textAlign: "justify",
-    fontFamily: "'Titillium Web', sans-serif",
+    // fontFamily: "'Titillium Web', sans-serif",
     padding: 20
   };
 
@@ -45,8 +45,12 @@ const ContactSection = props => {
     <div className={classes.section} id="contact-form">
       <div className={classes.container}>
         <h2 className={classes.title}>Kontakt</h2>
+
         <GridContainer justify="center">
+
+
           <GridItem xs={12} sm={12} md={6}>
+            <Card>
               <GridContainer
                 justify="center"
                 style={descriptionGridContainerStyle}
@@ -57,6 +61,7 @@ const ContactSection = props => {
                   md={9}
                   style={descriptionGridItemStyle}
                 >
+
                   <div className={classes.title}>
                     <h2 style={h2Style}>Lokalizacja</h2>
                   </div>
@@ -75,9 +80,12 @@ const ContactSection = props => {
                   <h4 className={classes.description} style={descriptionStyle}>
                     kolocosmopk@gmail.com
                   </h4>
+
                 </GridItem>{" "}
               </GridContainer>
+            </Card>
           </GridItem>
+
 
           <GridItem xs={12} sm={12} md={4}>
             <div className={classes.title}>

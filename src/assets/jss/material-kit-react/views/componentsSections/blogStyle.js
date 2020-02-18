@@ -10,7 +10,8 @@ const teamStyle = {
     title: {
         ...title,
         color:"#3C4858",
-        fontFamily:"'Titillium Web', sans-serif",
+        // fontFamily:"'Titillium Web', sans-serif",
+        fontFamily:"Roboto Slab",
         marginBottom: "1rem",
         marginTop: "30px",
         minHeight: "32px",
@@ -29,8 +30,9 @@ const teamStyle = {
     description: {
         color:"black",
         fontSize:18,
-        fontFamily:"'Titillium Web', sans-serif",
+        // fontFamily:"'Titillium Web', sans-serif",
 
+        fontFamily:"Roboto Slab",
     },
     justifyCenter: {
         justifyContent: "center !important"
