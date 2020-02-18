@@ -23,9 +23,13 @@ ReactDOM.render(
       {/*<Route path="/landing-page" component={LandingPage} />
       <Route path="/nasz-team" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />*/}
+
       <Route path="/blog" component={BlogPage} />
-      <Route path="/post/:id" component={PostPage} />
+      <Route path="/post" component={PostPage} />
+
       <Route path="/" component={Components} />
+      {/*<Route path="/" component={BlogPage} />*/}
+      {/*<Route path="/" component={PostPage} />*/}
     </Switch>
   </Router>,
   document.getElementById("root")

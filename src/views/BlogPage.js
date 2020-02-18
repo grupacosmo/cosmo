@@ -55,8 +55,7 @@ export default function BlogPage() {
       <Parallax filter image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>Blog</h1>
-            <p style={{textAlign: "center", width: "100%", fontStyle: "italic"}}>Aktualności i osiągnięcia</p>
+            <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>Aktualności</h1>
           </GridContainer>
         </div>
       </Parallax>
@@ -90,7 +89,7 @@ export default function BlogPage() {
                       <Button
                         justIcon
                         color="transparent"
-                        href={`/post/${post.id}`}
+                        href={`/post?id=${post.id}`}
                         style={{width: "150px"}}
                       >
                         Czytaj dalej

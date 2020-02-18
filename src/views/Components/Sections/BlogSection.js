@@ -46,7 +46,7 @@ export default function BlogSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Blog</h2>
+      <h2 className={classes.title}>Aktualności</h2>
       <div>
         <GridContainer justify="center">
           {
@@ -81,7 +81,7 @@ export default function BlogSection() {
                       <Button
                         justIcon
                         color="transparent"
-                        href={`/post/${post.id}`}
+                        href={`/post?id=${post.id}`}
                         style={{width: "150px"}}
                       >
                         Czytaj dalej

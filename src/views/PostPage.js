@@ -17,6 +17,15 @@ const useStyles = makeStyles(styles);
 
 export default function PostPage() {
 
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const id = parseInt(urlParams.get("id"));
+  console.log(id);
+
+  if (id === null || isNaN(id)) {
+    window.open("/", "_self")
+  }
+
   const [postLoaded, setPostLoaded] = useState(false);
   setTimeout(() => setPostLoaded(true), 2000);
 
@@ -44,17 +53,12 @@ export default function PostPage() {
                     <img src={fetchedPost.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
                   </GridItem>
                 </div>
-                <img
-                  src={require("assets/img/faces/christian.jpg")}
-                  alt="face"
-                  style={{width: "100px", borderRadius: "30px", marginTop: "20px"}}/>
-                <p className={classes.description} style={{fontStyle: "italic", color: "#767676"}}>
-                  Autor: Jan Kowalski<br />
-                  12.01.2020
-                </p>
                 <h2 className={classes.cardTitle} style={{textAlign: "center"}}>
                   {fetchedPost.title}
                 </h2>
+                <p className={classes.description} style={{fontStyle: "italic", color: "#767676", paddingLeft: "60px"}}>
+                  12.01.2020
+                </p>
 
                 <div className="content">
                   {/*CONTENT*/}
@@ -74,7 +78,9 @@ export default function PostPage() {
                   </p>
                   {/*END OF CONTENT*/}
                 </div>
-
+                <p className={classes.description} style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
+                  Autor: Jan Kowalski
+                </p>
               </GridItem>
             :
             <GridItem style={{padding: "150px 0", textAlign: "center"}}>

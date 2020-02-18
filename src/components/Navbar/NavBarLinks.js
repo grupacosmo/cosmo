@@ -68,7 +68,7 @@ export default function NavBarLinks() {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="Blog"
+          title="Aktualności"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -78,7 +78,7 @@ export default function NavBarLinks() {
             target="_self"
             className={classes.navLink}
           >
-            <Public className={classes.icons} /> Blog
+            <Public className={classes.icons} /> Aktualności
           </Button>
         </Tooltip>
       </ListItem>

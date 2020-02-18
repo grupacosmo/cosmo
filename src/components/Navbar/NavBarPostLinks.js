@@ -23,7 +23,7 @@ export default function NavBarBlogLinks() {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="blog"
+          title="Aktualności"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -34,7 +34,7 @@ export default function NavBarBlogLinks() {
             className={classes.navLink}
             style={{marginTop: "1px"}}
           >
-            <Public className={classes.icons} /> Blog
+            <Public className={classes.icons} /> Aktualności
           </Button>
         </Tooltip>
       </ListItem>
