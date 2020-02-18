@@ -44,9 +44,9 @@ export default function Components() {
         <Divider variant="middle" />
         <GoalSection />
         <Divider variant="middle" />
-        <ContactSection />
-        <Divider variant="middle" />
         <PartnersSection/>
+        <Divider variant="middle" />
+        <ContactSection />
       </div>
       <Footer />
     </div>

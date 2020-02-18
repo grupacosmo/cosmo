@@ -63,7 +63,7 @@ export default function Footer(props) {
           </div>
           <div className={classes.right}>
             &copy; {1900 + new Date().getYear()} , made with{" "}
-            <Favorite className={classes.icon} /> by{" "}
+            <Favorite className={classes.icon} /> by{"Jakub Chwastek, Patryk Borchowiec, Paweł Kisielewicz "}
             <a href="#" className={aClasses} target="_blank">
                
             </a>{" "}

@@ -6,7 +6,7 @@ import { withStyles, makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Button from "components/CustomButtons/Button.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/contactStyle.js";
 import { Link } from "react-scroll";
 
 const useStyles = makeStyles(styles);
@@ -21,6 +21,10 @@ const CssTextField = withStyles({
     }
 })(TextField);
 
+
+const inputStyle = {
+    color:"white",
+};
 
 
 
@@ -151,11 +155,12 @@ const OldForm = props => {
                     required
                     label="Your email"
                     value={email}
+
                     onChange={handleEmailChange}
                     fullWidth
                     InputProps={{
                         endAdornment: (
-                            <InputAdornment position="end">
+                            <InputAdornment position="end"   style={inputStyle}>
                                 <i className="fas fa-at" />
                             </InputAdornment>
                         )

@@ -21,6 +21,9 @@ const useStyles = makeStyles(styles);
 const GoalSection = props => {
   const classes = useStyles();
 
+  const goalSectionStyle= {
+    background:"#0b1011",
+  };
   const cardStyle = {
 
     justifyContent: "center",
@@ -37,9 +40,10 @@ const GoalSection = props => {
 
   const textStyle = {
     textAlign: "justify",
-    fontFamily: "Roboto Slab",
+    fontFamily: "'Titillium Web', sans-serif",
+    color:"white",
     padding: 20,
-    fontSize: 17,
+    fontSize: 26,
     margin: "auto"
   };
   const rocketDivStyle={
@@ -56,16 +60,22 @@ const GoalSection = props => {
 
 
   return (
-      <div className={classes.section} id="our-goals">
+      <div className={classes.section} id="our-goals" style={goalSectionStyle}>
         <div className={classes.container}>
-          <h2 className={classes.title}>Cel projektu ?</h2>
+          <h2 className={classes.title} style={{color:"white"}}>Cel projektu ?</h2>
           <GridContainer justify="center" style={descriptionGridItemStyle}>
             <>
               <GridItem xs={12} sm={12} md={6}>
                 <Card plain style={cardStyle}>
                   <h4 className={classes.description} style={textStyle}>
-                    Głównym celem jest zbudowanie satelity i umieszczenie go na orbicie.
-                    Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy.
+                    <ul>
+                      <li> Zaprojektowanie i przetestowanie małego silnika jonowego
+                       </li>
+                      <li> Stworzenie inteligentnego systemu przetwarzania obrazu na pokładzie satelity opartego na AI</li>
+                      <li>
+                        Edukacja, wdrożenie uczestników projektu w branżę kosmiczną</li>
+                    </ul>
+
                   </h4>
                 </Card>
               </GridItem>

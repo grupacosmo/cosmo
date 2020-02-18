@@ -6,9 +6,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/contactStyle.js";
 import Card from "components/Card/Card";
 import OldForm from "components/Form/OldForm.js";
+import {Divider} from "@material-ui/core";
 
 //Styling
 
@@ -19,6 +20,7 @@ const ContactSection = props => {
   const classes = useStyles();
 
   //this style and style below is using for centering description paragraph vertically
+
   const descriptionGridContainerStyle = {
     height: "100%"
   };
@@ -42,7 +44,6 @@ const ContactSection = props => {
         <h2 className={classes.title}>Kontakt</h2>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
-            <Card>
               <GridContainer
                 justify="center"
                 style={descriptionGridContainerStyle}
@@ -56,11 +57,15 @@ const ContactSection = props => {
                   <div className={classes.title}>
                     <h4>Lokalizacja</h4>
                   </div>
+                  <Divider/>
                   <p className={classes.description} style={descriptionStyle}>
                     Warszawska 24
-                    <br />
+                   </p>
+                  <p className={classes.description} style={descriptionStyle}>
                     Wydział Informatyki i telekomunikacji
+                  </p>
                     <br />
+                  <p className={classes.description} style={descriptionStyle}>
                     Katedra Informatyki
                   </p>
 
@@ -73,15 +78,13 @@ const ContactSection = props => {
                   </p>
                 </GridItem>{" "}
               </GridContainer>
-            </Card>
           </GridItem>
 
           <GridItem xs={12} sm={12} md={4}>
             <div className={classes.title}>
               <h3>Wyślij nam wiadomość</h3>
             </div>
-            <Card plain style={{ padding: 10 }}>
-              {/*<OldForm/>*/}
+            <Card className={classes.card}       >
               <OldForm />
             </Card>
           </GridItem>
