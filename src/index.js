@@ -17,6 +17,10 @@ import PostPage from "./views/PostPage";
 
 var hist = createBrowserHistory();
 
+if (!sessionStorage.getItem("lang")) {
+  sessionStorage.setItem("lang", "pl");
+}
+
 ReactDOM.render(
   <Router history={hist}>
     <Switch>

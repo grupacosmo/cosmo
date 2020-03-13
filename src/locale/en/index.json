@@ -1,0 +1,34 @@
+{
+  "homeSection" : {
+    "title" : "Project COSMO",
+    "description" : "Science Club of Cracow University of Technology",
+    "whoWeAreButton" : "Who we are?",
+    "contactButton" : "Contact",
+    "ourGoalButton" : "Our goal",
+    "switchLanguageButton": "Zmień na Polski"
+  },
+  "whoWeAreSection" : {
+    "title" : "Who we are?",
+    "description" : "We are the group of Polish students from the Cracow University of Technology. Besides studying, we meet and work towards implementation of our joint project - launching a smart nanosatellite into orbit. ",
+    "moreButton" : "Read more"
+  },
+  "ourGoalSection" : {
+    "title" : "Our goals",
+    "description" : "The main goal is to build a satellite and launch it into orbit. Nevertheless, it is important for us that the sent satellite realize useful goals that we are constantly working on."
+  },
+  "newsSection" : {
+    "title" : "News",
+    "readMoreButton" : "Read more",
+    "moreButton" : "More posts"
+  },
+  "contactSection" : {
+    "title" : "Contact",
+    "localizationTitle" : "Localization",
+    "emailTitle" : "Email",
+    "sendUsMessage" : "Send us an email",
+    "sendButton" : "Send"
+  },
+  "partnersSection" : {
+    "title" : "Our partners"
+  }
+}

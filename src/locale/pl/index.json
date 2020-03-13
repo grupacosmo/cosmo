@@ -1,0 +1,34 @@
+{
+  "homeSection" : {
+    "title" : "Projekt COSMO",
+    "description" : "Studenckie koło naukowe Politechniki Krakowskiej",
+    "whoWeAreButton" : "Kim jesteśmy?",
+    "contactButton" : "Kontakt",
+    "ourGoalButton" : "Nasz Cel",
+    "switchLanguageButton": "Switch to English"
+  },
+  "whoWeAreSection" : {
+    "title" : "Kim jesteśmy?",
+    "description" : "Grupą młodych ludzi, studentów Politechniki Krakowskiej. W przerwach od nauki spotykamy się by realizować wspólny cel - wysłać własnego satelitę na orbitę. Nasze zmagania można obserwować na naszych kanałach w mediach społecznościowych. Trzymajcie kciuki!",
+    "moreButton" : "Więcej"
+  },
+  "ourGoalSection" : {
+    "title" : "Cel projektu?",
+    "description" : "Głównym celem jest zbudowanie satelity i umieszczenie go na orbicie. Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy."
+  },
+  "newsSection" : {
+    "title" : "Aktualności",
+    "readMoreButton" : "Czytaj więcej",
+    "moreButton" : "Więcej postów"
+  },
+  "contactSection" : {
+    "title" : "Kontakt",
+    "localizationTitle" : "Lokalizacja",
+    "emailTitle" : "Adres Email",
+    "sendUsMessage" : "Wyślij nam wiadomość",
+    "sendButton" : "Wyślij"
+  },
+  "partnersSection" : {
+    "title" : "Nasi partnerzy"
+  }
+}
