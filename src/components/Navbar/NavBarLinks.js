@@ -16,10 +16,13 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import { Link } from "react-scroll";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
+import getLocale from "../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
 export default function NavBarLinks() {
+  const locale = getLocale("index").navbar;
+
   const classes = useStyles();
   return (
     <List className={classes.list}>
@@ -34,7 +37,7 @@ export default function NavBarLinks() {
           className={classes.navLink}
           style={{ cursor: "pointer" }}
         >
-          <People className={classes.icons} /> Kim jesteśmy?
+          <People className={classes.icons} /> {locale.whoWeAre}
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -48,7 +51,7 @@ export default function NavBarLinks() {
           className={classes.navLink}
           style={{ cursor: "pointer" }}
         >
-          <Email className={classes.icons} /> Kontakt
+          <Email className={classes.icons} /> {locale.contact}
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -62,13 +65,13 @@ export default function NavBarLinks() {
           className={classes.navLink}
           style={{ cursor: "pointer" }}
         >
-          <Flag className={classes.icons} /> Nasz cel
+          <Flag className={classes.icons} /> {locale.ourGoal}
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="Aktualności"
+          title={locale.news}
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -78,7 +81,7 @@ export default function NavBarLinks() {
             target="_self"
             className={classes.navLink}
           >
-            <Public className={classes.icons} /> Aktualności
+            <Public className={classes.icons} /> {locale.news}
           </Button>
         </Tooltip>
       </ListItem>

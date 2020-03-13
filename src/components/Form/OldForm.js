@@ -8,6 +8,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import { Link } from "react-scroll";
+import getLocale from "../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 const CssTextField = withStyles({
@@ -26,6 +27,8 @@ const CssTextField = withStyles({
 
 // Contact Section Hook
 const OldForm = props => {
+    const locale = getLocale("index").contactSection;
+
     const classes = useStyles();
 
     //State
@@ -205,7 +208,7 @@ const OldForm = props => {
                         round
                         onClick={handleSubmit}
                         disabled={!formValid}>
-                        Wyślij
+                      {locale.sendButton}
                     </Button>
                 </Link>
                 </form>

@@ -18,7 +18,7 @@
   },
   "newsSection" : {
     "title" : "Aktualności",
-    "readMoreButton" : "Czytaj więcej",
+    "readMoreButton" : "Czytaj dalej",
     "moreButton" : "Więcej postów"
   },
   "contactSection" : {
@@ -30,5 +30,11 @@
   },
   "partnersSection" : {
     "title" : "Nasi partnerzy"
+  },
+  "navbar" : {
+    "whoWeAre" : "Kim jesteśmy?",
+    "contact" : "Kontakt",
+    "ourGoal" : "Nasz cel",
+    "news" : "Aktualności"
   }
 }

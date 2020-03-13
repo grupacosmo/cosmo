@@ -15,6 +15,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Loading from "../../../components/Loading/Loading";
 import {backendUrl} from "../../../components/properties";
+import getLocale from "../../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
@@ -23,6 +24,8 @@ let fetchedPosts = [];
 export default function BlogSection() {
 
   const [postsLoaded, setPostsLoaded] = useState(false);
+
+  const locale = getLocale("index").newsSection;
 
   fetch(backendUrl + "/posts?per_page=3&page=1")
     .then((response) => {
@@ -39,7 +42,7 @@ export default function BlogSection() {
   const classes = useStyles();
   return (
     <div className={classes.section} style={{padding: "0"}}>
-      <h2 className={classes.title}>Aktualności</h2>
+      <h2 className={classes.title}>{locale.title}</h2>
       <div>
         <GridContainer justify="center">
           {
@@ -79,7 +82,7 @@ export default function BlogSection() {
                         href={`/post?id=${post.id}`}
                         style={{width: "150px"}}
                       >
-                        Czytaj dalej
+                        {locale.readMoreButton}
                       </Button>
                     </CardFooter>
                   </Card>
@@ -97,7 +100,7 @@ export default function BlogSection() {
               href={"/blog"}
               style={{fontSize: "20px", width: "200px"}}
             >
-              Więcej postów
+              {locale.moreButton}
             </Button>
           </GridItem>
         </GridContainer>

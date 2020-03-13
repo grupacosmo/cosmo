@@ -14,12 +14,15 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
+import getLocale from "../../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
 
 const GoalSection = props => {
   const classes = useStyles();
+
+  const locale = getLocale("index").ourGoalSection;
 
   const cardStyle = {
 
@@ -58,15 +61,12 @@ const GoalSection = props => {
   return (
       <div className={classes.section} id="our-goals">
         <div className={classes.container}>
-          <h2 className={classes.title}>Cel projektu ?</h2>
+          <h2 className={classes.title}>{locale.title}</h2>
           <GridContainer justify="center" style={descriptionGridItemStyle}>
             <>
               <GridItem xs={12} sm={12} md={6}>
                 <Card plain style={cardStyle}>
-                  <h4 className={classes.description} style={textStyle}>
-                    Głównym celem jest zbudowanie satelity i umieszczenie go na orbicie.
-                    Niemniej ważne jest jednak dla nas aby wysłany satelita relizował pożyteczne cele, nad którymi nieustannie pracujemy.
-                  </h4>
+                  <h4 className={classes.description} style={textStyle}>{locale.description}</h4>
                 </Card>
               </GridItem>
               <GridItem xs={12} sm={12} md={4}>

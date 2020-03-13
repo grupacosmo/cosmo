@@ -30,5 +30,11 @@
   },
   "partnersSection" : {
     "title" : "Our partners"
+  },
+  "navbar" : {
+    "whoWeAre" : "Who we are?",
+    "contact" : "Contact",
+    "ourGoal" : "Our Goal",
+    "news" : "News"
   }
 }
