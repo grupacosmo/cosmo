@@ -11,7 +11,8 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import Button from "components/CustomButtons/Button.js";
 import { Link } from "react-scroll";
-import getLocale, {getLanguage} from "../../../util/internationalization";
+import getLocale from "../../../util/internationalization";
+import SwitchLanguageButton from "../../../components/SwitchLanguageButton";
 
 const useStyles = makeStyles(styles);
 
@@ -22,7 +23,6 @@ export default function HomeSection(props) {
   const img = new Image();
   img.src = image;
 
-  const language = getLanguage();
   const locale = getLocale("index").homeSection;
 
   // this piece of code, detects if the background image is loaded
@@ -34,20 +34,7 @@ export default function HomeSection(props) {
       <div className={classes.container}>
         <GridContainer>
           <GridItem style={{textAlign: "right"}}>
-            <Button
-              type="button"
-              round
-              style={{
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                border: "2px solid white",
-                margin: "0 30px 0 0",
-              }}
-              onClick={() => {
-                let isPolish = !language || language === "pl";
-                isPolish ? sessionStorage.setItem("lang", "en") : sessionStorage.setItem("lang", "pl");
-                window.open("/", "_self");
-              }}
-            >{locale.switchLanguageButton}</Button>
+            <SwitchLanguageButton href="/"/>
           </GridItem>
           <GridItem>
             <div className={classes.brand}>

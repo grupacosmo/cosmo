@@ -4,8 +4,7 @@
     "description" : "Studenckie koło naukowe Politechniki Krakowskiej",
     "whoWeAreButton" : "Kim jesteśmy?",
     "contactButton" : "Kontakt",
-    "ourGoalButton" : "Nasz Cel",
-    "switchLanguageButton": "Switch to English"
+    "ourGoalButton" : "Nasz Cel"
   },
   "whoWeAreSection" : {
     "title" : "Kim jesteśmy?",
