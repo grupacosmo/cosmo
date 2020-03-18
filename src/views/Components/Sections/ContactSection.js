@@ -6,10 +6,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import styles from "assets/jss/material-kit-react/views/componentsSections/contactStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
 import OldForm from "components/Form/OldForm.js";
-import {Divider} from "@material-ui/core";
+import getLocale from "../../../util/internationalization";
 
 //Styling
 
@@ -19,34 +19,33 @@ const useStyles = makeStyles(styles);
 const ContactSection = props => {
   const classes = useStyles();
 
-  //this style and style below is using for centering description paragraph vertically
+  const locale = getLocale("index").contactSection;
 
+  //this style and style below is using for centering description paragraph vertically
   const descriptionGridContainerStyle = {
     height: "100%"
   };
-  const h2Style = {
-    fontFamily:"'Titillium Web', sans-serif",
-  }
 
   const descriptionGridItemStyle = {
     height: "100%",
     display: "flex",
-    alignItems: "baseline",
+    alignItems: "center",
     flexDirection: "column"
   };
 
   const descriptionStyle = {
     textAlign: "justify",
-    fontFamily: "'Titillium Web', sans-serif",
+    fontFamily: "Roboto Slab",
     padding: 20
   };
 
   return (
     <div className={classes.section} id="contact-form">
       <div className={classes.container}>
-        <h2 className={classes.title}>Kontakt</h2>
+        <h2 className={classes.title}>{locale.title}</h2>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
+            <Card>
               <GridContainer
                 justify="center"
                 style={descriptionGridContainerStyle}
@@ -58,32 +57,36 @@ const ContactSection = props => {
                   style={descriptionGridItemStyle}
                 >
                   <div className={classes.title}>
-                    <h2 style={h2Style}>Lokalizacja</h2>
+                    <h4>{locale.localizationTitle}</h4>
                   </div>
-
-                  <h4 className={classes.description} style={descriptionStyle}>
+                  <p className={classes.description} style={descriptionStyle}>
                     Warszawska 24
-                    <br/>
+                    <br />
                     Wydział Informatyki i telekomunikacji
                     <br />
                     Katedra Informatyki
-                  </h4>
+                  </p>
 
                   <div className={classes.title}>
-                    <h2 style={h2Style}>Adres Email</h2>
+                    <h4>{locale.emailTitle}</h4>
                   </div>
-                  <h4 className={classes.description} style={descriptionStyle}>
+                  <p className={classes.description} style={descriptionStyle}>
                     kolocosmopk@gmail.com
-                  </h4>
+                    <br />
+                  </p>
                 </GridItem>{" "}
               </GridContainer>
+            </Card>
           </GridItem>
 
           <GridItem xs={12} sm={12} md={4}>
             <div className={classes.title}>
-              <h3>Wyślij nam wiadomość</h3>
+              <h3>{locale.sendUsMessage}</h3>
             </div>
+            <Card plain style={{ padding: 10 }}>
+              {/*<OldForm/>*/}
               <OldForm />
+            </Card>
           </GridItem>
         </GridContainer>
       </div>

@@ -21,12 +21,16 @@ import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import Loading from "../components/Loading/Loading";
 import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
+import getLocale from "../util/internationalization";
+import SwitchLanguageButton from "../components/SwitchLanguageButton";
 
 const useStyles = makeStyles(styles);
 
 let fetchedPosts = [];
 
 export default function BlogPage() {
+
+  const locale = getLocale("blog");
 
   const [postsLoaded, setPostsLoaded] = useState(false);
 
@@ -49,7 +53,12 @@ export default function BlogPage() {
       <Parallax filter image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>Aktualności</h1>
+            <GridItem style={{textAlign: "right"}}>
+              <SwitchLanguageButton href="/blog"/>
+            </GridItem>
+          </GridContainer>
+          <GridContainer>
+            <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>{locale.title}</h1>
           </GridContainer>
         </div>
       </Parallax>
@@ -86,7 +95,7 @@ export default function BlogPage() {
                         href={`/post?id=${post.id}`}
                         style={{width: "150px"}}
                       >
-                        Czytaj dalej
+                        {locale.readMoreButton}
                       </Button>
                     </CardFooter>
                   </Card>

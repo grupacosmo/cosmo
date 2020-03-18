@@ -10,6 +10,7 @@ import "assets/css/PartnerCarousel.css"
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import getLocale from "../../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
@@ -50,13 +51,13 @@ const carouselStyle = {
 
 const PartnersSection = () => {
     const classes = useStyles();
-
+    const locale = getLocale("index").partnersSection;
 
     return (
 
         <div className={classes.section} id="our-partners">
 
-            <h2 className={classes.title}>Nasi partnerzy</h2>
+            <h2 className={classes.title}>{locale.title}</h2>
 
 
             <Carousel style={carouselStyle}

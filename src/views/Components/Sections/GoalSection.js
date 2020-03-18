@@ -16,6 +16,7 @@ import GridItem from "components/Grid/GridItem.js";
 //stylistyka komponentów
 import styles from "assets/jss/material-kit-react/views/componentsSections/goalStyle";
 import Card from "components/Card/Card";
+import getLocale from "../../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
@@ -23,6 +24,12 @@ const useStyles = makeStyles(styles);
 const GoalSection = props => {
   const classes = useStyles();
 
+  const locale = getLocale("index").ourGoalSection;
+
+  const cardStyle = {
+    justifyContent: "center",
+    textAlign: "justify",
+  };
 
 
   const descriptionGridItemStyle = {
@@ -38,32 +45,21 @@ const GoalSection = props => {
     margin:"auto"
   };
 
-
-
-  return (
+return (
       <div className={classes.section} id="our-goals">
         <div className={classes.container}>
-          <h2 className={classes.title} style={{color:"white"}}>Cel projektu ?</h2>
+          <h2 className={classes.title}>{locale.title}</h2>
           <GridContainer justify="center" style={descriptionGridItemStyle}>
             <>
               <GridItem xs={12} sm={12} md={6}>
-                <Card className={classes.card} plain>
-                  <h4 className={classes.description}>
-                    <ul>
-                      <li> Zaprojektowanie i przetestowanie małego silnika jonowego
-                       </li>
-                      <li> Stworzenie inteligentnego systemu przetwarzania obrazu na pokładzie satelity opartego na AI</li>
-                      <li>
-                        Edukacja, wdrożenie uczestników projektu w branżę kosmiczną</li>
-                    </ul>
-
-                  </h4>
+                <Card plain style={cardStyle}>
+                  <h4 className={classes.description} style={textStyle}>{locale.description}</h4>
                 </Card>
               </GridItem>
               <GridItem xs={12} sm={12} md={4}>
 
                 <div className="rocket" style={rocketDivStyle}>
-                  <img className={classes.rocket} src={rocket} alt=""/>
+                  <img src={rocket} style={rocketStyle} alt=""/>
 
                 </div>
               </GridItem>

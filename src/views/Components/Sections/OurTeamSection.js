@@ -9,12 +9,14 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import photo from "assets/img/faces/zdjecieGrupowe.jpg"
+import getLocale from "../../../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
 export default function OurTeamSection(props) {
   const classes = useStyles();
 
+  const locale = getLocale("index").whoWeAreSection;
 
   //this style and style below is using for centering description paragraph vertically
   const descriptionGridContainerStyle = {
@@ -45,7 +47,7 @@ export default function OurTeamSection(props) {
   return (
     <div className={classes.section} id="who-we-are">
       <div className={classes.container}>
-        <h2 className={classes.title}>Kim jesteśmy?</h2>
+        <h2 className={classes.title}>{locale.title}</h2>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6} lg={6}>
             <GridContainer
@@ -59,14 +61,8 @@ export default function OurTeamSection(props) {
                 lg={6}
                 style={descriptionGridItemStyle2}
               >
-                <p className={classes.description} style={descriptionStyle}>
-                  Grupą młodych ludzi, studentów Politechniki Krakowskiej.
-                  W przerwach od nauki spotykamy się by realizować wspólny cel - wysłać własnego satelitę na orbitę.
-                  Nasze zmagania można obserwować na naszych kanałach w mediach społecznościowych. Trzymajcie kciuki!
-                </p>
-                <Button color="primary" href="/nasz-team" target="_blank" round>
-                  Więcej
-                </Button>
+                <p className={classes.description} style={descriptionStyle}>{locale.description}</p>
+                <Button color="primary" href="/nasz-team" target="_blank" round>{locale.moreButton}</Button>
               </GridItem>
             </GridContainer>
           </GridItem>
