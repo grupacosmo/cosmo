@@ -12,8 +12,6 @@ const landingPageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    fontFamily:"'Titillium Web', sans-serif",
-    fontSize:40,
     color: "#FFFFFF",
     textDecoration: "none"
   },

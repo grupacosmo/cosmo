@@ -6,61 +6,22 @@ import { withStyles, makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Button from "components/CustomButtons/Button.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/contactStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import { Link } from "react-scroll";
-
 import getLocale from "../../util/internationalization";
-import "assets/css/Form.css";
 
 const useStyles = makeStyles(styles);
 const CssTextField = withStyles({
     root: {
-        margin:"10px !important",
-        '& label' : {
-            color:"white",
-        },
-
-        '& textarea':{
-            color:"white"
-        },
-        '& input':{
-            color:"white",
-        },
         "& label.Mui-focused": {
             color: "purple"
         },
-        "& label.Mui": {
-            color: "red"
-        },
         "& .MuiInput-underline:after": {
             borderBottomColor: "purple"
-        },
-        '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-                borderColor: 'white',
-                padding:10,
-            },
-            '&:hover fieldset': {
-                borderColor: 'purple',
-            },
-            '&.Mui-focused fieldset': {
-                borderColor: 'purple',
-            },
-            '& textarea':{
-                color:"white"
-            }
-        },
-
-
-
+        }
     }
 })(TextField);
 
-
-const inputStyle = {
-    color:"white",
-    margin: 5,
-};
 
 
 
@@ -174,16 +135,14 @@ const OldForm = props => {
                 <CssTextField
                     className={classes.margin}
                     id="custom-css-outlined-input"
-                    label="Imię"
+                    label="Your Name"
                     value={name}
-                    variant="outlined"
-
                     onChange={handleNameChange}
                     fullWidth
                     margin="dense"
                     InputProps={{
                         endAdornment: (
-                            <InputAdornment position="end" style={inputStyle}>
+                            <InputAdornment position="end">
                                 <i className="fas fa-user" />
                             </InputAdornment>
                         )
@@ -193,15 +152,13 @@ const OldForm = props => {
                     className={classes.margin}
                     id="font-awesome"
                     required
-                    label="Email"
+                    label="Your email"
                     value={email}
-                    variant="outlined"
-
                     onChange={handleEmailChange}
                     fullWidth
                     InputProps={{
                         endAdornment: (
-                            <InputAdornment position="end"   style={inputStyle}>
+                            <InputAdornment position="end">
                                 <i className="fas fa-at" />
                             </InputAdornment>
                         )
@@ -210,14 +167,13 @@ const OldForm = props => {
                 <CssTextField
                     className={classes.margin}
                     id="font-awesome"
-                    label="Temat"
+                    label="Topic"
                     value={topic}
                     onChange={handleTopicChange}
                     fullWidth
-                    variant="outlined"
                     InputProps={{
                         endAdornment: (
-                            <InputAdornment position="end" style={inputStyle}>
+                            <InputAdornment position="end">
                                 <i className="fas fa-star" />
                             </InputAdornment>
                         )
@@ -225,18 +181,16 @@ const OldForm = props => {
                 />
                 <CssTextField
                     id="standard-multiline-flexible"
-                    className={classes.margin}
-                    label="Wiadomość"
+                    label="Your message"
                     multiline
                     value={message}
                     rows="2"
                     rowsMax="5"
-                    variant="outlined"
                     fullWidth
                     onChange={handleMessageChange}
                     InputProps={{
                         endAdornment: (
-                            <InputAdornment position="end" style={inputStyle}>
+                            <InputAdornment position="end">
                                 <i className="fas fa-comment" />
                             </InputAdornment>
                         )

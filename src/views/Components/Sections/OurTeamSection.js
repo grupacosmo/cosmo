@@ -38,9 +38,9 @@ export default function OurTeamSection(props) {
   };
   const descriptionStyle = {
     textAlign: "justify",
-    fontFamily: "'Titillium Web', sans-serif",
+    fontFamily: "Roboto Slab",
     padding: 20,
-    fontSize: "26px",
+    fontSize: 17,
     // fontVariant: "petite-caps
   };
 
@@ -49,7 +49,7 @@ export default function OurTeamSection(props) {
       <div className={classes.container}>
         <h2 className={classes.title}>{locale.title}</h2>
         <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={6} lg={6}>
+          <GridItem xs={12} sm={12} md={6}>
             <GridContainer
               justify="center"
               style={descriptionGridContainerStyle}
@@ -58,7 +58,6 @@ export default function OurTeamSection(props) {
                 xs={12}
                 sm={12}
                 md={9}
-                lg={6}
                 style={descriptionGridItemStyle2}
               >
                 <p className={classes.description} style={descriptionStyle}>{locale.description}</p>
@@ -67,7 +66,7 @@ export default function OurTeamSection(props) {
             </GridContainer>
           </GridItem>
 
-          <GridItem xs={12} sm={12} md={4} lg={5}>
+          <GridItem xs={12} sm={12} md={4}>
                 <img
                   src={photo}
                   alt="COSMO"

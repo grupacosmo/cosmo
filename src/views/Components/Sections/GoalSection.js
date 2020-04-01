@@ -12,9 +12,7 @@ import rocket from "assets/img/rocket.png";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-
-//stylistyka komponentów
-import styles from "assets/jss/material-kit-react/views/componentsSections/goalStyle";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
 import getLocale from "../../../util/internationalization";
 
@@ -27,10 +25,11 @@ const GoalSection = props => {
   const locale = getLocale("index").ourGoalSection;
 
   const cardStyle = {
+
     justifyContent: "center",
     textAlign: "justify",
-  };
 
+  };
 
   const descriptionGridItemStyle = {
     height: "100%",
@@ -39,13 +38,27 @@ const GoalSection = props => {
     flexDirection: "row"
   };
 
-
+  const textStyle = {
+    textAlign: "justify",
+    fontFamily: "Roboto Slab",
+    padding: 20,
+    fontSize: 17,
+    margin: "auto"
+  };
   const rocketDivStyle={
 
     margin:"auto"
   };
+  const rocketStyle = {
+    maxWidth:"50%",
+    height: "auto",
+    padding:10,
+    margin:"auto",
+    minWidth:"150px"
+  };
 
-return (
+
+  return (
       <div className={classes.section} id="our-goals">
         <div className={classes.container}>
           <h2 className={classes.title}>{locale.title}</h2>
