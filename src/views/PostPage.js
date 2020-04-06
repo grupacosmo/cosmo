@@ -16,6 +16,7 @@ import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import GridContainer from "../components/Grid/GridContainer";
+import {getLanguage} from "../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
@@ -31,6 +32,7 @@ export default function PostPage() {
     window.open("/", "_self");
   }
 
+  const lang = getLanguage();
   const [postLoaded, setPostLoaded] = useState(false);
   const [authorLoaded, setAuthorLoaded] = useState(false);
 
@@ -40,6 +42,12 @@ export default function PostPage() {
     })
     .then((json) => {
       fetchedPost = json;
+
+      // if this is other language post, open proper post
+      if (json.acf["other-language"] && ((lang === "en" && json.acf.type === "polish-post")
+        || (lang === "pl" && json.acf.type === "english-post"))) {
+        window.open("/post?id=" + json.acf["other-language"], "_self");
+      }
 
       const authorsLink = json._links.author[0].href;
       fetch(authorsLink)
