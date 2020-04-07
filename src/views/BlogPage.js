@@ -21,7 +21,7 @@ import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import Loading from "../components/Loading/Loading";
 import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
-import getLocale from "../util/internationalization";
+import getLocale, {getLanguage} from "../util/internationalization";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
 
 const useStyles = makeStyles(styles);
@@ -31,10 +31,11 @@ let fetchedPosts = [];
 export default function BlogPage() {
 
   const locale = getLocale("blog");
-
+  const lang = getLanguage();
   const [postsLoaded, setPostsLoaded] = useState(false);
+  const url = backendUrl + "/posts?filter[meta_key]=type&filter[meta_value]=";
 
-  fetch(backendUrl + "/posts")
+  fetch(url + (lang === "pl" ? "polish-post" : "english-post"))
     .then((response) => {
       return response.json();
     })
