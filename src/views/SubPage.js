@@ -37,7 +37,7 @@ export default function SubPage() {
   const lang = getLanguage();
   const idEnd = id.slice(id.length - 3, id.length);
   if ((idEnd === "_en" && lang === "pl") || (idEnd === "_pl" && lang === "en")) {
-    window.open("page?id=" + id.slice(0, id.length - 2) + lang, "_self");
+    window.open("/page?id=" + id.slice(0, id.length - 2) + lang, "_self");
   }
 
   // fetching data
