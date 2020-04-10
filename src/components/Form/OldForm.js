@@ -109,7 +109,7 @@ const OldForm = props => {
         };
         sendFeedback(templateId, template_params);
     };
-
+    //todo dodac utils
     const sendFeedback = (templateId, template_params) => {
         window.emailjs
             .send("gmail", templateId, template_params)

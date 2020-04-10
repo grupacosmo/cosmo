@@ -9,6 +9,7 @@ import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
 import OldForm from "components/Form/OldForm.js";
+import Form from "components/Form/Form.js";
 import getLocale from "../../../util/internationalization";
 
 //Styling
@@ -84,8 +85,8 @@ const ContactSection = props => {
               <h3>{locale.sendUsMessage}</h3>
             </div>
             <Card plain style={{ padding: 10 }}>
-              {/*<OldForm/>*/}
-              <OldForm />
+              {/* <OldForm /> */}
+              <Form  classes= {classes}/>
             </Card>
           </GridItem>
         </GridContainer>

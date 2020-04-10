@@ -1,6 +1,6 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
+import { Carousel } from 'react-responsive-carousel';
 import pk from "assets/img/partners/politechnika.jpg";
 import baltic from "assets/img/partners/balticsatapps.png";
 import department from "assets/img/partners/logoIT.png";
@@ -8,7 +8,7 @@ import department2 from "assets/img/partners/katedra.png";
 import futureLab from "assets/img/partners/futurelab.png"
 import "assets/css/PartnerCarousel.css"
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import getLocale from "../../../util/internationalization";
 
@@ -34,7 +34,7 @@ const imgStyle2 = {
 const gridStyle = {
     justifyContent: "center",
     alignItems: "center",
-    flexDirection:"column",
+    flexDirection: "column",
 
 };
 const itDepartmentStyle = {
@@ -54,41 +54,36 @@ const PartnersSection = () => {
     const locale = getLocale("index").partnersSection;
 
     return (
-
         <div className={classes.section} id="our-partners">
-
             <h2 className={classes.title}>{locale.title}</h2>
-
-
             <Carousel style={carouselStyle}
-                      showArrows={false}
-                      interval={3000}
-                      infiniteLoop={true}
-                      showThumbs={false}
-                      autoPlay
-                      showIndicators={false}
+                showArrows={false}
+                interval={3000}
+                infiniteLoop={true}
+                showThumbs={false}
+                autoPlay
+                showIndicators={false}
             >
-
                 <a href="https:\\www.pk.edu.pl" target="_blank" rel="noopener noreferrer">
                     <div className="Partner">
-                        <img style={imgStyle} src={pk} alt="politechnika krakowska"/>
+                        <img style={imgStyle} src={pk} alt="politechnika krakowska" />
                     </div>
                 </a>
                 <a href="https://balticsatapps.pl/" target="_blank" rel="noopener noreferrer">
                     <div className="Partner">
-                        <img style={imgStyle} src={baltic} alt="balticsatapps"/>
+                        <img style={imgStyle} src={baltic} alt="balticsatapps" />
                     </div>
                 </a>
                 <a href="https://ii.pk.edu.pl" target="_blank" rel="noopener noreferrer">
                     <div className="Partner">
-                        <img style={imgStyle2} src={department2} alt="itdepartment"/>
+                        <img style={imgStyle2} src={department2} alt="itdepartment" />
                     </div>
                 </a>
                 <a href="https://it.pk.edu.pl" target="_blank" rel="noopener noreferrer">
                     <div className="Partner">
-                        <Grid container  style={gridStyle}>
+                        <Grid container style={gridStyle}>
                             <Grid xs={4} md={6}>
-                                <img style={imgStyle} src={department} alt="department"/>
+                                <img style={imgStyle} src={department} alt="department" />
                             </Grid>
                             <Grid xs={6} md={4}>
                                 <h2 style={itDepartmentStyle}>Wydział Informatyki i Telekomunikacji</h2>
@@ -98,7 +93,7 @@ const PartnersSection = () => {
                 </a>
                 <a href="http://futurelab.pk.edu.pl/" target="_blank" rel="noopener noreferrer">
                     <div className="Partner">
-                        <img style={imgStyle} src={futureLab} alt="futurelab"/>
+                        <img style={imgStyle} src={futureLab} alt="futurelab" />
                     </div>
                 </a>
 

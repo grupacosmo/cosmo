@@ -22,6 +22,7 @@ const buttonStyle = {
 };
 export default function Footer(props) {
   const classes = useStyles();
+  
   const { whiteFont } = props;
   const footerClasses = classNames({
     [classes.footer]: true,

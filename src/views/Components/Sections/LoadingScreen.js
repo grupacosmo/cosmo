@@ -15,7 +15,6 @@ export default function LoadingScreen(props) {
 };
 
 
-
   return (
     <div className={props.isLoaded ? "loadingScreen hide" : "loadingScreen"}>
       <img style={logoStyle} src={logo}  alt=""/>
