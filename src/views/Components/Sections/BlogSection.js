@@ -62,9 +62,11 @@ export default function BlogSection() {
                           backgroundImage: `url(${post.acf.thumbnail})`,
                           backgroundRepeat: "no-repeat",
                           backgroundSize: "cover",
-                          backgroundPosition: "center"
+                          backgroundPosition: "center",
+                          cursor: "pointer"
                         }}
                         className={classes.imgRaised}
+                        onClick={() => window.open(`/post?id=${post.id}`, "_self")}
                       />
                     </GridItem>
                     <h4 className={classes.cardTitle}>

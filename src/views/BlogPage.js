@@ -75,7 +75,10 @@ export default function BlogPage() {
                         xs={12} sm={12} md={6}
                         className={classes.itemGrid}
                         style={{margin: "auto"}}>
-                        <img src={post.acf.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
+                        <img src={post.acf.thumbnail}
+                             alt="thumbnail"
+                             style={{width: "100%", cursor: "pointer"}}
+                             onClick={() => window.open(`/post?id=${post.id}`, "_self")}/>
                       </GridItem>
                     </div>
                     <p className={classes.description} style={{fontStyle: "italic", color: "#bcbcbc"}}>
