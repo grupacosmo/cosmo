@@ -69,7 +69,17 @@ export default function BlogSection() {
                         onClick={() => window.open(`/post?id=${post.id}`, "_self")}
                       />
                     </GridItem>
-                    <h4 className={classes.cardTitle}>
+                    <div style={{
+                      fontStyle: "italic",
+                      color: "#cacaca",
+                      borderRadius: "0 0 10px 0",
+                      width: "100px",
+                      position: "absolute",
+                      top: "250px",
+                    }}>
+                      {`${post.date.slice(8,10)}.${post.date.slice(5,7)}.${post.date.slice(0,4)}`}
+                    </div>
+                    <h4 className={classes.cardTitle} style={{marginTop: "25px"}}>
                       <a style={{color: "#3c4858"}} href={`/post?id=${post.id}`}>{post.title.rendered}</a>
                     </h4>
                     <CardBody style={{height: "155px", textOverflow: "ellipsis", overflow: "hidden"}}>
