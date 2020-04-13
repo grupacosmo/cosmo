@@ -62,13 +62,15 @@ export default function BlogSection() {
                           backgroundImage: `url(${post.acf.thumbnail})`,
                           backgroundRepeat: "no-repeat",
                           backgroundSize: "cover",
-                          backgroundPosition: "center"
+                          backgroundPosition: "center",
+                          cursor: "pointer"
                         }}
                         className={classes.imgRaised}
+                        onClick={() => window.open(`/post?id=${post.id}`, "_self")}
                       />
                     </GridItem>
                     <h4 className={classes.cardTitle}>
-                      {post.title.rendered}
+                      <a style={{color: "#3c4858"}} href={`/post?id=${post.id}`}>{post.title.rendered}</a>
                     </h4>
                     <CardBody style={{height: "155px", textOverflow: "ellipsis", overflow: "hidden"}}>
                       <div className={classes.description}>

@@ -75,14 +75,17 @@ export default function BlogPage() {
                         xs={12} sm={12} md={6}
                         className={classes.itemGrid}
                         style={{margin: "auto"}}>
-                        <img src={post.acf.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
+                        <img src={post.acf.thumbnail}
+                             alt="thumbnail"
+                             style={{width: "100%", cursor: "pointer"}}
+                             onClick={() => window.open(`/post?id=${post.id}`, "_self")}/>
                       </GridItem>
                     </div>
                     <p className={classes.description} style={{fontStyle: "italic", color: "#bcbcbc"}}>
                       {`${post.date.slice(8,10)}.${post.date.slice(5,7)}.${post.date.slice(0,4)}`}
                     </p>
                     <h3 className={classes.cardTitle} style={{textAlign: "center"}}>
-                      {post.title.rendered}
+                      <a style={{color: "#3c4858"}} href={`/post?id=${post.id}`}>{post.title.rendered}</a>
                     </h3>
                     <CardBody style={{maxHeight: "155px", textOverflow: "ellipsis", overflow: "hidden"}}>
                       <JsxParser
