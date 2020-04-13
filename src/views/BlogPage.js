@@ -85,7 +85,7 @@ export default function BlogPage() {
                       {`${post.date.slice(8,10)}.${post.date.slice(5,7)}.${post.date.slice(0,4)}`}
                     </p>
                     <h3 className={classes.cardTitle} style={{textAlign: "center"}}>
-                      {post.title.rendered}
+                      <a style={{color: "#3c4858"}} href={`/post?id=${post.id}`}>{post.title.rendered}</a>
                     </h3>
                     <CardBody style={{maxHeight: "155px", textOverflow: "ellipsis", overflow: "hidden"}}>
                       <JsxParser

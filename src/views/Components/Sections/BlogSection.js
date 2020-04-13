@@ -70,7 +70,7 @@ export default function BlogSection() {
                       />
                     </GridItem>
                     <h4 className={classes.cardTitle}>
-                      {post.title.rendered}
+                      <a style={{color: "#3c4858"}} href={`/post?id=${post.id}`}>{post.title.rendered}</a>
                     </h4>
                     <CardBody style={{height: "155px", textOverflow: "ellipsis", overflow: "hidden"}}>
                       <div className={classes.description}>
