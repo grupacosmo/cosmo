@@ -51,7 +51,7 @@ export default function BlogSection() {
             postsLoaded ?
               fetchedPosts.map(post => (
                 <GridItem xs={12} sm={12} md={8} lg={4} key={post.id}>
-                  <Card plain>
+                  <Card plain style={{boxShadow: "0px 10px 23px -15px rgba(0,0,0,0.2)"}}>
                     <GridItem
                       xs={12} sm={12} md={12}
                       className={classes.itemGrid}>
@@ -61,11 +61,11 @@ export default function BlogSection() {
                           height: "250px",
                           backgroundImage: `url(${post.acf.thumbnail})`,
                           backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
+                          backgroundSize: "contain",
                           backgroundPosition: "center",
                           cursor: "pointer"
                         }}
-                        className={classes.imgRaised}
+
                         onClick={() => window.open(`/post?id=${post.id}`, "_self")}
                       />
                     </GridItem>
