@@ -18,6 +18,7 @@ import GoalSection from "./Sections/GoalSection";
 import LoadingScreen from "./Sections/LoadingScreen";
 import PartnersSection from "./Sections/PartnersSection";
 import BlogSection from "./Sections/BlogSection";
+import AnnouncementSection from "./Sections/AnnouncementSection";
 const useStyles = makeStyles(styles);
 
 export default function Components() {
@@ -41,6 +42,7 @@ export default function Components() {
       <NavBarSection />
       <HomeSection setLoaded={setLoaded} />
       <div className={classNames(classes.main, classes.mainRaised)}>
+        <AnnouncementSection />
         <OurTeamSection />
         <Divider variant="middle" />
         <GoalSection />

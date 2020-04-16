@@ -17,6 +17,7 @@ import JsxParser from "react-jsx-parser";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import GridContainer from "../components/Grid/GridContainer";
 import {getLanguage} from "../util/internationalization";
+import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
 const useStyles = makeStyles(styles);
 
@@ -78,6 +79,7 @@ export default function PostPage() {
   const classes = useStyles();
   return (
     <div>
+      <AnnouncementSection fixed={true}/>
       <PostNavBarSection />
       <div className={classNames(classes.main, classes.mainRaised)} style={{marginTop: "100px"}}>
         <div style={{padding: "20px"}}>

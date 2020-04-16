@@ -1,0 +1,54 @@
+.announcementContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    -webkit-box-shadow: 0px 9px 21px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 21px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 21px -8px rgba(0,0,0,0.75);
+}
+
+.announcementTitle {
+    font-weight: 900
+}
+
+.announcementCloseButton {
+    color: white;
+    background-color: inherit;
+    font-size: 25px;
+    font-weight: 700;
+    border: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    -webkit-text-stroke: 1px black;
+}
+
+.announcementContainer.nonFixed {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.announcementContainer.nonFixed p {
+    font-size: 15px !important;
+}
+
+.announcementContainer.fixed {
+    opacity: 0.9;
+    padding: 10px;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.announcementContainer.fixed p {
+    margin: 0;
+    font-size: 12px !important;
+}
+
+.announcementContainer.fixed .announcementTitle {
+    font-size: 40px !important;
+    margin: 0;
+}

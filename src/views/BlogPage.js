@@ -23,6 +23,7 @@ import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
 import getLocale, {getLanguage} from "../util/internationalization";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
+import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
 const useStyles = makeStyles(styles);
 
@@ -50,6 +51,7 @@ export default function BlogPage() {
   const classes = useStyles();
   return (
     <div>
+      <AnnouncementSection fixed={true}/>
       <BlogNavBarSection />
       <Parallax filter image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
