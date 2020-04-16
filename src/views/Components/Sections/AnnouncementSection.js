@@ -6,12 +6,14 @@ import "assets/css/announcement.css";
 import {getLanguage} from "../../../util/internationalization";
 
 let announcement = {}
-// todo announcement pop up
-export default function AnnouncementSection() {
+export default function AnnouncementSection(props) {
 
+  const fixed = !!props.fixed;
   const lang = getLanguage();
 
   const [announcementLoaded, setAnnouncementLoaded] = useState(false);
+  const [closed, setClosed] = useState(false);
+
   const url = backendUrl + "/announcements?per_page=1&page=1";
   fetch(url)
     .then((response) => {
@@ -35,10 +37,14 @@ export default function AnnouncementSection() {
     })
 
   return (
-    announcementLoaded && (
-      <div className="announcementContainer"
-           style={{backgroundImage: `url(${announcement.background.guid})`, color: announcement.textcolor}}>
-        <h1 style={{fontWeight: 900, color: announcement.titlecolor}}>
+    announcementLoaded && !closed && (
+      <div className={`announcementContainer ${fixed ? "fixed" : "nonFixed"}`}
+           style={{
+             backgroundImage: `url(${announcement.background.guid})`,
+             color: announcement.textcolor
+           }}>
+        {fixed && <button className="announcementCloseButton" onClick={() => setClosed(true)}>x</button>}
+        <h1 style={{color: announcement.titlecolor}} className="announcementTitle">
           {lang === "pl" ? announcement.title.rendered : announcement.englishtitle}
         </h1>
         <JsxParser

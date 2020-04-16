@@ -19,6 +19,7 @@ import JsxParser from "react-jsx-parser";
 import {getLanguage} from "../util/internationalization";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import "assets/css/PostPage.css";
+import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
 const useStyles = makeStyles(styles);
 
@@ -69,6 +70,7 @@ export default function SubPage() {
   const classes = useStyles();
   return (
     <div>
+      <AnnouncementSection fixed={true}/>
       <BlogNavBarSection />
       <Parallax filter image={pageLoaded ? pageContent["background_image"].guid : null}>
         <div className={classes.container}>
