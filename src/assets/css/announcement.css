@@ -35,6 +35,7 @@
 }
 
 .announcementContainer.fixed {
+    opacity: 0.9;
     padding: 10px;
     bottom: 0;
     position: fixed;

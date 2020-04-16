@@ -10,31 +10,34 @@ export default function AnnouncementSection(props) {
 
   const fixed = !!props.fixed;
   const lang = getLanguage();
+  const status = sessionStorage.getItem("announcement");
 
   const [announcementLoaded, setAnnouncementLoaded] = useState(false);
   const [closed, setClosed] = useState(false);
 
-  const url = backendUrl + "/announcements?per_page=1&page=1";
-  fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      if (json.length > 0) {
-        announcement = json[0];
-        setAnnouncementLoaded(true);
+  if (!fixed || status !== "closed") {
+    const url = backendUrl + "/announcements?per_page=1&page=1";
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        if (json.length > 0) {
+          announcement = json[0];
+          setAnnouncementLoaded(true);
 
-        // sets up anchors
-        document.querySelectorAll(".announcementContainer a")
-          .forEach(a => {
-            a.style.color = announcement.anchorscolor;
-            a.target = "_blank";
-          });
-      }
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    })
+          // sets up anchors
+          document.querySelectorAll(".announcementContainer a")
+            .forEach(a => {
+              a.style.color = announcement.anchorscolor;
+              a.target = "_blank";
+            });
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      })
+  }
 
   return (
     announcementLoaded && !closed && (
@@ -43,7 +46,12 @@ export default function AnnouncementSection(props) {
              backgroundImage: `url(${announcement.background.guid})`,
              color: announcement.textcolor
            }}>
-        {fixed && <button className="announcementCloseButton" onClick={() => setClosed(true)}>x</button>}
+        {fixed &&
+          <button className="announcementCloseButton"
+            onClick={() => {
+              setClosed(true)
+              sessionStorage.setItem("announcement", "closed");
+            }}>x</button>}
         <h1 style={{color: announcement.titlecolor}} className="announcementTitle">
           {lang === "pl" ? announcement.title.rendered : announcement.englishtitle}
         </h1>
