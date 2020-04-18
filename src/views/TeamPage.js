@@ -17,7 +17,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import {backendUrl} from "../components/properties";
-import {getLanguage} from "../util/internationalization";
+import getLocale, {getLanguage} from "../util/internationalization";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
@@ -25,12 +25,9 @@ const useStyles = makeStyles(styles);
 
 let members = {};
 
-// todo responsive app
-// todo locale
-
 export default function TeamPage() {
 
-  // checking language
+  const locale = getLocale("team");
   const lang = getLanguage();
 
   // fetching data
@@ -76,9 +73,9 @@ export default function TeamPage() {
           </GridContainer>
           <GridContainer>
             <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>
-              Nasz zespół
+              {locale.title}
             </h1>
-            <p style={{textAlign: "center", fontStyle: "italic", width: "100%", fontSize: "15px"}}>Członkowie koła COSMO</p>
+            <p style={{textAlign: "center", fontStyle: "italic", width: "100%", fontSize: "15px"}}>{locale.description}</p>
           </GridContainer>
         </div>
       </Parallax>
