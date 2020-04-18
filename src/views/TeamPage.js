@@ -3,7 +3,10 @@ import React, {useState} from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
+
+// core components
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
 
 // core components
 import Footer from "components/Footer/Footer.js";
@@ -16,14 +19,12 @@ import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import {backendUrl} from "../components/properties";
 import {getLanguage} from "../util/internationalization";
 import SwitchLanguageButton from "../components/SwitchLanguageButton";
-import "assets/css/PostPage.css";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
 const useStyles = makeStyles(styles);
 
 let members = {};
 
-// todo load content
 // todo responsive app
 // todo locale
 
@@ -45,9 +46,12 @@ export default function TeamPage() {
         return {
           id: member.id,
           name: member.title.rendered,
+          image: member.photo.guid,
           priority: parseInt(member.orderpriority),
-          descriptionpl: member.description,
-          descriptionen: member.englishdescription
+          description: {
+            pl: member.description,
+            en: member.englishdescription
+          },
         }
       }).sort(((a, b) => b.priority - a.priority))
 
@@ -67,7 +71,7 @@ export default function TeamPage() {
         <div className={classes.container}>
           <GridContainer>
             <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href="/teams"/>
+              <SwitchLanguageButton href="/team"/>
             </GridItem>
           </GridContainer>
           <GridContainer>
@@ -79,11 +83,33 @@ export default function TeamPage() {
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div>
+        <GridContainer justify="center">
           {
-            membersLoaded && <h1>Loaded</h1>
+            membersLoaded && members.map(member =>
+              <GridItem xs={12} md={6} lg={4} key={member.id}>
+                <Card style={{width: "20rem", marginLeft: "auto", marginRight: "auto"}}>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "250px",
+                      backgroundImage: `url(${member.image})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "contain",
+                      backgroundPosition: "center",
+                      cursor: "pointer"
+                    }}
+                    className={classes.imgCardTop}
+                  />
+
+                  <CardBody>
+                    <h4 className={classes.cardTitle}>{member.name}</h4>
+                    <p>{member.description[lang]}</p>
+                  </CardBody>
+                </Card>
+              </GridItem>
+            )
           }
-        </div>
+        </GridContainer>
       </div>
       <Footer />
     </div>
