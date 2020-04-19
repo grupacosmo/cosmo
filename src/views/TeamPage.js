@@ -84,7 +84,7 @@ export default function TeamPage() {
           {
             membersLoaded && members.map(member =>
               <GridItem xs={12} md={6} lg={4} key={member.id}>
-                <Card style={{width: "20rem", marginLeft: "auto", marginRight: "auto"}}>
+                <Card style={{maxWidth: "20rem", marginLeft: "auto", marginRight: "auto", minHeight: "600px"}}>
                   <div
                     style={{
                       width: "100%",
@@ -92,8 +92,7 @@ export default function TeamPage() {
                       backgroundImage: `url(${member.image})`,
                       backgroundRepeat: "no-repeat",
                       backgroundSize: "contain",
-                      backgroundPosition: "center",
-                      cursor: "pointer"
+                      backgroundPosition: "center"
                     }}
                     className={classes.imgCardTop}
                   />
