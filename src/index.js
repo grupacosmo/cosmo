@@ -15,6 +15,7 @@ import LoginPage from "views/LoginPage/LoginPage.js";*/
 import BlogPage from "./views/BlogPage";
 import PostPage from "./views/PostPage";
 import SubPage from "./views/SubPage";
+import TeamPage from "./views/TeamPage";
 
 var hist = createBrowserHistory();
 
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/nasz-team" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />*/}
 
+      <Route path="/team" component={TeamPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/post" component={PostPage} />
       <Route path="/page" component={SubPage} />
@@ -37,6 +39,7 @@ ReactDOM.render(
       {/*<Route path="/" component={BlogPage} />*/}
       {/*<Route path="/" component={PostPage} />*/}
       {/*<Route path="/" component={SubPage} />*/}
+      {/*<Route path="/" component={TeamPage} />*/}
     </Switch>
   </Router>,
   document.getElementById("root")
