@@ -34,8 +34,8 @@ ReactDOM.render(
       <Route path="/blog" component={BlogPage} />
       <Route path="/post" component={PostPage} />
       <Route path="/page" component={SubPage} />
-
       <Route path="/" component={Components} />
+
       {/*<Route path="/" component={BlogPage} />*/}
       {/*<Route path="/" component={PostPage} />*/}
       {/*<Route path="/" component={SubPage} />*/}
