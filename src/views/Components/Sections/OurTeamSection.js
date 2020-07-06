@@ -60,7 +60,7 @@ export default function OurTeamSection(props) {
                 style={descriptionGridItemStyle2}
               >
                 <p className={classes.description} style={descriptionStyle}>{locale.description}</p>
-                <Button color="primary" href="/team" target="_blank" round>{locale.moreButton}</Button>
+                <Button color="primary" href="/team" target="_self" round>{locale.moreButton}</Button>
               </GridItem>
             </GridContainer>
           </GridItem>
