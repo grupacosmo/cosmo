@@ -17,6 +17,7 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 import { Link } from "react-scroll";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 import getLocale from "../../util/internationalization";
+import NavBarChangeLanguageButton from "./NavBarChangeLanguageButton";
 
 const useStyles = makeStyles(styles);
 
@@ -153,6 +154,7 @@ export default function NavBarLinks() {
           </Button>
         </Tooltip>
       </ListItem>
+      <NavBarChangeLanguageButton href="/"/>
     </List>
   );
 }

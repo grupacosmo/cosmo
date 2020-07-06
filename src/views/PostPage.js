@@ -14,8 +14,6 @@ import Loading from "../components/Loading/Loading";
 import PostNavBarSection from "./Components/Sections/PostNavBarSection";
 import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
-import SwitchLanguageButton from "../components/SwitchLanguageButton";
-import GridContainer from "../components/Grid/GridContainer";
 import {getLanguage} from "../util/internationalization";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
@@ -80,14 +78,9 @@ export default function PostPage() {
   return (
     <div>
       <AnnouncementSection fixed={true}/>
-      <PostNavBarSection />
+      <PostNavBarSection id={id}/>
       <div className={classNames(classes.main, classes.mainRaised)} style={{marginTop: "100px"}}>
         <div style={{padding: "20px"}}>
-          <GridContainer>
-            <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href={`/post?id=${id}`}/>
-            </GridItem>
-          </GridContainer>
           {
             postLoaded ?
               <GridItem xs={12} sm={12} md={12} style={{paddingTop: "40px"}}>

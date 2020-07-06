@@ -18,7 +18,6 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import {backendUrl} from "../components/properties";
 import getLocale, {getLanguage} from "../util/internationalization";
-import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
 const useStyles = makeStyles(styles);
@@ -63,14 +62,9 @@ export default function TeamPage() {
   return (
     <div>
       <AnnouncementSection fixed={true}/>
-      <BlogNavBarSection />
+      <BlogNavBarSection href="/team"/>
       <Parallax filter image={require("assets/img/group-photo.jpg")}>
         <div className={classes.container}>
-          <GridContainer>
-            <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href="/team"/>
-            </GridItem>
-          </GridContainer>
           <GridContainer>
             <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>
               {locale.title}

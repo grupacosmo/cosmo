@@ -14,11 +14,12 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 import {Public} from "@material-ui/icons";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 import getLocale from "../../util/internationalization";
+import NavBarChangeLanguageButton from "./NavBarChangeLanguageButton";
 
 const useStyles = makeStyles(styles);
 
-export default function NavBarBlogLinks() {
-
+export default function NavBarBlogLinks(props) {
+  const {id} = props;
   const locale = getLocale("post");
 
   const classes = useStyles();
@@ -110,6 +111,7 @@ export default function NavBarBlogLinks() {
           </Button>
         </Tooltip>
       </ListItem>
+      <NavBarChangeLanguageButton href={`/post?id=${id}`}/>
     </List>
   );
 }
