@@ -14,7 +14,6 @@ import OurTeamSection from "../Components/Sections/OurTeamSection.js";
 import HomeSection from "./Sections/HomeSection";
 import ContactSection from "./Sections/ContactSection";
 import NavBarSection from "./Sections/NavBarSection";
-import GoalSection from "./Sections/GoalSection";
 import LoadingScreen from "./Sections/LoadingScreen";
 import PartnersSection from "./Sections/PartnersSection";
 import BlogSection from "./Sections/BlogSection";
@@ -45,8 +44,8 @@ export default function Components() {
         <AnnouncementSection />
         <OurTeamSection />
         <Divider variant="middle" />
-        <GoalSection />
-        <Divider variant="middle" />
+{/*        <GoalSection />
+        <Divider variant="middle" />*/}
         <BlogSection/>
         <Divider variant="middle" />
         <ContactSection />

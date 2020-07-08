@@ -54,7 +54,7 @@ export default function HomeSection(props) {
                 duration={500}>
                 <Button type="button" color="info" round>{locale.contactButton}</Button>
               </Link>
-              <Link
+              {/*<Link
                 activeClass="active"
                 to="our-goals"
                 spy={true}
@@ -62,7 +62,7 @@ export default function HomeSection(props) {
                 offset={-70}
                 duration={500}>
                 <Button type="button" color="info" round>{locale.ourGoalButton}</Button>
-              </Link>
+              </Link>*/}
             </div>
           </GridItem>
         </GridContainer>
