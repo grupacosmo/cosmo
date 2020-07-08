@@ -11,7 +11,7 @@ export default function NavBarBlogSection(props) {
             fixed
             color="transparent"
             changeColorOnScroll={{
-                height: 500,
+                height: 400,
                 color: "white"
             }}
         />
