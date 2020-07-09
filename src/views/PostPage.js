@@ -92,12 +92,9 @@ export default function PostPage() {
                     <img src={fetchedPost.acf.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
                   </GridItem>
                 </div>
-                <h1 className={classes.cardTitle} style={{textAlign: "center"}}>
+                <h1 className={"titleHeader"} style={{textAlign: "center"}}>
                   {fetchedPost.title.rendered}
                 </h1>
-                <p className={classes.description} style={{fontStyle: "italic", color: "#767676", paddingLeft: "60px"}}>
-                  {`${fetchedPost.date.slice(8,10)}.${fetchedPost.date.slice(5,7)}.${fetchedPost.date.slice(0,4)}`}
-                </p>
 
                 <GridItem xs={12} sm={12} md={8} style={{margin: "auto"}}>
                   <div className="content">
@@ -108,10 +105,16 @@ export default function PostPage() {
                 </GridItem>
                 {
                   authorLoaded ?
-                    <p className={classes.description}
-                       style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
-                      Autor: {authorName}
-                    </p>
+                    <>
+                      <p className={classes.description}
+                         style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
+                        Autor: {authorName}
+                        <br/>
+                        <span className={classes.description} style={{fontStyle: "italic", color: "#767676", paddingLeft: "60px", textAlign: "right"}}>
+                          {`${fetchedPost.date.slice(8,10)}.${fetchedPost.date.slice(5,7)}.${fetchedPost.date.slice(0,4)}`}
+                        </span>
+                      </p>
+                    </>
                   : <></>
                 }
               </GridItem>
