@@ -77,7 +77,7 @@ export default function TeamPage() {
         <GridContainer justify="center">
           {
             membersLoaded && members.map(member =>
-              <GridItem xs={12} md={6} lg={4} key={member.id}>
+              <GridItem xs={12} md={6} lg={4} xl={3} key={member.id}>
                 <Card style={{maxWidth: "20rem", marginLeft: "auto", marginRight: "auto", minHeight: "600px"}}>
                   <div
                     style={{
