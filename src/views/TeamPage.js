@@ -19,6 +19,7 @@ import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import {backendUrl} from "../components/properties";
 import getLocale, {getLanguage} from "../util/internationalization";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
+import {Email} from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -48,9 +49,9 @@ export default function TeamPage() {
             pl: member.description,
             en: member.englishdescription
           },
+          email: member.email
         }
       }).sort(((a, b) => b.priority - a.priority))
-
       setMembersLoaded(true);
     })
     .catch((error) => {
@@ -92,7 +93,14 @@ export default function TeamPage() {
                   />
 
                   <CardBody>
-                    <h4 className={classes.cardTitle}>{member.name}</h4>
+                    {member.email ? (
+                        <a href={`/contact?id=${member.id}`}>
+                          <Email className={classes.icons} style={{cursor: "pointer"}}/>
+                        </a>
+                      ): <></>}
+                    <h4 className={classes.cardTitle}>
+                      {member.name}
+                    </h4>
                     <p>{member.description[lang]}</p>
                   </CardBody>
                 </Card>

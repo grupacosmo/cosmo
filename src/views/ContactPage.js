@@ -87,7 +87,7 @@ export default function ContactPage() {
   const classes = useStyles();
   return (
     <div id="menu-navbar" style={{marginTop: "140px"}}>
-      <BlogNavBarSection href="/contact" height={-1}/>
+      <BlogNavBarSection href={`/contact${id ? `?id=${id}` : ""}`} height={-1}/>
       <div className={classNames(classes.main, classes.mainRaised)}>
         {descriptionReady ? (
             description ? <ContactSection receiver={receiver} description={description}/> : <ContactSection receiver={receiver}/>
