@@ -68,9 +68,9 @@ export default function TeamPage() {
         <div className={classes.container}>
           <GridContainer>
             <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>
-              {locale.title}
+              {locale.description}
             </h1>
-            <p style={{textAlign: "center", fontStyle: "italic", width: "100%", fontSize: "15px"}}>{locale.description}</p>
+            {/*<p style={{textAlign: "center", fontStyle: "italic", width: "100%", fontSize: "15px"}}>{locale.description}</p>*/}
           </GridContainer>
         </div>
       </Parallax>
@@ -93,16 +93,23 @@ export default function TeamPage() {
                   />
 
                   <CardBody>
-                    {member.email ? (
-                        <a href={`/contact?id=${member.id}`}>
-                          <Email className={classes.icons} style={{cursor: "pointer"}}/>
-                        </a>
-                      ): <></>}
                     <h4 className={classes.cardTitle}>
                       {member.name}
                     </h4>
                     <p>{member.description[lang]}</p>
                   </CardBody>
+                  {member.email ? (
+                    <a href={`/contact?id=${member.id}`}
+                       style={{
+                         cursor: "pointer",
+                         display: "block",
+                         position: "absolute",
+                         bottom: 0,
+                         right: 9}}
+                    >
+                      <Email className={classes.icons}/>
+                    </a>
+                  ): <></>}
                 </Card>
               </GridItem>
             )

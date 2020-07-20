@@ -76,7 +76,7 @@ export default function NavBar(props) {
   );
   return (
     <AppBar className={appBarClasses}>
-      <Toolbar className={classes.container} style={{maxWidth: "100%"}}>
+      <Toolbar className={classes.container} style={{maxWidth: "95%"}}>
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (

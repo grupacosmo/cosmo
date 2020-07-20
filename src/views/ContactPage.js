@@ -16,11 +16,10 @@ import ContactSection from "./Components/Sections/ContactSection";
 import Card from "../components/Card/Card";
 import GridContainer from "../components/Grid/GridContainer";
 import GridItem from "../components/Grid/GridItem";
-import {getLanguage} from "../util/internationalization";
 
 const useStyles = makeStyles(styles);
 
-function getMemberDescription(name, img, email, description) {
+function getMemberDescription(name, img, email) {
   return (
     <>
       <Card>
@@ -37,7 +36,6 @@ function getMemberDescription(name, img, email, description) {
               <GridItem xs={12}>
                 <h4 style={{fontWeight: "700"}}>{name}</h4>
                 <p style={{fontStyle: "italic"}}>{email}</p>
-                <p style={{textAlign: "justify"}}>{description}</p>
               </GridItem>
             </GridContainer>
           </GridItem>
@@ -54,7 +52,6 @@ export default function ContactPage() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const id = parseInt(urlParams.get("id"));
-  const lang = getLanguage();
   const [descriptionReady, setDescriptionReady] = useState(false);
 
   useEffect(() => {
@@ -73,8 +70,7 @@ export default function ContactPage() {
         .then((json) => {
           if (json.email) {
             receiver = json.email;
-            let desc = lang === "pl" ? json.description : json.englishdescription;
-            description = getMemberDescription(json.title.rendered, json.photo.guid, json.email, desc);
+            description = getMemberDescription(json.title.rendered, json.photo.guid, json.email);
           }
           setDescriptionReady(true);
         })
