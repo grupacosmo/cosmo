@@ -8,18 +8,17 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
-import OldForm from "components/Form/OldForm.js";
 import getLocale from "../../../util/internationalization";
+import MailForm from "../../../components/Form/MailForm";
 
 const useStyles = makeStyles(styles);
 
 // Contact Section Hook
 const ContactSection = props => {
+  //test();
   const classes = useStyles();
   const {receiver, description} = props;
   const locale = getLocale("index").contactSection;
-
-  console.log(receiver);
 
   //this style and style below is using for centering description paragraph vertically
   const descriptionGridContainerStyle = {
@@ -87,7 +86,7 @@ const ContactSection = props => {
               <h3>{locale.sendUsMessage}</h3>
             </div>
             <Card plain style={{ padding: 10 }}>
-              <OldForm />
+              <MailForm receiver={receiver} />
             </Card>
           </GridItem>
         </GridContainer>
