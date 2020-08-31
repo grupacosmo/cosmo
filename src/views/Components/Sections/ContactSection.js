@@ -1,27 +1,20 @@
 import React from "react";
-// nodejs library that concatenates classes
-// eslint-disable-next-line
-import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
-
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import {GridContainer,GridItem} from "components/Grid";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 import Card from "components/Card/Card";
-import OldForm from "components/Form/OldForm.js";
+import Form from "components/Form/Form";
 import getLocale from "../../../util/internationalization";
 
-//Styling
+
 
 const useStyles = makeStyles(styles);
 
-// Contact Section Hook
+
 const ContactSection = props => {
   const classes = useStyles();
-
   const locale = getLocale("index").contactSection;
 
-  //this style and style below is using for centering description paragraph vertically
   const descriptionGridContainerStyle = {
     height: "100%"
   };
@@ -84,8 +77,8 @@ const ContactSection = props => {
               <h3>{locale.sendUsMessage}</h3>
             </div>
             <Card plain style={{ padding: 10 }}>
-              {/*<OldForm/>*/}
-              <OldForm />
+              {/* <OldForm /> */}
+              <Form  classes= {classes}/>
             </Card>
           </GridItem>
         </GridContainer>

@@ -1,12 +1,10 @@
 export function getLanguage() {
   let language = sessionStorage.getItem("lang");
-  if (!language) {
-    language = "pl";
-  }
-  return language;
+  return language ? language : "pl" ;
 }
 
-export default function getLocale(page) {
+export function getLocale(page) {
   const language = getLanguage();
   return  require(`locale/${language}/${page}.json`);
 }
+export default getLocale;

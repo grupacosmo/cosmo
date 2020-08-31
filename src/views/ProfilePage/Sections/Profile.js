@@ -1,29 +1,14 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-
-// core components
-
 import Button from "components/CustomButtons/Button.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-//eslint-disable-next-line
-import profile from "assets/img/faces/christian.jpg";
+import {GridContainer,GridItem} from "components/Grid";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from "assets/img/faces/pawel_kisielewicz_profile.jpg";
-//eslint-disable-next-line
-import JakubChwastekImg from "assets/img/faces/jakub_chwastek_profile.png";
-//TODO:
-//Links
-//Descriptions
-//Pictures
-//Add more people
+
 
 const useStyles = makeStyles(styles);
 const SampleArrowStyle = {

@@ -29,6 +29,8 @@ export default function BlogSection() {
   const lang = getLanguage();
 
   const url = backendUrl + "/posts?per_page=3&page=1&filter[meta_key]=type&filter[meta_value]=";
+
+//todo Zastanowić się nad tym zapytaniem
   fetch(url + (lang === "pl" ? "polish-post" : "english-post"))
     .then((response) => {
       return response.json();
