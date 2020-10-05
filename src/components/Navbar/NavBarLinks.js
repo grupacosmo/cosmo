@@ -8,7 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import {Email, People, Flag, Public} from "@material-ui/icons";
+import {Email, People, Public} from "@material-ui/icons";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -17,6 +17,7 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 import { Link } from "react-scroll";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 import getLocale from "../../util/internationalization";
+import NavBarChangeLanguageButton from "./NavBarChangeLanguageButton";
 
 const useStyles = makeStyles(styles);
 
@@ -54,7 +55,7 @@ export default function NavBarLinks() {
           <Email className={classes.icons} /> {locale.contact}
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/*<ListItem className={classes.listItem}>
         <Link
           activeClass="active"
           to="our-goals"
@@ -67,7 +68,7 @@ export default function NavBarLinks() {
         >
           <Flag className={classes.icons} /> {locale.ourGoal}
         </Link>
-      </ListItem>
+      </ListItem>*/}
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
@@ -153,6 +154,7 @@ export default function NavBarLinks() {
           </Button>
         </Tooltip>
       </ListItem>
+      <NavBarChangeLanguageButton href="/"/>
     </List>
   );
 }

@@ -11,7 +11,7 @@ export default function NavBarSection() {
             fixed
             color="transparent"
             changeColorOnScroll={{
-                height: 500,
+                height: 250,
                 color: "white"
             }}
         />

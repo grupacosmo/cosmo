@@ -16,6 +16,7 @@ import BlogPage from "./views/BlogPage";
 import PostPage from "./views/PostPage";
 import SubPage from "./views/SubPage";
 import TeamPage from "./views/TeamPage";
+import ContactPage from "./views/ContactPage";
 
 var hist = createBrowserHistory();
 
@@ -34,8 +35,9 @@ ReactDOM.render(
       <Route path="/blog" component={BlogPage} />
       <Route path="/post" component={PostPage} />
       <Route path="/page" component={SubPage} />
-
+      <Route path="/contact" component={ContactPage} />
       <Route path="/" component={Components} />
+
       {/*<Route path="/" component={BlogPage} />*/}
       {/*<Route path="/" component={PostPage} />*/}
       {/*<Route path="/" component={SubPage} />*/}

@@ -26,7 +26,7 @@ export default function OurTeamSection(props) {
   const teamImgStyle = {
     width:"100%",
     height:"auto",
-    padding : "10px"
+    padding : "5px"
   };
 
   const descriptionGridItemStyle2 = {
@@ -39,9 +39,8 @@ export default function OurTeamSection(props) {
   const descriptionStyle = {
     textAlign: "justify",
     fontFamily: "Roboto Slab",
-    padding: 20,
-    fontSize: 17,
-    // fontVariant: "petite-caps
+    padding: 10,
+    fontSize: 18
   };
 
   return (
@@ -49,7 +48,7 @@ export default function OurTeamSection(props) {
       <div className={classes.container}>
         <h2 className={classes.title}>{locale.title}</h2>
         <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={12} md={5}>
             <GridContainer
               justify="center"
               style={descriptionGridContainerStyle}
@@ -57,11 +56,11 @@ export default function OurTeamSection(props) {
               <GridItem
                 xs={12}
                 sm={12}
-                md={9}
+                md={11}
                 style={descriptionGridItemStyle2}
               >
                 <p className={classes.description} style={descriptionStyle}>{locale.description}</p>
-                <Button color="primary" href="/nasz-team" target="_blank" round>{locale.moreButton}</Button>
+                <Button color="primary" href="/team" target="_self" round>{locale.moreButton}</Button>
               </GridItem>
             </GridContainer>
           </GridItem>

@@ -3,15 +3,15 @@ import React from "react";
 import NavBar from "components/Navbar/NavBar";
 import NavBarBlogLinks from "../../../components/Navbar/NavBarBlogLinks";
 
-export default function NavBarBlogSection() {
+export default function NavBarBlogSection(props) {
     return (
         <NavBar
             brand="COSMO"
-            rightLinks={<NavBarBlogLinks />}
+            rightLinks={<NavBarBlogLinks href={props.href}/>}
             fixed
             color="transparent"
             changeColorOnScroll={{
-                height: 500,
+                height: props.height ? props.height : 400,
                 color: "white"
             }}
         />

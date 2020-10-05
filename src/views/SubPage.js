@@ -17,7 +17,6 @@ import Loading from "../components/Loading/Loading";
 import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
 import {getLanguage} from "../util/internationalization";
-import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import "assets/css/PostPage.css";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
@@ -71,14 +70,9 @@ export default function SubPage() {
   return (
     <div>
       <AnnouncementSection fixed={true}/>
-      <BlogNavBarSection />
+      <BlogNavBarSection href={`/page?id=${id}`}/>
       <Parallax filter image={pageLoaded ? pageContent["background_image"].guid : null}>
         <div className={classes.container}>
-          <GridContainer>
-            <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href={"/page?id=" + id}/>
-            </GridItem>
-          </GridContainer>
           <GridContainer>
             <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>
               {pageLoaded && pageContent.title.rendered}

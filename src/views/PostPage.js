@@ -14,8 +14,6 @@ import Loading from "../components/Loading/Loading";
 import PostNavBarSection from "./Components/Sections/PostNavBarSection";
 import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
-import SwitchLanguageButton from "../components/SwitchLanguageButton";
-import GridContainer from "../components/Grid/GridContainer";
 import {getLanguage} from "../util/internationalization";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
@@ -80,14 +78,9 @@ export default function PostPage() {
   return (
     <div>
       <AnnouncementSection fixed={true}/>
-      <PostNavBarSection />
+      <PostNavBarSection id={id}/>
       <div className={classNames(classes.main, classes.mainRaised)} style={{marginTop: "100px"}}>
         <div style={{padding: "20px"}}>
-          <GridContainer>
-            <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href={`/post?id=${id}`}/>
-            </GridItem>
-          </GridContainer>
           {
             postLoaded ?
               <GridItem xs={12} sm={12} md={12} style={{paddingTop: "40px"}}>
@@ -99,12 +92,9 @@ export default function PostPage() {
                     <img src={fetchedPost.acf.thumbnail} alt="thumbnail" style={{width: "100%"}}/>
                   </GridItem>
                 </div>
-                <h1 className={classes.cardTitle} style={{textAlign: "center"}}>
+                <h1 className={"titleHeader"} style={{textAlign: "center"}}>
                   {fetchedPost.title.rendered}
                 </h1>
-                <p className={classes.description} style={{fontStyle: "italic", color: "#767676", paddingLeft: "60px"}}>
-                  {`${fetchedPost.date.slice(8,10)}.${fetchedPost.date.slice(5,7)}.${fetchedPost.date.slice(0,4)}`}
-                </p>
 
                 <GridItem xs={12} sm={12} md={8} style={{margin: "auto"}}>
                   <div className="content">
@@ -115,10 +105,16 @@ export default function PostPage() {
                 </GridItem>
                 {
                   authorLoaded ?
-                    <p className={classes.description}
-                       style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
-                      Autor: {authorName}
-                    </p>
+                    <>
+                      <p className={classes.description}
+                         style={{fontStyle: "italic", color: "#767676", textAlign: "right"}}>
+                        Autor: {authorName}
+                        <br/>
+                        <span className={classes.description} style={{fontStyle: "italic", color: "#767676", paddingLeft: "60px", textAlign: "right"}}>
+                          {`${fetchedPost.date.slice(8,10)}.${fetchedPost.date.slice(5,7)}.${fetchedPost.date.slice(0,4)}`}
+                        </span>
+                      </p>
+                    </>
                   : <></>
                 }
               </GridItem>

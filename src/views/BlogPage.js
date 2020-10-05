@@ -22,7 +22,6 @@ import Loading from "../components/Loading/Loading";
 import {backendUrl} from "../components/properties";
 import JsxParser from "react-jsx-parser";
 import getLocale, {getLanguage} from "../util/internationalization";
-import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
 
 const useStyles = makeStyles(styles);
@@ -52,14 +51,9 @@ export default function BlogPage() {
   return (
     <div>
       <AnnouncementSection fixed={true}/>
-      <BlogNavBarSection />
+      <BlogNavBarSection href="/blog"/>
       <Parallax filter image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
-          <GridContainer>
-            <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href="/blog"/>
-            </GridItem>
-          </GridContainer>
           <GridContainer>
             <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>{locale.title}</h1>
           </GridContainer>

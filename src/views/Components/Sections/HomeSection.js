@@ -12,7 +12,6 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import Button from "components/CustomButtons/Button.js";
 import { Link } from "react-scroll";
 import getLocale from "../../../util/internationalization";
-import SwitchLanguageButton from "../../../components/SwitchLanguageButton";
 
 const useStyles = makeStyles(styles);
 
@@ -33,9 +32,6 @@ export default function HomeSection(props) {
     <Parallax image={image}>
       <div className={classes.container}>
         <GridContainer>
-          <GridItem style={{textAlign: "right"}}>
-            <SwitchLanguageButton href="/"/>
-          </GridItem>
           <GridItem>
             <div className={classes.brand}>
               <h1 className={classes.title}>{locale.title}</h1>
@@ -58,7 +54,7 @@ export default function HomeSection(props) {
                 duration={500}>
                 <Button type="button" color="info" round>{locale.contactButton}</Button>
               </Link>
-              <Link
+              {/*<Link
                 activeClass="active"
                 to="our-goals"
                 spy={true}
@@ -66,7 +62,7 @@ export default function HomeSection(props) {
                 offset={-70}
                 duration={500}>
                 <Button type="button" color="info" round>{locale.ourGoalButton}</Button>
-              </Link>
+              </Link>*/}
             </div>
           </GridItem>
         </GridContainer>

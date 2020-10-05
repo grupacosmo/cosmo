@@ -1,6 +1,6 @@
 {
   "homeSection" : {
-    "title" : "Projekt COSMO",
+    "title" : "COSMO PK",
     "description" : "Studenckie koło naukowe Politechniki Krakowskiej",
     "whoWeAreButton" : "Kim jesteśmy?",
     "contactButton" : "Kontakt",
@@ -9,7 +9,7 @@
   "whoWeAreSection" : {
     "title" : "Kim jesteśmy?",
     "description" : "Grupą młodych ludzi, studentów Politechniki Krakowskiej. W przerwach od nauki spotykamy się by realizować wspólny cel - wysłać własnego satelitę na orbitę. Nasze zmagania można obserwować na naszych kanałach w mediach społecznościowych. Trzymajcie kciuki!",
-    "moreButton" : "Więcej"
+    "moreButton" : "Członkowie koła"
   },
   "ourGoalSection" : {
     "title" : "Cel projektu?",

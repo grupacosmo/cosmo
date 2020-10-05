@@ -18,8 +18,8 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import BlogNavBarSection from "./Components/Sections/BlogNavBarSection";
 import {backendUrl} from "../components/properties";
 import getLocale, {getLanguage} from "../util/internationalization";
-import SwitchLanguageButton from "../components/SwitchLanguageButton";
 import AnnouncementSection from "./Components/Sections/AnnouncementSection";
+import {Email} from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -49,9 +49,9 @@ export default function TeamPage() {
             pl: member.description,
             en: member.englishdescription
           },
+          email: member.email
         }
       }).sort(((a, b) => b.priority - a.priority))
-
       setMembersLoaded(true);
     })
     .catch((error) => {
@@ -63,19 +63,14 @@ export default function TeamPage() {
   return (
     <div>
       <AnnouncementSection fixed={true}/>
-      <BlogNavBarSection />
+      <BlogNavBarSection href="/team"/>
       <Parallax filter image={require("assets/img/group-photo.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem style={{textAlign: "right"}}>
-              <SwitchLanguageButton href="/team"/>
-            </GridItem>
-          </GridContainer>
-          <GridContainer>
             <h1 className={classes.title} style={{textAlign: "center", width: "100%"}}>
-              {locale.title}
+              {locale.description}
             </h1>
-            <p style={{textAlign: "center", fontStyle: "italic", width: "100%", fontSize: "15px"}}>{locale.description}</p>
+            {/*<p style={{textAlign: "center", fontStyle: "italic", width: "100%", fontSize: "15px"}}>{locale.description}</p>*/}
           </GridContainer>
         </div>
       </Parallax>
@@ -83,7 +78,7 @@ export default function TeamPage() {
         <GridContainer justify="center">
           {
             membersLoaded && members.map(member =>
-              <GridItem xs={12} md={6} lg={4} key={member.id}>
+              <GridItem xs={12} md={6} lg={4} xl={3} key={member.id}>
                 <Card style={{maxWidth: "20rem", marginLeft: "auto", marginRight: "auto", minHeight: "600px"}}>
                   <div
                     style={{
@@ -98,9 +93,23 @@ export default function TeamPage() {
                   />
 
                   <CardBody>
-                    <h4 className={classes.cardTitle}>{member.name}</h4>
+                    <h4 className={classes.cardTitle}>
+                      {member.name}
+                    </h4>
                     <p>{member.description[lang]}</p>
                   </CardBody>
+                  {member.email ? (
+                    <a href={`/contact?id=${member.id}`}
+                       style={{
+                         cursor: "pointer",
+                         display: "block",
+                         position: "absolute",
+                         bottom: 0,
+                         right: 9}}
+                    >
+                      <Email className={classes.icons}/>
+                    </a>
+                  ): <></>}
                 </Card>
               </GridItem>
             )

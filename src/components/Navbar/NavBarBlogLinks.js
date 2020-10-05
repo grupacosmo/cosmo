@@ -12,10 +12,12 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
+import NavBarChangeLanguageButton from "./NavBarChangeLanguageButton";
 
 const useStyles = makeStyles(styles);
 
-export default function NavBarBlogLinks() {
+export default function NavBarBlogLinks(props) {
+  const {href} = props;
   const classes = useStyles();
   return (
     <List className={classes.list}>
@@ -87,6 +89,7 @@ export default function NavBarBlogLinks() {
           </Button>
         </Tooltip>
       </ListItem>
+      <NavBarChangeLanguageButton href={href}/>
     </List>
   );
 }
