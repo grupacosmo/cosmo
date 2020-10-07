@@ -60,7 +60,7 @@ export default function HomeSection(props) {
     <Parallax image={image}>
       <div className={classes.container}>
         <GridContainer>
-          <GridItem md={6}>
+          <GridItem md={6} style={{paddingTop: "100px"}}>
             <div className={classes.brand}>
               <h1 className={classes.title}>{locale.title}</h1>
               <h3 className={classes.subtitle}>{locale.description}</h3>
@@ -84,7 +84,7 @@ export default function HomeSection(props) {
               </Link>
             </div>
           </GridItem>
-          <GridItem md={6}>
+          <GridItem md={6} align="center" style={{marginTop: "20px"}}>
             <Carousel {...carouselSettings} style={{maxWidth: "400px"}}>
               {
                 carouselItems.map(item =>
@@ -92,6 +92,7 @@ export default function HomeSection(props) {
                     <img
                       src={item.image}
                       alt={item.title}
+                      style={{borderRadius: "3px"}}
                       className="slick-image"
                     />
                     <div className="slick-caption">
@@ -104,6 +105,15 @@ export default function HomeSection(props) {
                 )
               }
             </Carousel>
+            <div style={{background: "rgba(0, 0, 0, 0.5)", textAlign: "center"}}>
+              <h2 style={{color: "white"}}>Dołącz do nas</h2>
+              <a style={{color: "#00ACC1", fontWeight: "bold", fontSize: "20px", cursor: "pointer"}}
+                 href="https://www.youtube.com/watch?v=NZU7bTM4LbQ"
+                 target="_blank"
+              >
+                Link do formularza
+              </a>
+            </div>
           </GridItem>
         </GridContainer>
       </div>
