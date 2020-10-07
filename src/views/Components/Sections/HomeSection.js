@@ -15,6 +15,12 @@ import getLocale from "../../../util/internationalization";
 import Carousel from "react-slick";
 
 import img1 from "assets/img/examples/earth.jpg"
+import img2 from "assets/img/examples/cubesat-lab.jpg"
+import img3 from "assets/img/examples/baloon.jpg"
+import img4 from "assets/img/examples/obc.jpg"
+import img5 from "assets/img/examples/ai.jpg"
+import img6 from "assets/img/examples/antenna.jpg"
+import img7 from "assets/img/examples/webdev.jpg"
 
 const useStyles = makeStyles(styles);
 
@@ -32,12 +38,12 @@ export default function HomeSection(props) {
 
   const carouselItems = [
     {image: img1, title: "Rekrutacja", additional: <p>Rekrutacja kończy się 20.02.2020</p>},
-    {image: img1, title: "Budujemy satelitę"},
-    {image: img1, title: "Sondy stratosferyczne"},
-    {image: img1, title: "Komputer pokładowy OBC - satelita"},
-    {image: img1, title: "Eksperyment AI - satelita"},
-    {image: img1, title: "Komunikacja - satelita, sondy"},
-    {image: img1, title: "Webdev - budowa stron internetowych"}
+    {image: img2, title: "Budujemy satelitę"},
+    {image: img3, title: "Sondy stratosferyczne"},
+    {image: img4, title: "Komputer pokładowy OBC - satelita"},
+    {image: img5, title: "Eksperyment AI - satelita"},
+    {image: img6, title: "Komunikacja - satelita, sondy"},
+    {image: img7, title: "Webdev - budowa stron internetowych"}
   ]
 
   const image = require("assets/img/home_background.jpg");
@@ -76,15 +82,6 @@ export default function HomeSection(props) {
                 duration={500}>
                 <Button type="button" color="info" round>{locale.contactButton}</Button>
               </Link>
-              {/*<Link
-                activeClass="active"
-                to="our-goals"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}>
-                <Button type="button" color="info" round>{locale.ourGoalButton}</Button>
-              </Link>*/}
             </div>
           </GridItem>
           <GridItem md={6}>
@@ -98,8 +95,10 @@ export default function HomeSection(props) {
                       className="slick-image"
                     />
                     <div className="slick-caption">
-                      <h4>{item.title}</h4>
-                      <div>{item.additional ? item.additional : <></>}</div>
+                      <div style={{background: "rgba(0, 0, 0, 0.5)"}}>
+                        <h4>{item.title}</h4>
+                        <div>{item.additional ? item.additional : <></>}</div>
+                      </div>
                     </div>
                   </div>
                 )
