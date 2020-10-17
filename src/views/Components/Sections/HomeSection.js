@@ -86,7 +86,7 @@ export default function HomeSection(props) {
               </Link>
             </div>
           </GridItem>
-          <GridItem md={6} align="center" style={{marginTop: "20px"}}>
+          <GridItem md={6} align="center" className="homeSectionRight">
             <Slider {...carouselSettings}>
               {
                 carouselItems.map((item, index) =>
@@ -121,7 +121,7 @@ export default function HomeSection(props) {
               >
                 <h2>Dowiedz się więcej</h2>
               </Link>
-              <a style={{color: "#00ACC1", fontWeight: "bold", fontSize: "20px", cursor: "pointer"}}
+              <a style={{color: "#00ACC1", fontWeight: "bold", cursor: "pointer"}}
                  href="https://www.youtube.com/watch?v=NZU7bTM4LbQ"
                  target="_blank"
                  rel="noopener noreferrer"

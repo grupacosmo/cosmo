@@ -49,7 +49,12 @@
     }
 
     .recruitmentInfoContainer h2 {
-        font-size: 30px;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .recruitmentInfoContainer a {
+        font-size: 15px;
     }
 }
 
