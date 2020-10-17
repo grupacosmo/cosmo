@@ -45,8 +45,6 @@ export default function Components() {
         <AnnouncementSection />
         <OurTeamSection />
         <Divider variant="middle" />
-{/*        <GoalSection />
-        <Divider variant="middle" />*/}
         <BlogSection/>
         <Divider variant="middle" />
         <ContactSection receiver={email} />

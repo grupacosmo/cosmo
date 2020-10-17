@@ -14,6 +14,8 @@ import { Link } from "react-scroll";
 import getLocale from "../../../util/internationalization";
 import Slider from "react-slick";
 
+import "assets/css/homeSection.css";
+
 import img1 from "assets/img/examples/earth.jpg"
 import img2 from "assets/img/examples/cubesat-lab.jpg"
 import img3 from "assets/img/examples/baloon.jpg"
@@ -60,7 +62,7 @@ export default function HomeSection(props) {
     <Parallax image={image}>
       <div className={classes.container}>
         <GridContainer>
-          <GridItem md={6} style={{paddingTop: "100px"}}>
+          <GridItem md={6} className="homeSectionLeft">
             <div className={classes.brand}>
               <h1 className={classes.title}>{locale.title}</h1>
               <h3 className={classes.subtitle}>{locale.description}</h3>
@@ -89,28 +91,36 @@ export default function HomeSection(props) {
               {
                 carouselItems.map((item, index) =>
                   <div key={index}>
-                    <div style={{
-                      width: "100%",
-                      height: "300px",
-                      backgroundImage: `url(${item.image})`,
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center center",
-                      borderRadius: "3px"
+                    <div
+                      className="slideContainer"
+                      style={{
+                        backgroundImage: `url(${item.image})`,
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center center",
+                        borderRadius: "3px"
                     }}>
-                      <div className="slick-caption">
-                        <div style={{background: "rgba(0, 0, 0, 0.5)"}}>
-                          <h4>{item.title}</h4>
-                          <div>{item.additional ? item.additional : <></>}</div>
-                        </div>
+                      <div className="slideContent">
+                        <h4>{item.title}</h4>
+                        <div>{item.additional ? item.additional : <></>}</div>
                       </div>
                     </div>
                   </div>
                 )
               }
             </Slider>
-            <div style={{background: "rgba(0, 0, 0, 0.5)", textAlign: "center"}}>
-              <h2 style={{color: "white"}}>Dołącz do nas</h2>
+            <div className="recruitmentInfoContainer">
+              <Link
+                activeClass="active"
+                to="contact-form"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={classes.navLink}
+                style={{ cursor: "pointer" }}
+              >
+                <h2>Dowiedz się więcej</h2>
+              </Link>
               <a style={{color: "#00ACC1", fontWeight: "bold", fontSize: "20px", cursor: "pointer"}}
                  href="https://www.youtube.com/watch?v=NZU7bTM4LbQ"
                  target="_blank"
