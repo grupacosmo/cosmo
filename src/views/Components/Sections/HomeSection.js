@@ -12,7 +12,7 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import Button from "components/CustomButtons/Button.js";
 import { Link } from "react-scroll";
 import getLocale from "../../../util/internationalization";
-import Carousel from "react-slick";
+import Slider from "react-slick";
 
 import img1 from "assets/img/examples/earth.jpg"
 import img2 from "assets/img/examples/cubesat-lab.jpg"
@@ -85,31 +85,36 @@ export default function HomeSection(props) {
             </div>
           </GridItem>
           <GridItem md={6} align="center" style={{marginTop: "20px"}}>
-            <Carousel {...carouselSettings} style={{maxWidth: "400px"}}>
+            <Slider {...carouselSettings}>
               {
-                carouselItems.map(item =>
-                  <div>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{borderRadius: "3px"}}
-                      className="slick-image"
-                    />
-                    <div className="slick-caption">
-                      <div style={{background: "rgba(0, 0, 0, 0.5)"}}>
-                        <h4>{item.title}</h4>
-                        <div>{item.additional ? item.additional : <></>}</div>
+                carouselItems.map((item, index) =>
+                  <div key={index}>
+                    <div style={{
+                      width: "100%",
+                      height: "300px",
+                      backgroundImage: `url(${item.image})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center center",
+                      borderRadius: "3px"
+                    }}>
+                      <div className="slick-caption">
+                        <div style={{background: "rgba(0, 0, 0, 0.5)"}}>
+                          <h4>{item.title}</h4>
+                          <div>{item.additional ? item.additional : <></>}</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 )
               }
-            </Carousel>
+            </Slider>
             <div style={{background: "rgba(0, 0, 0, 0.5)", textAlign: "center"}}>
               <h2 style={{color: "white"}}>Dołącz do nas</h2>
               <a style={{color: "#00ACC1", fontWeight: "bold", fontSize: "20px", cursor: "pointer"}}
                  href="https://www.youtube.com/watch?v=NZU7bTM4LbQ"
                  target="_blank"
+                 rel="noopener noreferrer"
               >
                 Link do formularza
               </a>
