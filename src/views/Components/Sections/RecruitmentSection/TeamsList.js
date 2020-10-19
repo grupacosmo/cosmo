@@ -1,8 +1,6 @@
 import React from "react";
-import "../../../../assets/css/RecruitmentSection/RecruitmentSection.css"
 import TeamListItem from "./TeamListItem";
-// nodejs library that concatenates classes
-import classNames from "classnames";
+
 // @material-ui/core components
 import {makeStyles} from "@material-ui/core/styles";
 
@@ -12,9 +10,6 @@ import {makeStyles} from "@material-ui/core/styles";
 import {List, Divider} from "@material-ui/core";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-
-
-import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,36 +23,42 @@ const data = [
     {
         id: 1,
         teamTitle: "Team Webdev",
+        href: "",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
             " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
     },
     {
         id: 2,
         teamTitle: "Team OBC",
+        href: "",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
             " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
     },
     {
         id: 3,
         teamTitle: "Team AI",
+        href: "",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
             " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
     },
     {
         id: 4,
         teamTitle: "Team Marketingu",
+        href: "",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
             " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
     },
     {
         id: 5,
         teamTitle: "Team Komunikacji",
+        href: "",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
             " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
     },
     {
         id: 6,
         teamTitle: "Team Logistyki",
+        href: "",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
             " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
     }
@@ -67,15 +68,31 @@ export default function TeamsList() {
     const classes = useStyles();
 
     const Items = data.map((item) => {
-        return item.id < data.length -1 ?
-            <GridItem xs={6}>
-                <TeamListItem data={item}/>
-                <Divider/>
-            </GridItem>
-            :
-            <GridItem xs={6}>
-                <TeamListItem data={item}/>
-            </GridItem>
+        if(item.id < data.length - 1){
+            return(
+                <GridItem xs={12} md={6}>
+                    <TeamListItem data={item}/>
+                    <Divider/>
+                </GridItem>
+            )
+        }else {
+            if(item.id === data.length -1){
+                return (
+                    <GridItem xs={12} md={6}>
+                        <TeamListItem data={item}/>
+                        <Divider id="OneBeforeLastDivider"/>
+                    </GridItem>
+                )
+            }else {
+                console.log("hello")
+                return (
+                    <GridItem xs={12} md={6}>
+                        <TeamListItem data={item}/>
+                    </GridItem>
+                )
+            }
+        }
+
     })
 
     return (

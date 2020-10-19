@@ -18,3 +18,13 @@
     font-size: 18px;
     color: #999;
 }
+
+#OneBeforeLastDivider{
+    display: none;
+}
+
+@media (max-width: 959px){
+    #OneBeforeLastDivider{
+        display: block;
+    }
+}
