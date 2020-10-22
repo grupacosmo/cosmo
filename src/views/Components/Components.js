@@ -20,6 +20,7 @@ import BlogSection from "./Sections/BlogSection";
 import AnnouncementSection from "./Sections/AnnouncementSection";
 import RecruitmentSection from "./Sections/RecruitmentSection/RecruitmentSection";
 import {email} from "../../components/properties";
+import WhatWeDoSection from "./Sections/WhatWeDoSection";
 const useStyles = makeStyles(styles);
 
 export default function Components() {
@@ -48,6 +49,7 @@ export default function Components() {
         <Divider variant="middle" />
         <RecruitmentSection />
         <Divider variant="middle" />
+        <WhatWeDoSection />
         <BlogSection/>
         <Divider variant="middle" />
         <ContactSection receiver={email} />
