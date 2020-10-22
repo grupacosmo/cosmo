@@ -1,0 +1,73 @@
+.homeSectionLeft {
+    padding-top: 100px;
+}
+
+.slideContainer {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+}
+
+.slideContent {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    top: 180px;
+}
+
+.recruitmentInfoContainer {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.recruitmentInfoContainer h2 {
+    color: white;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .homeSectionLeft {
+        padding-top: 0;
+    }
+
+    .homeSectionLeft h1 {
+        font-size: 40px;
+    }
+
+    .homeSectionLeft h3 {
+        font-size: 18px;
+    }
+
+    .slideContainer {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+    }
+
+    .slideContent {
+        top: 80px;
+    }
+
+    .recruitmentInfoContainer h2 {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .recruitmentInfoContainer a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .homeSectionLeft button {
+        font-size: 8px;
+    }
+
+    .slideContent {
+        top: 80px;
+    }
+
+    .recruitmentInfoContainer h2 {
+        font-size: 25px;
+    }
+}
