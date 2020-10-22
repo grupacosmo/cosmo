@@ -119,10 +119,10 @@ export default function HomeSection(props) {
                 className={classes.navLink}
                 style={{ cursor: "pointer" }}
               >
-                <h2>Dowiedz się więcej</h2>
+                <h2>Dołącz do nas</h2>
               </Link>
               <a style={{color: "#00ACC1", fontWeight: "bold", cursor: "pointer"}}
-                 href="https://www.youtube.com/watch?v=NZU7bTM4LbQ"
+                 href="https://forms.gle/Ej9dXYHVCT2xMqAF8"
                  target="_blank"
                  rel="noopener noreferrer"
               >
