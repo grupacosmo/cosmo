@@ -18,6 +18,7 @@ import LoadingScreen from "./Sections/LoadingScreen";
 import PartnersSection from "./Sections/PartnersSection";
 import BlogSection from "./Sections/BlogSection";
 import AnnouncementSection from "./Sections/AnnouncementSection";
+import RecruitmentSection from "./Sections/RecruitmentSection/RecruitmentSection";
 import {email} from "../../components/properties";
 const useStyles = makeStyles(styles);
 
@@ -44,6 +45,8 @@ export default function Components() {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <AnnouncementSection />
         <OurTeamSection />
+        <Divider variant="middle" />
+        <RecruitmentSection />
         <Divider variant="middle" />
         <BlogSection/>
         <Divider variant="middle" />

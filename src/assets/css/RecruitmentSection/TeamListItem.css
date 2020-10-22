@@ -1,0 +1,11 @@
+.TeamItemTitle{
+    font-size: 20px;
+    color: #9c27b0;
+    font-weight: 400;
+}
+.TeamListLink{
+    display: block;
+    font-size: 16px;
+    text-align: end;
+    margin-top: 20px;
+}
