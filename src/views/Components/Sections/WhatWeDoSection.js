@@ -1,13 +1,8 @@
 import React from "react";
-// react components for routing our app without refresh
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
-import styles from "assets/jss/material-kit-react/views/components.js";
 import Slider from "react-slick";
 
 import img1 from "assets/img/examples/ai.jpg"
@@ -17,11 +12,9 @@ import img4 from "assets/img/examples/experiment.jpg"
 import img5 from "assets/img/examples/eps.jpg"
 import img6 from "assets/img/examples/balloon2.jpg"
 import img7 from "assets/img/examples/laser.jpg"
-
-const useStyles = makeStyles(styles);
+import {useMediaQuery} from "@material-ui/core";
 
 export default function WhatWeDoSection() {
-  const classes = useStyles();
 
   const carouselSettings = {
     dots: true,
@@ -45,6 +38,9 @@ export default function WhatWeDoSection() {
     {image: img7, title: "Lasery", description: "Piu piu piu i myk z laserka"}
   ]
 
+  let mediumText = useMediaQuery('(max-width: 500px)');
+  let smallText = useMediaQuery('(max-width: 400px)');
+
   return (
     <GridContainer>
       <GridItem md={12} align="center">
@@ -67,7 +63,11 @@ export default function WhatWeDoSection() {
                     background: "rgba(0, 0, 0, 0.5)",
                     color: "white"
                   }}>
-                    <h2 style={{fontWeight: "bold", marginBottom: "0"}}>
+                    <h2
+                      style={{
+                      fontWeight: "bold", marginBottom: "0",
+                      fontSize: smallText ? "20px" : (mediumText ? "25px" : "2.25rem")
+                    }}>
                       {item.title}
                     </h2>
                     {
@@ -75,19 +75,28 @@ export default function WhatWeDoSection() {
                         <a
                           href={item.teamLink}
                           target="_blank"
-                          style={{color: "white", fontStyle: "italic", fontWeight: 400}}
+                          style={{
+                            color: "white",
+                            fontStyle: "italic",
+                            fontWeight: 400
+                          }}
+                          rel="noopener noreferrer"
                         >
                           Team {item.teamName}
                         </a>
                         : <></>
                     }
-                    <p style={{marginTop: "40px"}}>{item.description}</p>
+                    <p style={{
+                      marginTop: "40px",
+                      fontSize: smallText ? "12px" : (mediumText ? "14px" : "1rem")
+                    }}>{item.description}</p>
                     {
                       item.articleLink ?
                         <a
                           href={item.articleLink}
                           style={{fontWeight: "bold", color: "rgb(0, 172, 193)"}}
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           Czytaj więcej
                         </a>
