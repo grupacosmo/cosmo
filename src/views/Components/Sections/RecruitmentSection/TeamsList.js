@@ -19,48 +19,44 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien ullamcorper, consectetur magna ac, auctor orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien";
+
 const data = [
     {
         id: 1,
         teamTitle: "Team Webdev",
         href: "",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
-            " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
+        description: lorem
     },
     {
         id: 2,
         teamTitle: "Team OBC",
         href: "",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
-            " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
+        description: lorem
     },
     {
         id: 3,
         teamTitle: "Team AI",
         href: "",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
-            " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
+        description: lorem
     },
     {
         id: 4,
         teamTitle: "Team Marketingu",
         href: "",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
-            " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
+        description: lorem
     },
     {
         id: 5,
         teamTitle: "Team Komunikacji",
         href: "",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
-            " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
+        description: lorem
     },
     {
         id: 6,
         teamTitle: "Team Logistyki",
         href: "",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien" +
-            " ullamcorper, consectetur magna ac, auctor orci." + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ornare mi. Vestibulum ut sapien"
+        description: lorem
     }
 ]
 

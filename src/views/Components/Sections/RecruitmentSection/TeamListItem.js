@@ -22,7 +22,7 @@ export default function TeamListItem(props) {
                         >
                             Ali Connors {props.data.description}
                         </Typography>
-                        <a className="TeamListLink">Przejdź do opisu zespołu</a>
+                        <a href="/" className="TeamListLink">Przejdź do opisu zespołu</a>
                     </React.Fragment>
                 }
             />

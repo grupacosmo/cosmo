@@ -78,7 +78,7 @@ export default function ContactPage() {
           console.error('Error:', error);
         });
     }
-  });
+  }, [id]);
 
   const classes = useStyles();
   return (
