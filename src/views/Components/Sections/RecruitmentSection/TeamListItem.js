@@ -9,7 +9,7 @@ import {ListItem, ListItemText, Typography} from "@material-ui/core";
 
 export default function TeamListItem(props) {
     return (
-        <ListItem button alignItems="flex-start" component="a" href={props.data.href}>
+        <ListItem button alignItems="flex-start" component="div" href={props.data.href}>
             <ListItemText
                 primary={<h3 className="TeamItemTitle">{props.data.teamTitle}</h3>}
                 secondary={

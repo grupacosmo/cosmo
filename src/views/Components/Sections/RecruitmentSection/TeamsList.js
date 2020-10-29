@@ -63,10 +63,10 @@ const data = [
 export default function TeamsList() {
     const classes = useStyles();
 
-    const Items = data.map((item) => {
+    const Items = data.map((item, index) => {
         if(item.id < data.length - 1){
             return(
-                <GridItem xs={12} md={6}>
+                <GridItem xs={12} md={6} key={index}>
                     <TeamListItem data={item}/>
                     <Divider/>
                 </GridItem>
@@ -74,15 +74,14 @@ export default function TeamsList() {
         }else {
             if(item.id === data.length -1){
                 return (
-                    <GridItem xs={12} md={6}>
+                    <GridItem xs={12} md={6} key={index}>
                         <TeamListItem data={item}/>
                         <Divider id="OneBeforeLastDivider"/>
                     </GridItem>
                 )
             }else {
-                console.log("hello")
                 return (
-                    <GridItem xs={12} md={6}>
+                    <GridItem xs={12} md={6} key={index}>
                         <TeamListItem data={item}/>
                     </GridItem>
                 )
