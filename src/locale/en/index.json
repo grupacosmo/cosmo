@@ -31,6 +31,8 @@
     "title" : "Our partners"
   },
   "navbar" : {
+    "recruitment" : "Recruitment",
+    "whatWeDo" : "What we do?",
     "whoWeAre" : "Who we are?",
     "contact" : "Contact",
     "ourGoal" : "Our Goal",

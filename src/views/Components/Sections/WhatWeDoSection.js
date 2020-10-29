@@ -42,7 +42,7 @@ export default function WhatWeDoSection() {
   let smallText = useMediaQuery('(max-width: 400px)');
 
   return (
-    <GridContainer>
+    <GridContainer id="whatWeDoSection">
       <GridItem md={12} align="center">
         <Slider {...carouselSettings}>
           {

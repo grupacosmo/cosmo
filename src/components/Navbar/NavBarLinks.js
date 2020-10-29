@@ -8,7 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import {Email, People, Public} from "@material-ui/icons";
+import {Email, People, Public, AssignmentInd, LiveHelp} from "@material-ui/icons";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -18,6 +18,7 @@ import { Link } from "react-scroll";
 import {facebookUrl, githubUrl, instagramUrl, twitterUrl} from "../properties";
 import getLocale from "../../util/internationalization";
 import NavBarChangeLanguageButton from "./NavBarChangeLanguageButton";
+import "assets/css/IndexPageNavbar.css";
 
 const useStyles = makeStyles(styles);
 
@@ -26,7 +27,35 @@ export default function NavBarLinks() {
 
   const classes = useStyles();
   return (
-    <List className={classes.list}>
+    <List className={classes.list + " indexPageNavbar"}>
+      <ListItem className={classes.listItem}>
+        <Link
+          activeClass="active"
+          to="RecruitmentContainer"
+          spy={true}
+          smooth={true}
+          offset={-120}
+          duration={500}
+          className={classes.navLink}
+          style={{ cursor: "pointer" }}
+        >
+          <AssignmentInd className={classes.icons} /> {locale.recruitment}
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link
+          activeClass="active"
+          to="whatWeDoSection"
+          spy={true}
+          smooth={true}
+          offset={-120}
+          duration={500}
+          className={classes.navLink}
+          style={{ cursor: "pointer" }}
+        >
+          <LiveHelp className={classes.icons} /> {locale.whatWeDo}
+        </Link>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Link
           activeClass="active"
