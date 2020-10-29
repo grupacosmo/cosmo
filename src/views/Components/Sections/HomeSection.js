@@ -98,7 +98,7 @@ export default function HomeSection(props) {
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center center",
-                        borderRadius: "3px"
+                        borderRadius: "8px"
                     }}>
                       <div className="slideContent">
                         <h4>{item.title}</h4>

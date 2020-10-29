@@ -21,6 +21,8 @@ import AnnouncementSection from "./Sections/AnnouncementSection";
 import RecruitmentSection from "./Sections/RecruitmentSection/RecruitmentSection";
 import {email} from "../../components/properties";
 import WhatWeDoSection from "./Sections/WhatWeDoSection";
+import "assets/css/indexPage.css";
+
 const useStyles = makeStyles(styles);
 
 export default function Components() {
@@ -43,7 +45,7 @@ export default function Components() {
       <LoadingScreen isLoaded={loaded}/>
       <NavBarSection />
       <HomeSection setLoaded={setLoaded} />
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div className={classNames(classes.main, classes.mainRaised) + " mainContainer"}>
         <AnnouncementSection />
         <OurTeamSection />
         <Divider variant="middle" />
