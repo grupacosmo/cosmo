@@ -33,6 +33,8 @@ const imgStyle2 = {
     maxWidth: "90%"
 };
 
+const luxonisLogo = require("assets/img/luxonis.jpeg");
+
 const PartnersSection = () => {
     const classes = useStyles();
     const locale = getLocale("index").partnersSection;
@@ -42,10 +44,18 @@ const PartnersSection = () => {
           <h2 className={classes.title}>{locale.title}</h2>
           <GridContainer justify="center">
               <GridItem xs={12}>
+                  <a href="https://luxonis.com/" target="_blank" rel="noopener noreferrer">
+                      <img src={luxonisLogo}
+                           alt="Embedded Machine Learning and Computer Vision"
+                           style={{width: "100%", maxWidth: "1000px", padding: "10px"}}
+                      />
+                  </a>
+              </GridItem>
+              <GridItem xs={12}>
                   <a href="https://botland.com.pl" target="_blank" rel="noopener noreferrer">
                       <img src="https://botland.com.pl/img/logo_botland_kn.png"
                            alt="Sklep dla robotyków i elektroników, Arduino, Raspberry Pi - BOTLAND"
-                           style={{width: "100%", maxWidth: "900px", padding: "10px"}}
+                           style={{width: "100%", maxWidth: "600px", padding: "10px"}}
                       />
                   </a>
               </GridItem>
